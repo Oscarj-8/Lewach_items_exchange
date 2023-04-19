@@ -263,3 +263,7 @@ a:after {
   align-items: center;
   display: grid;
 }
+
+.page3-card {
+  display: flex;
+}
