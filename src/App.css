@@ -1,11 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap");
 
 :root {
   --space: 0.1em;
   --fsizelogo: 32px;
   --fsize: 20px;
   --fcolor: white;
+  --p3hffamily: "Bebas Neue", cursive;
+  --p3hfsize: 42px;
+  --p3hcolor: #323232;
+  --p3fhspacing: 0.02em;
+  --p3tffamily: "Roboto", sans-serif;
+  --p3tfsize: 25px;
+  --p3flspacing: 0.01em;
+  --p3tlhieght: 32px;
 }
 
 body {
@@ -264,6 +273,49 @@ a:after {
   display: grid;
 }
 
-.page3-card {
+.page3-cards {
+  margin-top: 8%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 94px;
+}
+
+.page3-card {
+  width: 70%;
+  align-items: center;
+  display: flex;
+  gap: 64px;
+  justify-content: space-between;
+}
+
+.page3-card h2 {
+  font-family: var(--p3hffamily);
+  font-size: var(--p3hfsize);
+  color: var(--p3hcolor);
+  letter-spacing: var(--p3fhspacing);
+  font-weight: 400;
+}
+
+.page3-card p {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--p3tfsize);
+  letter-spacing: var(--p3flspacing);
+  line-height: var(--p3tlhieght);
+}
+
+.page3-card img {
+  width: 450px;
+}
+
+.card-2 {
+  flex-direction: row-reverse;
+}
+
+.card-3 img {
+  border-radius: 20px;
+}
+
+.card-4 {
+  flex-direction: row-reverse;
 }

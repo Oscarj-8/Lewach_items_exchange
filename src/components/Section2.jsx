@@ -7,7 +7,7 @@ import variety from "../assets/images/variety.png";
 function Section2() {
   return (
     <div className="page3-cards">
-      <div className="page3-card">
+      <div className="page3-card card-1">
         <div className="page3-text">
           <h2>Build a community of like minded people</h2>
           <p>
@@ -18,7 +18,7 @@ function Section2() {
         </div>
         <img src={community} />
       </div>
-      <div className="page3-card">
+      <div className="page3-card card-2">
         <div className="page3-text">
           <h2>Connect with your community</h2>
           <p>
@@ -29,7 +29,7 @@ function Section2() {
         </div>
         <img src={connect} />
       </div>
-      <div className="page3-card">
+      <div className="page3-card card-3">
         <div className="page3-text">
           <h2>REDUCE WASTE</h2>
           <p>
@@ -40,7 +40,7 @@ function Section2() {
         </div>
         <img src={waste} />
       </div>
-      <div className="page3-card">
+      <div className="page3-card card-4">
         <div className="page3-text">
           <h2>Convenient delivery service</h2>
           <p>
@@ -51,7 +51,7 @@ function Section2() {
         </div>
         <img src={delivery} />
       </div>
-      <div className="page3-card">
+      <div className="page3-card card-5">
         <div className="page3-text">
           <h2>increase variety in your life</h2>
           <p>
