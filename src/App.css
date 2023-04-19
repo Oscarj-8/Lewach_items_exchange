@@ -38,7 +38,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 52px 64px;
 }
 
@@ -106,10 +105,9 @@ a:after {
 
 .landing-body-text {
   width: 50%;
-  padding: 0px 0 0 224px;
   display: flex;
   flex-direction: column;
-  margin-top: 3%;
+  padding-left: 64px;
 }
 
 .landing-body-text .landing-body-text-first {
@@ -129,16 +127,6 @@ a:after {
 }
 
 .landing-body-text button {
-  /* font-family: "Bebas Neue", cursive;
-  font-size: 20px;
-  background-color: #31c719;
-  color: white;
-  width: 180px;
-  padding: 16px 24px;
-  border-radius: 8px;
-  letter-spacing: 0.1em;
-  border: none;
-  box-shadow: 0px 4px 11px rgba(0, 0, 0); */
   width: 180px;
   color: #fff;
   border-radius: 5px;
@@ -188,9 +176,7 @@ a:after {
 
 .landing-body-images {
   width: 50%;
-  height: 400px;
   margin-top: 50px;
-  padding: 0px 124px;
 }
 
 .section-root {
