@@ -23,8 +23,8 @@ function Section2() {
           <h2>Connect with your community</h2>
           <p>
             Lewach helps with you connect with your local community by
-            exchanging items with people nearby. Suppor emall businesses and
-            meet new people without leavinf the comfort of your own home
+            exchanging items with people nearby. Support small businesses and
+            meet new people without leaving the comfort of your own home
           </p>
         </div>
         <img src={connect} />

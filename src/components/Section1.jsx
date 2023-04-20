@@ -1,6 +1,7 @@
 import platform from "../assets/images/platform.png";
 import delivery from "../assets/images/delivery.png";
 import group from "../assets/images/group.png";
+import chat from "../assets/images/chat.png";
 
 function Section1() {
   return (
@@ -29,13 +30,19 @@ function Section1() {
           <p>Provide a delivery service if required by our users</p>{" "}
           <div className="card-number">2</div>
         </div>
-
         <div className="card">
           <div className="icon-div">
             <img src={group} />
           </div>
           <p>Create communities of users, where anyone can find anything</p>
           <div className="card-number">3</div>
+        </div>
+        <div className="card">
+          <div className="icon-div icon4">
+            <img src={chat} width="108px" />
+          </div>
+          <p>Chatting system where users can talk and negotiate terms</p>
+          <div className="card-number">4</div>
         </div>
       </div>
       <div className="green-line green-down"></div>
