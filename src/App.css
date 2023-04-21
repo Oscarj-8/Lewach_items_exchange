@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 :root {
   --space: 0.1em;
@@ -306,6 +306,7 @@ a:after {
   font-size: var(--p3tfsize);
   letter-spacing: var(--p3flspacing);
   line-height: var(--p3tlhieght);
+  color: #4f5253;
 }
 
 .page3-card img {
@@ -398,7 +399,6 @@ a:after {
 .comment {
   padding: 32px 24px;
   text-align: center;
-
   width: 500px;
 }
 
@@ -417,4 +417,39 @@ a:after {
   font-family: var(--p3tffamily);
   font-weight: 600;
   color: white;
+}
+
+/* About us page*/
+
+.aboutus-root {
+  background: url(assets/images/aboutus-bg.jpg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 0px 64px;
+  justify-content: center;
+  gap: 6em;
+}
+
+.aboutus-text {
+  width: 45%;
+}
+
+.aboutus-img img {
+  width: 650px;
+}
+
+.aboutus-text h1 {
+  font-family: var(--p3hffamily);
+  font-size: 57px;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+}
+
+.aboutus-text p {
+  font-family: var(--p3tffamily);
+  font-size: 25px;
+  color: #4d4c4c;
+  line-height: 36px;
+  letter-spacing: 0.04em;
 }
