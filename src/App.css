@@ -510,15 +510,14 @@ a:after {
 /* Contact Us section starts here*/
 
 .contactUs {
-  background-color: wheat;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   padding: 64px;
-  gap: 5em;
+  gap: 2em;
 }
 
 .contact {
-  background-color: whitesmoke;
+  flex: 1.5;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -541,7 +540,6 @@ a:after {
 
 .contact-info {
   display: flex;
-  justify-content: center;
 }
 
 .email-address {
@@ -586,4 +584,41 @@ a:after {
   font-family: "Quicksand";
   font-size: 18px;
   color: #272727;
+}
+
+.getIn {
+  flex: 1;
+  background-color: #ebebeb;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+  border-radius: 8px;
+}
+
+.getIn h2 {
+  font-family: var(--p3hffamily);
+  font-size: 36px;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  color: #323232;
+}
+
+.getIn input,
+textarea {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #c3c1c1;
+  font-family: "Quicksand";
+}
+
+.btn3 {
+  padding: 16px;
+  width: 15%;
+  border: none;
+  border-radius: 8px;
+  background-color: #03467a;
+  color: white;
+  font-family: "Quicksand";
+  font-weight: 500;
 }
