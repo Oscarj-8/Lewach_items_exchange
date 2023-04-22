@@ -68,7 +68,7 @@ function ContactUs() {
         <input type="text" placeholder="Your name" />
         <textarea placeholder="Your message" />
         <button type="button" className="btn3">
-          Submit{" "}
+          Submit
         </button>
       </div>
     </div>

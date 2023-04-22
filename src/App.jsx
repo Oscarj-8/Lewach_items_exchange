@@ -1,6 +1,7 @@
 import "./App.css";
 import AboutUs from "./components/AboutUs";
 import ContactUs from "./components/ContactUs";
+import Footer from "./components/Footer";
 import Landing_Page from "./components/Landing_Page";
 import LastSec from "./components/LastSec";
 import Section1 from "./components/Section1";
@@ -17,6 +18,7 @@ function App() {
       <AboutUs />
       <ContactUs />
       <LastSec />
+      <Footer />
     </>
   );
 }
