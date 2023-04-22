@@ -447,9 +447,9 @@ a:after {
 }
 
 .aboutus-text p {
-  font-family: var(--p3tffamily);
-  font-size: 25px;
-  color: #4d4c4c;
+  font-family: "Quicksand";
+  font-size: 20px;
+  color: #272727;
   line-height: 36px;
   letter-spacing: 0.04em;
 }
@@ -505,4 +505,85 @@ a:after {
 .btn2:hover {
   color: #31c719;
   background-color: #ffffff;
+}
+
+/* Contact Us section starts here*/
+
+.contactUs {
+  background-color: wheat;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 64px;
+  gap: 5em;
+}
+
+.contact {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contactUs-top h1 {
+  font-family: var(--p3hffamily);
+  font-size: 57px;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+}
+
+.contactUs-top p {
+  font-family: "Quicksand";
+  font-size: 20px;
+  color: #272727;
+  line-height: 36px;
+  letter-spacing: 0.04em;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+}
+
+.email-address {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.phone-opening {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.info-sec {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.info-icons img {
+  width: 45px;
+}
+
+.inside-sec {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  width: 100%;
+}
+
+.inside-sec h2 {
+  font-family: var(--p3hffamily);
+  font-size: 28px;
+  color: #999999;
+  font-weight: 200;
+  margin: 0px;
+}
+
+.inside-sec span {
+  width: 70%;
+  font-family: "Quicksand";
+  font-size: 18px;
+  color: #272727;
 }
