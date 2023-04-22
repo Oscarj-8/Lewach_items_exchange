@@ -200,7 +200,6 @@ a:after {
 .sec-top {
   margin-top: 2%;
   width: 20%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -429,6 +428,7 @@ a:after {
   padding: 0px 64px;
   justify-content: center;
   gap: 6em;
+  margin: 64px;
 }
 
 .aboutus-text {
@@ -447,9 +447,178 @@ a:after {
 }
 
 .aboutus-text p {
-  font-family: var(--p3tffamily);
-  font-size: 25px;
-  color: #4d4c4c;
+  font-family: "Quicksand";
+  font-size: 20px;
+  color: #272727;
   line-height: 36px;
   letter-spacing: 0.04em;
+}
+
+/* Last sec*/
+
+.last-sec {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 72px 64px;
+  gap: 42px;
+  background: url(assets/images/lastSec.jpg) no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+  align-items: center;
+}
+
+.last-sec::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3, 70, 122, 0.5);
+  z-index: -1;
+}
+
+.last-sec span {
+  font-family: "Quicksand";
+  font-size: 42px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  width: 80%;
+}
+
+.btn2 {
+  width: 180px;
+  color: #ffffff;
+  background-color: #31c719;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  border: 2px solid #31c719;
+}
+
+.btn2:hover {
+  color: #31c719;
+  background-color: #ffffff;
+}
+
+/* Contact Us section starts here*/
+
+.contactUs {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 64px;
+  gap: 2em;
+}
+
+.contact {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contactUs-top h1 {
+  font-family: var(--p3hffamily);
+  font-size: 57px;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+}
+
+.contactUs-top p {
+  font-family: "Quicksand";
+  font-size: 20px;
+  color: #272727;
+  line-height: 36px;
+  letter-spacing: 0.04em;
+}
+
+.contact-info {
+  display: flex;
+}
+
+.email-address {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.phone-opening {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.info-sec {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.info-icons img {
+  width: 45px;
+}
+
+.inside-sec {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  width: 100%;
+}
+
+.inside-sec h2 {
+  font-family: var(--p3hffamily);
+  font-size: 28px;
+  color: #999999;
+  font-weight: 200;
+  margin: 0px;
+}
+
+.inside-sec span {
+  width: 70%;
+  font-family: "Quicksand";
+  font-size: 18px;
+  color: #272727;
+}
+
+.getIn {
+  flex: 1;
+  background-color: #ebebeb;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+  border-radius: 8px;
+}
+
+.getIn h2 {
+  font-family: var(--p3hffamily);
+  font-size: 36px;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  color: #323232;
+}
+
+.getIn input,
+textarea {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #c3c1c1;
+  font-family: "Quicksand";
+}
+
+.btn3 {
+  padding: 16px;
+  width: 15%;
+  border: none;
+  border-radius: 8px;
+  background-color: #03467a;
+  color: white;
+  font-family: "Quicksand";
+  font-weight: 500;
 }
