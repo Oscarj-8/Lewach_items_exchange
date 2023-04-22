@@ -15,7 +15,7 @@ function App() {
       <Section2 />
       <Testimonial />
       <AboutUs />
-      {/* <ContactUs /> */}
+      <ContactUs />
       <LastSec />
     </>
   );
