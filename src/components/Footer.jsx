@@ -33,9 +33,19 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="footer-center"></div>
-      <div className="footer-right"></div>
-      <div className="footer-bottom"></div>
+      <div className="footer-center">
+        <input type="text" className="name-input" placeholder="Name" />
+        <input type="text" className="email-input" placeholder="Email" />
+        <button className="btn-4">Subscribe</button>
+      </div>
+      <div className="footer-right">
+        <h4>Help and Support</h4>
+        <span>FAQ</span>
+        <span>Contact Us</span>
+      </div>
+      <div className="footer-bottom">
+        Terms of Service | Privacy Policy | @2023 Lewach. All Rights Reserved
+      </div>
     </div>
   );
 }

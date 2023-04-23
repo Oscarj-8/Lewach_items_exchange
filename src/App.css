@@ -17,8 +17,8 @@
   --p3tlhieght: 32px;
 }
 
-body {
-  margin: 0;
+* {
+  margin: 0px;
   padding: 0;
 }
 
@@ -500,11 +500,13 @@ a:after {
   letter-spacing: 0.1em;
   cursor: pointer;
   border: 2px solid #31c719;
+  box-shadow: 2px 3px 13px rgb(46, 44, 44);
 }
 
 .btn2:hover {
   color: #31c719;
   background-color: #ffffff;
+  box-shadow: none;
 }
 
 /* Contact Us section starts here*/
@@ -626,20 +628,49 @@ textarea {
 /* Footer starts here*/
 
 .footer-root {
-  background-color: #6b6b6b;
+  background-color: #444444;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: auto auto;
+  grid-gap: 10px;
+  padding: 64px 64px 16px 64px;
+  color: white;
+  font-family: "Quicksand";
 }
 
 .footer-left {
   display: flex;
+  gap: 1em;
+  justify-content: flex-start;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  gap: 0.5em;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+}
+
+.footer-logo img {
+  width: 50px;
 }
 
 .footer-social-icons {
+  position: relative;
   display: flex;
   gap: 1em;
+  cursor: pointer;
 }
 
 .social-icons {
-  font-size: 40px;
+  transition: transform 0.2s ease-in-out;
+  font-size: 30px;
+}
+
+.social-icons:hover {
+  transform: scale(1.3);
 }
 
 .facebook-icon {
@@ -652,4 +683,56 @@ textarea {
 
 .instagram-icon {
   color: #e1306c;
+}
+
+.footer-center {
+  flex: 2;
+  display: grid;
+  grid-template-columns: 25% 25% 15%;
+  align-items: start;
+  gap: 1em;
+  justify-content: center;
+}
+
+.footer-center input {
+  border: none;
+  border-radius: 4px;
+  height: 0;
+  padding: 20px 16px;
+}
+
+.footer-center input:focus {
+  outline: none;
+}
+
+.footer-center input::placeholder {
+  font-family: "Quicksand";
+}
+
+.btn-4 {
+  font-family: "Quicksand";
+  letter-spacing: 0.05em;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: #31c719;
+  color: white;
+  font-weight: 600;
+  box-shadow: 2px 3px 13px rgb(46, 44, 44);
+}
+
+.btn-4:hover {
+  box-shadow: none;
+}
+
+.footer-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-bottom {
+  grid-column: 1 / span 3;
+  grid-row: 2 / span 1;
+  justify-self: center;
 }
