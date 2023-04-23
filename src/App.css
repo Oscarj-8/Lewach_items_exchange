@@ -622,3 +622,34 @@ textarea {
   font-family: "Quicksand";
   font-weight: 600;
 }
+
+/* Footer starts here*/
+
+.footer-root {
+  background-color: #6b6b6b;
+}
+
+.footer-left {
+  display: flex;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 1em;
+}
+
+.social-icons {
+  font-size: 40px;
+}
+
+.facebook-icon {
+  color: #3b5998;
+}
+
+.twitter-icon {
+  color: #1da1f2;
+}
+
+.instagram-icon {
+  color: #e1306c;
+}
