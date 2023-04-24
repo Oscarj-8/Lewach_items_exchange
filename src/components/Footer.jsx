@@ -44,7 +44,10 @@ function Footer() {
         <span>Contact Us</span>
       </div>
       <div className="footer-bottom">
-        Terms of Service | Privacy Policy | @2023 Lewach. All Rights Reserved
+        <span>
+          <a href="/">Terms of Service</a> | <a>Privacy Policy</a> | @2023
+          Lewach. All Rights Reserved
+        </span>
       </div>
     </div>
   );
