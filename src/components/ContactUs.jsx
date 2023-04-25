@@ -64,8 +64,8 @@ function ContactUs() {
       <div className="getIn">
         <h2>GET IN TOUCH</h2>
         <input type="text" placeholder="Your name" />
-        <input type="text" placeholder="Your name" />
-        <input type="text" placeholder="Your name" />
+        <input type="text" placeholder="Your email" />
+        <input type="text" placeholder="Your phone" />
         <textarea placeholder="Your message" />
         <button type="button" className="btn3">
           Submit

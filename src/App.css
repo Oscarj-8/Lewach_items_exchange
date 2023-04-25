@@ -5,11 +5,8 @@
 :root {
   --space: 0.1em;
   --fsizelogo: 32px;
-  --fsize: 20px;
 
-  --p3hfsize: 42px;
   --fcolorlightblack: #323232;
-  --p3fhspacing: 0.02em;
 
   --p3tfsize: 25px;
   --p3flspacing: 0.01em;
@@ -127,13 +124,14 @@ a:after {
 
 .body-center {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .landing-body-text {
   width: 50%;
   display: flex;
   flex-direction: column;
-  padding-left: 64px;
   color: var(--fcolorwhite);
 }
 
@@ -150,13 +148,15 @@ a:after {
 .landing-body-text .landing-body-text-second {
   font-family: var(--ffquicksand);
   font-size: 1.2em;
+  font-weight: 600;
 }
 
 .landing-body-text button {
-  width: 180px;
+  width: 9em;
   color: var(--fcolorwhite);
   border-radius: 5px;
-  padding: 10px;
+  padding: 0.6em;
+  margin-top: 4%;
   font-size: var(--fmid);
   font-family: var(--ffbebas);
   letter-spacing: 0.1em;
@@ -199,10 +199,6 @@ a:after {
 
 .landing-body-text button:hover {
   box-shadow: none;
-}
-
-.landing-body-images {
-  width: 50%;
 }
 
 /* Section 1 starts here*/
@@ -641,6 +637,10 @@ textarea {
   font-family: var(--ffquicksand);
 }
 
+textarea {
+  height: 8em;
+}
+
 .btn3 {
   padding: 1em;
   width: 15%;
@@ -664,10 +664,10 @@ textarea {
   display: grid;
   grid-template-columns: 25% 50% 25%;
   grid-template-rows: auto auto;
-  grid-gap: 10px;
-  padding: 64px 64px 16px 64px;
-  color: white;
-  font-family: "Quicksand";
+  grid-gap: 0.625em;
+  padding: 4em 4em 1em 4em;
+  color: var(--fcolorwhite);
+  font-family: var(--ffquicksand);
 }
 
 .footer-left {
@@ -679,14 +679,14 @@ textarea {
 .footer-text {
   display: flex;
   flex-direction: column;
-  font-size: 16px;
+  font-size: 1em;
   gap: 0.5em;
-  line-height: 20px;
-  letter-spacing: 0.03em;
+  line-height: 1.125em;
+  letter-spacing: var(--fspagetop);
 }
 
 .footer-logo img {
-  width: 50px;
+  width: 3.5em;
 }
 
 .footer-social-icons {
@@ -698,7 +698,7 @@ textarea {
 
 .social-icons {
   transition: transform 0.2s ease-in-out;
-  font-size: 30px;
+  font-size: 1.8em;
 }
 
 .social-icons:hover {
@@ -738,17 +738,17 @@ textarea {
 }
 
 .footer-center input::placeholder {
-  font-family: "Quicksand";
+  font-family: var(--ffquicksand);
 }
 
 .btn-4 {
-  font-family: "Quicksand";
+  font-family: var(--ffquicksand);
   letter-spacing: 0.05em;
   padding: 10px;
   border-radius: 4px;
   border: none;
   background-color: #31c719;
-  color: white;
+  color: var(--fcolorwhite);
   font-weight: 600;
   box-shadow: 2px 3px 13px rgb(46, 44, 44);
 }
@@ -770,5 +770,5 @@ textarea {
 }
 
 .footer-bottom a {
-  font-size: 14px;
+  font-size: var(--fxxsmall);
 }
