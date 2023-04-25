@@ -5,7 +5,6 @@ function Landing_Page() {
   return (
     <div className="landing-root">
       <div className="first-page">
-        <div className="opa"></div>
         <header>
           <div className="logo-section">
             <img src={logo} />

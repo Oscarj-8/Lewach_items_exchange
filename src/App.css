@@ -6,25 +6,56 @@
   --space: 0.1em;
   --fsizelogo: 32px;
   --fsize: 20px;
-  --fcolor: white;
-  --p3hffamily: "Bebas Neue", cursive;
+
   --p3hfsize: 42px;
-  --p3hcolor: #323232;
+  --fcolorlightblack: #323232;
   --p3fhspacing: 0.02em;
-  --p3tffamily: "Roboto", sans-serif;
+
   --p3tfsize: 25px;
   --p3flspacing: 0.01em;
   --p3tlhieght: 32px;
+
+  --fxxsmall: 0.875em;
+  --fxsmall: 1em;
+  --fsmall: 1.125em;
+  --fmid: 1.25em;
+  --flarge: 1.5em;
+  --fxxlarge: 2.625em;
+
+  --fpagetop: 3.5625em;
+  --fspagetop: 0.03em;
+  --fwpagetop: 400;
+
+  --fcolorwhite: white;
+  --fcolorlightblack: #323232;
+  --fcolorlighterblack: #5e5e5e;
+
+  --ffbebas: "Bebas Neue", cursive;
+  --ffquicksand: "Quicksand";
+  --ffroboto: "Roboto", sans-serif;
 }
 
 * {
   margin: 0px;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .landing-root {
   background: url(assets/images/firstpageBackground.jpg) no-repeat center center;
   background-size: cover;
+  color: var(--fcolorwhite);
+}
+
+.landing-root::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3, 70, 122, 0.32);
 }
 
 .first-page {
@@ -34,16 +65,8 @@
   color: var(--fcolor);
 }
 
-.opa {
-  position: absolute;
-  inset: 0;
-  background-color: #03467a;
-  opacity: 32%;
-  z-index: -1;
-}
-
 header {
-  font-family: "Bebas Neue", cursive;
+  font-family: var(--ffbebas);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,23 +85,18 @@ header {
 .inline-nav ul {
   list-style: none;
   display: inline-flex;
-  gap: 32px;
-  font-size: var(--fsize);
-  letter-spacing: var(--space);
+  gap: 2em;
 }
 
 a {
   text-decoration: none;
-  color: white;
-  font-size: var(--fsize);
+  color: var(--fcolorwhite);
+  font-size: var(--fmid);
   letter-spacing: var(--space);
   cursor: pointer;
   position: relative;
-  border: none;
-  background: none;
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
-  transition-property: color;
 }
 
 a:focus,
@@ -116,13 +134,13 @@ a:after {
   display: flex;
   flex-direction: column;
   padding-left: 64px;
+  color: var(--fcolorwhite);
 }
 
 .landing-body-text .landing-body-text-first {
-  font-family: "Bebas Neue", cursive;
+  font-family: var(--ffbebas);
   font-size: 6em;
   font-weight: 400;
-  margin-bottom: 0px;
 }
 
 .green-span {
@@ -130,17 +148,17 @@ a:after {
 }
 
 .landing-body-text .landing-body-text-second {
-  font-family: "Quicksand";
+  font-family: var(--ffquicksand);
   font-size: 1.2em;
 }
 
 .landing-body-text button {
   width: 180px;
-  color: #fff;
+  color: var(--fcolorwhite);
   border-radius: 5px;
   padding: 10px;
-  font-size: 20px;
-  font-family: "Bebas Neue", cursive;
+  font-size: var(--fmid);
+  font-family: var(--ffbebas);
   letter-spacing: 0.1em;
   cursor: pointer;
   position: relative;
@@ -174,6 +192,7 @@ a:after {
   top: 0;
   height: 100%;
 }
+
 .btn:active {
   top: 2px;
 }
@@ -184,11 +203,11 @@ a:after {
 
 .landing-body-images {
   width: 50%;
-  margin-top: 50px;
 }
 
+/* Section 1 starts here*/
+
 .section-root {
-  color: black;
   margin-bottom: 64px;
   display: flex;
   flex-direction: column;
@@ -202,16 +221,15 @@ a:after {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 1.5em;
 }
 
 .sec-top h2 {
-  font-family: var(--p3hffamily);
+  font-family: var(--ffbebas);
   color: #03467a;
-  font-size: 57px;
-  letter-spacing: 0.03em;
-  font-weight: 400;
-  margin: 0 auto;
+  font-size: var(--fpagetop);
+  letter-spacing: var(--fspagetop);
+  font-weight: var(--fwpagetop);
 }
 
 .green-line {
@@ -240,8 +258,8 @@ a:after {
   border-radius: 16px;
   justify-content: space-between;
   align-items: center;
-  font-family: "Quicksand";
-  font-size: 18px;
+  font-family: var(--ffquicksand);
+  font-size: var(--fsmall);
   padding: 24px;
   text-align: center;
   box-shadow: 8px 9px 53px rgba(0, 0, 0, 0.25);
@@ -262,53 +280,56 @@ a:after {
 }
 
 .card-number {
+  display: grid;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   background-color: #d9d9d9;
-  padding: 4px;
+  padding: 6px;
   align-items: center;
-  display: grid;
 }
 
 .icon4 {
   padding: 32px;
 }
 
+/* Section 2 or Page 3 starts here*/
+
 .page3-cards {
-  margin-top: 8%;
+  margin: 8% auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 94px;
+  gap: 6em;
 }
 
 .page3-card {
   width: 70%;
-  align-items: center;
   display: flex;
-  gap: 64px;
+  align-items: center;
+  gap: 3em;
   justify-content: space-between;
 }
 
 .page3-card h2 {
-  font-family: var(--p3hffamily);
-  font-size: var(--p3hfsize);
-  color: var(--p3hcolor);
+  font-family: var(--ffbebas);
+  font-size: var(--fxxlarge);
+  color: var(--fcolorlightblack);
   letter-spacing: var(--p3fhspacing);
-  font-weight: 400;
+  font-weight: var(--fwpagetop);
+  margin-bottom: 2%;
 }
 
 .page3-card p {
-  font-family: "Roboto", sans-serif;
-  font-size: var(--p3tfsize);
+  font-family: var(--ffroboto);
+  font-size: var(--flarge);
   letter-spacing: var(--p3flspacing);
   line-height: var(--p3tlhieght);
-  color: #4f5253;
+  color: var(--fcolorlighterblack);
 }
 
 .page3-card img {
-  width: 450px;
+  width: 27em;
 }
 
 .card-2 {
@@ -326,7 +347,7 @@ a:after {
 .fade-in {
   opacity: 0;
   transform: translatex(200px);
-  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 2s ease, transform 2s ease;
 }
 
 .fade-in.active {
@@ -342,9 +363,9 @@ a:after {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  gap: 94px;
+  gap: 10em;
   padding: 64px;
-  margin: 124px auto;
+  height: 100vh;
 }
 
 .testimonial-root::before {
@@ -360,74 +381,81 @@ a:after {
 
 .testimonial-header h2 {
   position: relative;
-  font-family: var(--p3hffamily);
+  font-family: var(--ffbebas);
   text-align: center;
-  color: #ffffff;
-  font-size: 57px;
-  letter-spacing: 0.03em;
-  font-weight: 400;
+  color: var(--fcolorwhite);
+  font-size: var(--fpagetop);
+  letter-spacing: var(--fspagetop);
+  font-weight: var(--fwpagetop);
 }
 
 .comment-sec {
   display: flex;
   gap: 9em;
-  margin-bottom: 64px;
+  margin-bottom: 6em;
   align-items: center;
   justify-content: center;
   z-index: 1;
 }
 
 .arrow img {
-  width: 45px;
-  height: 45px;
+  width: 2.8em;
+  height: 2.8em;
   cursor: pointer;
 }
 
-.comment-cont {
+.comment {
+  display: flex;
+  flex-direction: column;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 12px;
   box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.9);
   transition: transform 0.3s ease-in-out;
+  width: 25em;
+  text-align: center;
+  gap: 4em;
+  justify-content: space-between;
+  padding: 4px;
 }
 
-.comment-cont:hover {
+.comment:hover {
   transform: translatey(-2%);
 }
 
-.comment {
-  padding: 32px 24px;
-  text-align: center;
-  width: 500px;
+.comment img {
+  width: 50px;
+  align-self: center;
 }
 
 .comment p {
-  padding: 0 32px;
-  font-family: "Quicksand";
+  padding: 0 2em;
+  font-family: var(--ffquicksand);
   font-size: 1.15em;
   color: #4b4b4b;
 }
 
 .testimonial-bottom {
   background-color: #03467a;
-  padding: 8px;
+  padding: 1.125em;
   border-radius: 0px 0px 12px 12px;
   text-align: center;
-  font-family: var(--p3tffamily);
+  font-family: var(--ffroboto);
+  letter-spacing: 0.065em;
   font-weight: 600;
-  color: white;
+  color: var(--fcolorwhite);
 }
 
 /* About us page*/
 
 .aboutus-root {
-  background: url(assets/images/aboutus-bg.jpg) no-repeat center center;
-  background-size: cover;
+  background: url(assets/images/aboutus-bg.jpg) no-repeat;
+  background-size: contain;
   display: flex;
   align-items: center;
-  padding: 0px 64px;
+  padding: 0 4em;
   justify-content: center;
   gap: 6em;
-  margin: 64px;
+  height: 100vh;
 }
 
 .aboutus-text {
@@ -435,21 +463,22 @@ a:after {
 }
 
 .aboutus-img img {
-  width: 650px;
+  width: 40em;
 }
 
 .aboutus-text h1 {
-  font-family: var(--p3hffamily);
-  font-size: 57px;
-  letter-spacing: 0.03em;
-  font-weight: 400;
+  font-family: var(--ffbebas);
+  font-size: var(--fpagetop);
+  letter-spacing: var(--fspagetop);
+  font-weight: var(--fwpagetop);
+  margin-bottom: 2%;
 }
 
 .aboutus-text p {
-  font-family: "Quicksand";
-  font-size: 20px;
-  color: #272727;
-  line-height: 36px;
+  font-family: var(--ffquicksand);
+  font-size: var(--fmid);
+  color: var(--fcolorlightblack);
+  line-height: 1.7em;
   letter-spacing: 0.04em;
 }
 
@@ -459,8 +488,8 @@ a:after {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 72px 64px;
-  gap: 42px;
+  padding: 4.5em 4em;
+  gap: 2em;
   background: url(assets/images/lastSec.jpg) no-repeat center center;
   background-size: cover;
   z-index: 1;
@@ -480,22 +509,23 @@ a:after {
 }
 
 .last-sec span {
-  font-family: "Quicksand";
-  font-size: 42px;
-  font-weight: 600;
-  color: white;
+  font-family: var(--ffbebas);
+  font-size: 2.5em;
+  font-weight: 500;
+  color: var(--fcolorwhite);
   text-align: center;
-  width: 80%;
+  width: 50%;
+  letter-spacing: var(--fspagetop);
 }
 
 .btn2 {
-  width: 180px;
-  color: #ffffff;
+  width: 10em;
+  color: var(--fcolorwhite);
   background-color: #31c719;
   border-radius: 5px;
-  padding: 10px;
-  font-size: 20px;
-  font-family: "Bebas Neue", cursive;
+  padding: 0.5em;
+  font-size: var(--fmid);
+  font-family: var(--ffbebas);
   letter-spacing: 0.1em;
   cursor: pointer;
   border: 2px solid #31c719;
@@ -513,7 +543,7 @@ a:after {
 .contactUs {
   display: flex;
   flex-wrap: wrap;
-  padding: 64px;
+  padding: 4em;
   gap: 2em;
 }
 
@@ -521,21 +551,21 @@ a:after {
   flex: 1.5;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1em;
 }
 
 .contactUs-top h1 {
-  font-family: var(--p3hffamily);
-  font-size: 57px;
+  font-family: var(--ffbebas);
+  font-size: var(--fpagetop);
   letter-spacing: 0.03em;
-  font-weight: 400;
+  font-weight: var(--fwpagetop);
 }
 
 .contactUs-top p {
-  font-family: "Quicksand";
-  font-size: 20px;
-  color: #272727;
-  line-height: 36px;
+  font-family: var(--ffquicksand);
+  font-size: var(--fmid);
+  color: var(--fcolorlightblack);
+  line-height: 1.7em;
   letter-spacing: 0.04em;
 }
 
@@ -543,13 +573,7 @@ a:after {
   display: flex;
 }
 
-.email-address {
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-}
-
-.phone-opening {
+.all-info-sec {
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -559,10 +583,15 @@ a:after {
   display: flex;
   align-items: center;
   gap: 1em;
+  transition: all 0.8s ease-in-out;
+}
+
+.info-sec:hover {
+  transform: scale(1.05);
 }
 
 .info-icons img {
-  width: 45px;
+  width: 2.813em;
 }
 
 .inside-sec {
@@ -573,18 +602,17 @@ a:after {
 }
 
 .inside-sec h2 {
-  font-family: var(--p3hffamily);
-  font-size: 28px;
+  font-family: var(--ffbebas);
+  font-size: 2em;
   color: #999999;
   font-weight: 200;
-  margin: 0px;
 }
 
 .inside-sec span {
   width: 70%;
-  font-family: "Quicksand";
-  font-size: 18px;
-  color: #272727;
+  font-family: var(--ffquicksand);
+  font-size: var(--fsmall);
+  color: var(--fcolorlightblack);
 }
 
 .getIn {
@@ -592,36 +620,41 @@ a:after {
   background-color: #ebebeb;
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  padding: 32px;
-  border-radius: 8px;
+  gap: 1.8em;
+  padding: 2em;
+  border-radius: 0.5em;
 }
 
 .getIn h2 {
-  font-family: var(--p3hffamily);
-  font-size: 36px;
-  letter-spacing: 0.03em;
-  font-weight: 400;
-  color: #323232;
+  font-family: var(--ffbebas);
+  font-size: 2.2em;
+  letter-spacing: var(--fspagetop);
+  font-weight: var(--fwpagetop);
+  color: var(--fcolorlightblack);
 }
 
 .getIn input,
 textarea {
-  padding: 16px;
+  padding: 1em;
   border-radius: 12px;
   border: 1px solid #c3c1c1;
-  font-family: "Quicksand";
+  font-family: var(--ffquicksand);
 }
 
 .btn3 {
-  padding: 16px;
+  padding: 1em;
   width: 15%;
   border: none;
-  border-radius: 8px;
+  border-radius: 0.5em;
   background-color: #03467a;
-  color: white;
-  font-family: "Quicksand";
+  color: var(--fcolorwhite);
+  font-family: var(--ffquicksand);
   font-weight: 600;
+  box-shadow: 1px 1px 6px rgb(83, 82, 82);
+}
+
+.btn3:hover {
+  box-shadow: none;
 }
 
 /* Footer starts here*/
@@ -736,7 +769,6 @@ textarea {
   justify-self: center;
 }
 
-.footer-bottom span,
-a {
+.footer-bottom a {
   font-size: 14px;
 }
