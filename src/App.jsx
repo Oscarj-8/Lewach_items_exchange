@@ -10,7 +10,7 @@ import Testimonial from "./components/Testimonial";
 
 function App() {
   return (
-    <>
+    <div className="root">
       <Landing_Page />
       <Section1 />
       <Section2 />
@@ -19,7 +19,7 @@ function App() {
       <ContactUs />
       <LastSec />
       <Footer />
-    </>
+    </div>
   );
 }
 

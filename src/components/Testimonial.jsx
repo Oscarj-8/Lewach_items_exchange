@@ -24,19 +24,6 @@ function Testimonial() {
             <span>Joan Fergusson</span>
           </div>
         </div>
-
-        <div className="comment comment-box2">
-          <img src={quote} alt="quote icon" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Exercitationem tempore mollitia eos recusandae illo quasi ad cumque,
-            at doloribus nulla eveniet
-          </p>
-          <div className="testimonial-bottom">
-            <span>Frencesca Doyle</span>
-          </div>
-        </div>
-
         <div className="arrow right">
           <img src={right} alt="right-arrow" />
         </div>
