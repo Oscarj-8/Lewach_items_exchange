@@ -1680,7 +1680,7 @@ textarea {
 
   .footer-root {
     display: grid;
-    grid-template-columns: repeat(3fr, 1fr, 2fr);
+    grid-template-columns: 1.5fr 2fr 1fr;
     grid-template-rows: repeat(2, auto);
     grid-auto-rows: min-content;
     gap: 2em;
@@ -1705,5 +1705,210 @@ textarea {
   .footer-bottom {
     grid-column: 1 / span 3;
     grid-row: 2 / 3;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .body-center {
+    gap: 0;
+    justify-content: center;
+  }
+
+  .landing-body-text {
+    gap: 0;
+  }
+
+  .landing-body-text .landing-body-text-first {
+    max-width: 22ch;
+    font-size: 5em;
+  }
+
+  .sec-cards {
+    grid-template-columns: repeat(4, 25%);
+    gap: 1em;
+    justify-content: center;
+  }
+
+  .icon-div {
+    display: flex;
+    width: 7em;
+    height: 7em;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-div img {
+    width: 5em;
+  }
+
+  .icon4 img {
+    width: 4em;
+  }
+
+  .card {
+    width: 14em;
+  }
+
+  .page3-card {
+    width: 80%;
+  }
+
+  .page3-card .page3-text h2 {
+    font-size: var(--fxxlarge);
+    margin-bottom: 2%;
+  }
+
+  .page3-text p {
+    font-size: var(--flarge);
+  }
+
+  .page3-card img {
+    width: 25em;
+  }
+
+  .aboutus-root {
+    padding: 0 4em;
+    gap: 1em;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .aboutus-img img {
+    width: 25em;
+  }
+
+  .aboutus-text p {
+    font-size: var(--fmid);
+  }
+
+  .contactUs {
+    margin: 0;
+    padding: 2em 4em;
+  }
+
+  .btn3 {
+    width: 30%;
+    align-self: center;
+  }
+
+  .footer-center {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer-center input {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .first-page {
+    gap: 2em;
+  }
+
+  .landing-root {
+    padding: 0 4em;
+  }
+
+  .landing-body-text .landing-body-text-first {
+    max-width: 25ch;
+    font-size: 6em;
+  }
+
+  .landing-body-text .landing-body-text-second {
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+
+  .landing-body-images img {
+    width: 34em;
+  }
+
+  .body-center {
+    justify-content: start;
+  }
+
+  .landing-body-text {
+    gap: 0;
+  }
+
+  .landing-body-text button {
+    margin-top: 2%;
+  }
+
+  .sec-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card {
+    width: 14em;
+  }
+
+  .page3-card {
+    width: 80%;
+  }
+
+  .page3-card .page3-text h2 {
+    font-size: var(--fxxlarge);
+    margin-bottom: 2%;
+  }
+
+  .page3-text p {
+    font-size: var(--flarge);
+  }
+
+  .page3-card img {
+    width: 25em;
+  }
+
+  .testimonial-root {
+    height: 50vh;
+  }
+
+  .aboutus-root {
+    height: 100vh;
+    padding: 0 4em;
+  }
+
+  .aboutus-text {
+    width: 50%;
+  }
+
+  .aboutus-text p {
+    font-size: var(--flarge);
+  }
+
+  .aboutus-img img {
+    width: 40em;
+  }
+
+  .contactUs {
+    padding: 0 4em;
+  }
+
+  .contact {
+    padding: 0 6em;
+  }
+
+  .contactUs-top h1 {
+    text-align: center;
+  }
+
+  .last-sec span {
+    font-size: 3em;
+  }
+
+  .btn3 {
+    width: 30%;
+    align-self: center;
+  }
+
+  .footer-center {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer-left p {
+    width: 70%;
   }
 }
