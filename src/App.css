@@ -1836,12 +1836,16 @@ textarea {
     margin-top: 2%;
   }
 
+  .sec-top h2 {
+    font-size: 3.5em;
+  }
+
   .sec-cards {
     grid-template-columns: repeat(4, 1fr);
   }
 
   .card {
-    width: 14em;
+    width: 18em;
   }
 
   .page3-card {
@@ -1861,8 +1865,8 @@ textarea {
     width: 25em;
   }
 
-  .testimonial-root {
-    height: 50vh;
+  .testimonial-header h2 {
+    font-size: 3.5em;
   }
 
   .aboutus-root {
@@ -1872,6 +1876,10 @@ textarea {
 
   .aboutus-text {
     width: 50%;
+  }
+
+  .aboutus-text h1 {
+    font-size: 3.5em;
   }
 
   .aboutus-text p {
@@ -1892,10 +1900,15 @@ textarea {
 
   .contactUs-top h1 {
     text-align: center;
+    font-size: 3.5em;
   }
 
   .last-sec span {
     font-size: 3em;
+  }
+
+  .getIn {
+    height: 36em;
   }
 
   .btn3 {
