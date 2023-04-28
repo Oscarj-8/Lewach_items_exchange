@@ -17,7 +17,7 @@ function ContactUs() {
           </p>
         </div>
         <div className="contact-info">
-          <div className="email-address">
+          <div className="all-info-sec ">
             <div className="email-sec info-sec">
               <div className="info-icons">
                 <img src={email} />
@@ -38,7 +38,7 @@ function ContactUs() {
               </div>
             </div>
           </div>
-          <div className="phone-opening">
+          <div className="all-info-sec ">
             <div className="phone-sec info-sec">
               <div className="info-icons">
                 <img src={telephone} />
@@ -64,11 +64,11 @@ function ContactUs() {
       <div className="getIn">
         <h2>GET IN TOUCH</h2>
         <input type="text" placeholder="Your name" />
-        <input type="text" placeholder="Your name" />
-        <input type="text" placeholder="Your name" />
+        <input type="text" placeholder="Your email" />
+        <input type="text" placeholder="Your phone" />
         <textarea placeholder="Your message" />
         <button type="button" className="btn3">
-          Submit{" "}
+          Submit
         </button>
       </div>
     </div>

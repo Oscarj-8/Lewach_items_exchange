@@ -1,14 +1,10 @@
 import logo from "../assets/images/logoWhite.png";
-import shoe from "../assets/images/shoe.png";
-import phone from "../assets/images/phone.png";
 import sideimage from "../assets/images/sideimage.png";
-import sofa from "../assets/images/sofa.png";
 
 function Landing_Page() {
   return (
     <div className="landing-root">
       <div className="first-page">
-        <div className="opa"></div>
         <header>
           <div className="logo-section">
             <img src={logo} />
