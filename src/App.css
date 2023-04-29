@@ -38,27 +38,82 @@
   box-sizing: border-box;
 }
 
-header {
+.header {
+  position: relative;
   font-family: var(--ffbebas);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 52px 64px;
+  padding: 2em 2em;
+  color: white;
 }
 
 .logo-section {
   display: flex;
-  gap: 8px;
-  height: 55px;
+  gap: 0.3em;
   align-items: center;
   font-size: var(--fsizelogo);
   letter-spacing: var(--space);
 }
 
-.inline-nav ul {
+.logo-section h2 {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger svg {
+  font-size: 1.5rem;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  align-items: center;
+  transform: translatex(100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.nav.show-nav {
+  transform: translateY(0);
+}
+
+.nav-links {
   list-style: none;
-  display: inline-flex;
-  gap: 2em;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.nav-links li {
+  margin: 0.6em;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: var(--flarge);
+}
+
+.close-icon {
+  position: absolute;
+  top: 1.125em;
+  right: 1.125em;
+  cursor: pointer;
+  font-size: 3em;
 }
 
 a {
@@ -70,6 +125,7 @@ a {
   position: relative;
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
+  font-size: var(--flarge);
 }
 
 a:focus,
@@ -1246,5 +1302,43 @@ textarea {
 
   .footer-left p {
     width: 70%;
+  }
+}
+
+@media (max-width: 767px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    padding-top: 80px;
+  }
+
+  .nav.show-nav {
+    transform: translateY(0);
+    background-color: #03467a;
+    z-index: 2;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav {
+    position: static;
+    height: auto;
+    background-color: transparent;
+    box-shadow: none;
+    flex-direction: row;
+    justify-content: flex-end;
+    transform: none;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 0 1em;
   }
 }

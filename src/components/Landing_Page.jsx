@@ -1,37 +1,12 @@
 import logo from "../assets/images/logoWhite.png";
 import sideimage from "../assets/images/sideimage.png";
+import Header from "./Header";
 
 function Landing_Page() {
   return (
     <div className="landing-root">
       <div className="first-page">
-        <header>
-          <div className="logo-section">
-            <img src={logo} />
-            <h2> LEWACH</h2>
-          </div>
-          <nav className="inline-nav">
-            <ul>
-              <li>
-                <a href="/">HOME</a>
-              </li>
-              <li>
-                <a href="/">TESTIMONIAL</a>
-              </li>
-              <li>
-                <a href="/">ABOUT US</a>
-              </li>
-              <li>
-                <a href="/">CONTACT</a>
-              </li>
-            </ul>
-          </nav>
-          <div className="login-section">
-            <a href="/" className="login-link">
-              LOGIN/ SIGNUP
-            </a>
-          </div>
-        </header>
+        <Header />
         <div className="body-center">
           <div className="landing-body-text">
             <p className="landing-body-text-first">

@@ -7,6 +7,7 @@ import LastSec from "./components/LastSec";
 import Section1 from "./components/Section1";
 import Section2 from "./components/Section2";
 import Testimonial from "./components/Testimonial";
+import Header from "./components/Header";
 
 function App() {
   return (
