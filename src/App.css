@@ -105,7 +105,6 @@
 
 .nav-links a {
   text-decoration: none;
-  font-size: var(--flarge);
 }
 
 .close-icon {
@@ -113,7 +112,7 @@
   top: 1.125em;
   right: 1.125em;
   cursor: pointer;
-  font-size: 3em;
+  font-size: 2.5em;
 }
 
 a {
@@ -125,7 +124,7 @@ a {
   position: relative;
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
-  font-size: var(--flarge);
+  font-size: x-large;
 }
 
 a:focus,
@@ -926,6 +925,34 @@ textarea {
 }
 
 @media only screen and (min-width: 768px) {
+  a {
+    font-size: var(--fmid);
+  }
+
+  .nav {
+    position: static;
+    height: auto;
+    background-color: transparent;
+    box-shadow: none;
+    flex-direction: row;
+    justify-content: flex-end;
+    transform: none;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 0 1em;
+  }
+
+  .logo-section h2 {
+    display: inline;
+  }
+
   .body-center {
     display: flex;
     padding: 0 2em;
@@ -987,6 +1014,10 @@ textarea {
 }
 
 @media only screen and (min-width: 992px) {
+  a {
+    font-size: x-large;
+  }
+
   .landing-body-text .landing-body-text-first {
     font-size: 4.5em;
   }
