@@ -292,16 +292,6 @@ a:after {
   font-weight: var(--fwpagetop);
 }
 
-.green-line {
-  border-top: 5px #31c719 solid;
-  border-radius: 3em;
-  width: 60%;
-}
-
-.green-down {
-  max-width: 40%;
-}
-
 .sec-cards {
   display: flex;
   flex-direction: column;
@@ -1027,7 +1017,7 @@ textarea {
   }
 
   .sec-cards {
-    gap: 4em;
+    gap: 3em;
   }
 
   .page3-card img {
@@ -1255,7 +1245,7 @@ textarea {
   }
 
   .card {
-    width: 18em;
+    width: 16.7em;
   }
 
   .page3-card {
