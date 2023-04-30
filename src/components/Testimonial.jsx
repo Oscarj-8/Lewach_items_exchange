@@ -4,7 +4,7 @@ import quote from "../assets/images/quote.png";
 
 function Testimonial() {
   return (
-    <div className="testimonial-root">
+    <div name="testimonial" className="testimonial-root">
       <div className="testimonial-header">
         <h2>Testimonials</h2>
       </div>

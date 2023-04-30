@@ -5,7 +5,7 @@ import clock from "../assets/images/clock.png";
 
 function ContactUs() {
   return (
-    <div className="contactUs">
+    <div name="contactus" className="contactUs">
       <div className="contact">
         <div className="contactUs-top">
           <h1>CONTACT US</h1>

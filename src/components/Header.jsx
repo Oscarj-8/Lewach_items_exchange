@@ -1,4 +1,6 @@
 import logo from "../assets/images/logoWhite.png";
+import { Link } from "react-scroll";
+import { useState } from "react";
 
 // function Header() {
 //   return (
@@ -36,7 +38,6 @@ import logo from "../assets/images/logoWhite.png";
 
 // export default Header;
 
-import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Header = () => {
@@ -57,16 +58,29 @@ const Header = () => {
       <nav className={`nav ${showNav ? "show-nav" : ""}`}>
         <ul className="nav-links">
           <li>
-            <a href="#">Home</a>
+            <Link to="#" smooth={true} duration={500}>
+              HOME
+            </Link>
           </li>
           <li>
-            <a href="#">About</a>
+            <Link
+              className="links"
+              to="testimonial"
+              smooth={true}
+              duration={500}
+            >
+              TESTIMONIAL
+            </Link>
           </li>
           <li>
-            <a href="#">Services</a>
+            <Link className="links" to="aboutus" smooth={true} d uration={500}>
+              ABOUT US
+            </Link>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <Link className="links" to="contactus" smooth={true} duration={500}>
+              CONTACT
+            </Link>
           </li>
         </ul>
 
