@@ -1,43 +1,6 @@
 import logo from "../assets/images/logoWhite.png";
 import { Link } from "react-scroll";
 import { useState } from "react";
-
-// function Header() {
-//   return (
-//     <div>
-//       <header>
-//         <div className="logo-section">
-//           <img src={logo} />
-//           <h2> LEWACH</h2>
-//         </div>
-//         <nav className="inline-nav">
-//           <ul>
-//             <li>
-//               <a href="/">HOME</a>
-//             </li>
-//             <li>
-//               <a href="/">TESTIMONIAL</a>
-//             </li>
-//             <li>
-//               <a href="/">ABOUT US</a>
-//             </li>
-//             <li>
-//               <a href="/">CONTACT</a>
-//             </li>
-//           </ul>
-//         </nav>
-//         <div className="login-section">
-//           <a href="/" className="login-link">
-//             LOGIN/ SIGNUP
-//           </a>
-//         </div>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default Header;
-
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Header = () => {
@@ -49,6 +12,10 @@ const Header = () => {
     setShowCloseIcon(!showCloseIcon);
   };
 
+  const handler = () => {
+    setShowNav(!showNav);
+  };
+
   return (
     <header className="header">
       <div className="logo logo-section">
@@ -58,7 +25,7 @@ const Header = () => {
       <nav className={`nav ${showNav ? "show-nav" : ""}`}>
         <ul className="nav-links">
           <li>
-            <Link to="#" smooth={true} duration={500}>
+            <Link to="#" smooth={true} duration={2000} onClick={handler}>
               HOME
             </Link>
           </li>
@@ -67,18 +34,31 @@ const Header = () => {
               className="links"
               to="testimonial"
               smooth={true}
-              duration={500}
+              duration={2000}
+              onClick={handler}
             >
               TESTIMONIAL
             </Link>
           </li>
           <li>
-            <Link className="links" to="aboutus" smooth={true} d uration={500}>
+            <Link
+              className="links"
+              to="aboutus"
+              smooth={true}
+              duration={2000}
+              onClick={handler}
+            >
               ABOUT US
             </Link>
           </li>
           <li>
-            <Link className="links" to="contactus" smooth={true} duration={500}>
+            <Link
+              className="links"
+              to="contactus"
+              smooth={true}
+              duration={2000}
+              onClick={handler}
+            >
               CONTACT
             </Link>
           </li>
