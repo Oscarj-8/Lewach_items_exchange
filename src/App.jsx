@@ -8,15 +8,17 @@ import Section1 from "./components/Section1";
 import Section2 from "./components/Section2";
 import Testimonial from "./components/Testimonial";
 import Header from "./components/Header";
+import BackToTop from "./components/BackToTop";
 
 function App() {
   return (
     <div className="root">
+      <BackToTop />
       <Landing_Page />
       <Section1 />
       <Section2 />
-      <Testimonial />
       <AboutUs />
+      <Testimonial />
       <ContactUs />
       <LastSec />
       <Footer />

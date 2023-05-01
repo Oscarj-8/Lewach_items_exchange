@@ -6,7 +6,7 @@ import ScrollLine from "../components/ScrollLine";
 
 function Section1() {
   return (
-    <div className="section-root">
+    <div name="services" className="section-root">
       <div className="sec-top">
         <ScrollLine />
         <div>

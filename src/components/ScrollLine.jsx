@@ -18,6 +18,7 @@ function ScrollLine() {
 
   return (
     <div
+      className="scrollline"
       style={{
         width: lineWidth,
         height: "0.3em",

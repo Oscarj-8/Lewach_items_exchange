@@ -25,27 +25,34 @@ const Header = () => {
       <nav className={`nav ${showNav ? "show-nav" : ""}`}>
         <ul className="nav-links">
           <li>
-            <Link to="#" smooth={true} duration={2000} onClick={handler}>
+            <Link
+              className="links"
+              to="#"
+              smooth={true}
+              duration={1500}
+              onClick={handler}
+            >
               HOME
             </Link>
           </li>
           <li>
             <Link
               className="links"
-              to="testimonial"
+              to="services"
               smooth={true}
-              duration={2000}
+              duration={1500}
               onClick={handler}
             >
-              TESTIMONIAL
+              SERVICES
             </Link>
           </li>
+
           <li>
             <Link
               className="links"
               to="aboutus"
               smooth={true}
-              duration={2000}
+              duration={1500}
               onClick={handler}
             >
               ABOUT US
@@ -54,9 +61,20 @@ const Header = () => {
           <li>
             <Link
               className="links"
+              to="testimonial"
+              smooth={true}
+              duration={1500}
+              onClick={handler}
+            >
+              TESTIMONIAL
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="links"
               to="contactus"
               smooth={true}
-              duration={2000}
+              duration={1500}
               onClick={handler}
             >
               CONTACT
@@ -71,7 +89,7 @@ const Header = () => {
         )}
       </nav>
       <div className="login-section">
-        <a href="/" className="login-link">
+        <a href="/" className="login-link links">
           LOGIN
         </a>
       </div>

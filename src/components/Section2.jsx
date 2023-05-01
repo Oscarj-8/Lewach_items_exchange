@@ -32,7 +32,10 @@ function Section2() {
   }, []);
 
   return (
-    <div className="page3-cards">
+    <div name="why-lewach" className="page3-cards">
+      <div>
+        <h2>WHY LEWACH</h2>
+      </div>
       <div
         className="page3-card card-1 fade-in"
         ref={(el) => (fadeIns.current[0] = el)}

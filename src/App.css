@@ -104,11 +104,6 @@
   margin: 0.6em;
 }
 
-.nav-links .links,
-a {
-  text-decoration: none;
-}
-
 .close-icon {
   position: absolute;
   top: 1.125em;
@@ -244,6 +239,10 @@ a:after {
   z-index: 1;
 }
 
+button {
+  cursor: pointer;
+}
+
 .btn:after {
   position: absolute;
   content: "";
@@ -279,10 +278,10 @@ a:after {
 .section-root {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 3em;
   align-items: center;
   justify-content: center;
+  margin: 2em 0;
 }
 
 .sec-top {
@@ -292,12 +291,18 @@ a:after {
   gap: 1em;
 }
 
-.sec-top h2 {
+.sec-top h2,
+.page3-cards h2 {
   font-family: var(--ffbebas);
   color: #03467a;
   font-size: var(--fpagetop);
   letter-spacing: var(--fspagetop);
   font-weight: var(--fwpagetop);
+}
+
+.scrollline {
+  display: none;
+  background-color: #1da1f2;
 }
 
 .sec-cards {
@@ -356,7 +361,7 @@ a:after {
   flex-direction: column;
   gap: 3em;
   align-items: center;
-  margin: 3em 0;
+  margin-top: 5em;
   overflow-x: hidden;
 }
 
@@ -824,6 +829,27 @@ textarea {
   font-size: var(--fxxxsmall);
 }
 
+.back-to-top {
+  background-color: #03467a;
+  position: fixed;
+  display: flex;
+  padding: 8px;
+  border-radius: 50%;
+  right: 1em;
+  bottom: 1em;
+  transition: transform 0.2s ease-in-out;
+  z-index: 3;
+}
+
+.back-to-top:hover {
+  transform: scale(1.2);
+}
+
+.arrow-up {
+  font-size: 20px;
+  color: white;
+}
+
 @media only screen and (max-width: 600px) {
   .contactUs {
     flex-direction: column;
@@ -834,6 +860,7 @@ textarea {
   .body-center {
     padding: 0 2em;
   }
+
   .page3-card {
     flex-direction: row;
     width: 90%;
@@ -923,10 +950,6 @@ textarea {
 }
 
 @media only screen and (min-width: 768px) {
-  a {
-    font-size: var(--fmid);
-  }
-
   .nav {
     position: static;
     height: auto;
@@ -937,18 +960,8 @@ textarea {
     transform: none;
   }
 
-  .nav-links {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .nav-links li {
-    margin: 0 1em;
-  }
-
-  .logo-section h2 {
-    display: inline;
+  .links {
+    font-size: var(--fsmall);
   }
 
   .body-center {
@@ -975,6 +988,10 @@ textarea {
 
   .landing-body-images img {
     width: 300px;
+  }
+
+  .scrollline {
+    display: block;
   }
 
   .sec-cards {
@@ -1009,13 +1026,20 @@ textarea {
   .comment-sec {
     gap: 5em;
   }
+
+  .back-to-top {
+    padding: 12px;
+  }
+
+  .arrow-up {
+    font-size: 25px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
-  a {
-    font-size: x-large;
+  .links {
+    font-size: var(--flarge);
   }
-
   .landing-body-text .landing-body-text-first {
     font-size: 4.5em;
   }
@@ -1244,7 +1268,15 @@ textarea {
     margin-top: 2%;
   }
 
-  .sec-top h2 {
+  .section-root {
+    margin: 5em 0;
+  }
+
+  .page3-cards {
+    margin-top: 8em;
+  }
+  .sec-top h2,
+  .page3-cards h2 {
     font-size: 3.5em;
   }
 
