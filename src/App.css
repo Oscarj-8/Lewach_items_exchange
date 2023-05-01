@@ -1037,9 +1037,14 @@ textarea {
 }
 
 @media only screen and (min-width: 992px) {
-  .links {
-    font-size: var(--flarge);
+  .logo-section h2 {
+    display: block;
   }
+
+  .links {
+    font-size: var(--fmid);
+  }
+
   .landing-body-text .landing-body-text-first {
     font-size: 4.5em;
   }
@@ -1234,6 +1239,10 @@ textarea {
 }
 
 @media screen and (min-width: 1400px) {
+  .links {
+    font-size: var(--flarge);
+  }
+
   .first-page {
     gap: 2em;
   }
