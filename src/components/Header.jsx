@@ -1,41 +1,5 @@
 import logo from "../assets/images/logoWhite.png";
-
-// function Header() {
-//   return (
-//     <div>
-//       <header>
-//         <div className="logo-section">
-//           <img src={logo} />
-//           <h2> LEWACH</h2>
-//         </div>
-//         <nav className="inline-nav">
-//           <ul>
-//             <li>
-//               <a href="/">HOME</a>
-//             </li>
-//             <li>
-//               <a href="/">TESTIMONIAL</a>
-//             </li>
-//             <li>
-//               <a href="/">ABOUT US</a>
-//             </li>
-//             <li>
-//               <a href="/">CONTACT</a>
-//             </li>
-//           </ul>
-//         </nav>
-//         <div className="login-section">
-//           <a href="/" className="login-link">
-//             LOGIN/ SIGNUP
-//           </a>
-//         </div>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default Header;
-
+import { Link } from "react-scroll";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -48,6 +12,10 @@ const Header = () => {
     setShowCloseIcon(!showCloseIcon);
   };
 
+  const handler = () => {
+    setShowNav(!showNav);
+  };
+
   return (
     <header className="header">
       <div className="logo logo-section">
@@ -57,16 +25,60 @@ const Header = () => {
       <nav className={`nav ${showNav ? "show-nav" : ""}`}>
         <ul className="nav-links">
           <li>
-            <a href="#">Home</a>
+            <Link
+              className="links"
+              to="#"
+              smooth={true}
+              duration={1500}
+              onClick={handler}
+            >
+              HOME
+            </Link>
           </li>
           <li>
-            <a href="#">About</a>
+            <Link
+              className="links"
+              to="services"
+              smooth={true}
+              duration={1500}
+              onClick={handler}
+            >
+              SERVICES
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              className="links"
+              to="aboutus"
+              smooth={true}
+              duration={1500}
+              onClick={handler}
+            >
+              ABOUT US
+            </Link>
           </li>
           <li>
-            <a href="#">Services</a>
+            <Link
+              className="links"
+              to="testimonial"
+              smooth={true}
+              duration={1500}
+              onClick={handler}
+            >
+              TESTIMONIAL
+            </Link>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <Link
+              className="links"
+              to="contactus"
+              smooth={true}
+              duration={1500}
+              onClick={handler}
+            >
+              CONTACT
+            </Link>
           </li>
         </ul>
 
@@ -77,7 +89,7 @@ const Header = () => {
         )}
       </nav>
       <div className="login-section">
-        <a href="/" className="login-link">
+        <a href="/" className="login-link links">
           LOGIN
         </a>
       </div>
