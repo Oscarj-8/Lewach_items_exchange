@@ -1,7 +1,7 @@
 import left from "../assets/images/left-arrow.png";
 import right from "../assets/images/right-arrow.png";
 import quote from "../assets/images/quote.png";
-
+import React from "react";
 function Testimonial() {
   return (
     <div className="testimonial-root">

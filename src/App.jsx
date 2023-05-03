@@ -8,6 +8,7 @@ import Section1 from "./components/Section1";
 import Section2 from "./components/Section2";
 import Testimonial from "./components/Testimonial";
 import Header from "./components/Header";
+import React from "react";
 
 function App() {
   return (
