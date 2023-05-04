@@ -1,8 +1,7 @@
-import logo from "../assets/images/logoWhite.png";
+import logo from "../../assets/images/logoWhite.png";
 import { Link } from "react-scroll";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import React from "react";
 
 const Header = () => {
   const [showNav, setShowNav] = useState(false);

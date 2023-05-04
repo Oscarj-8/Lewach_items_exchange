@@ -1,10 +1,17 @@
+<<<<<<< HEAD:src/components/Testimonial.jsx
 import left from "../assets/images/left-arrow.png";
 import right from "../assets/images/right-arrow.png";
 import quote from "../assets/images/quote.png";
 import React from "react";
+=======
+import left from "../../assets/images/left-arrow.png";
+import right from "../../assets/images/right-arrow.png";
+import quote from "../../assets/images/quote.png";
+
+>>>>>>> main:src/components/LandingPage/Testimonial.jsx
 function Testimonial() {
   return (
-    <div className="testimonial-root">
+    <div name="testimonial" className="testimonial-root">
       <div className="testimonial-header">
         <h2>Testimonials</h2>
       </div>

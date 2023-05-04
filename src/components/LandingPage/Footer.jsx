@@ -1,4 +1,4 @@
-import footerLogo from "../assets/images/footerLogo.png";
+import footerLogo from "../../assets/images/footerLogo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,

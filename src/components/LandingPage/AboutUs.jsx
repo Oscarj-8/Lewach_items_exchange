@@ -1,8 +1,13 @@
+<<<<<<< HEAD:src/components/AboutUs.jsx
 import aboutus from "../assets/images/aboutus.jpg";
 import React from "react";
+=======
+import aboutus from "../../assets/images/aboutus.jpg";
+
+>>>>>>> main:src/components/LandingPage/AboutUs.jsx
 function AboutUs() {
   return (
-    <div className="aboutus-root">
+    <div name="aboutus" className="aboutus-root">
       <div className="aboutus-text">
         <h1>ABOUT US</h1>
         <p>

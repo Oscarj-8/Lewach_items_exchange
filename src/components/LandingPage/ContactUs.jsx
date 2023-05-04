@@ -1,11 +1,19 @@
+<<<<<<< HEAD:src/components/ContactUs.jsx
 import email from "../assets/images/email.png";
 import telephone from "../assets/images/telephone-call.png";
 import placeholder from "../assets/images/placeholder.png";
 import clock from "../assets/images/clock.png";
 import React from "react";
+=======
+import email from "../../assets/images/email.png";
+import telephone from "../../assets/images/telephone-call.png";
+import placeholder from "../../assets/images/placeholder.png";
+import clock from "../../assets/images/clock.png";
+
+>>>>>>> main:src/components/LandingPage/ContactUs.jsx
 function ContactUs() {
   return (
-    <div className="contactUs">
+    <div name="contactus" className="contactUs">
       <div className="contact">
         <div className="contactUs-top">
           <h1>CONTACT US</h1>

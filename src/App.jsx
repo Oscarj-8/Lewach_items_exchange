@@ -1,23 +1,24 @@
 import "./App.css";
-import AboutUs from "./components/AboutUs";
-import ContactUs from "./components/ContactUs";
-import Footer from "./components/Footer";
-import Landing_Page from "./components/Landing_Page";
-import LastSec from "./components/LastSec";
-import Section1 from "./components/Section1";
-import Section2 from "./components/Section2";
-import Testimonial from "./components/Testimonial";
-import Header from "./components/Header";
-import React from "react";
+import AboutUs from "./components/LandingPage/AboutUs";
+import ContactUs from "./components/LandingPage/ContactUs";
+import Footer from "./components/LandingPage/Footer";
+import Landing_Page from "./components/LandingPage/Landing_Page";
+import LastSec from "./components/LandingPage/LastSec";
+import Section1 from "./components/LandingPage/Section1";
+import Section2 from "./components/LandingPage/Section2";
+import Testimonial from "./components/LandingPage/Testimonial";
+import BackToTop from "./components/LandingPage/BackToTop";
+y;
 
 function App() {
   return (
     <div className="root">
+      <BackToTop />
       <Landing_Page />
       <Section1 />
       <Section2 />
-      <Testimonial />
       <AboutUs />
+      <Testimonial />
       <ContactUs />
       <LastSec />
       <Footer />
