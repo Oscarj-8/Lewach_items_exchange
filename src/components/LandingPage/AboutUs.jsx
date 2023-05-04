@@ -1,10 +1,6 @@
-<<<<<<< HEAD:src/components/AboutUs.jsx
-import aboutus from "../assets/images/aboutus.jpg";
-import React from "react";
-=======
 import aboutus from "../../assets/images/aboutus.jpg";
+import React from "react";
 
->>>>>>> main:src/components/LandingPage/AboutUs.jsx
 function AboutUs() {
   return (
     <div name="aboutus" className="aboutus-root">

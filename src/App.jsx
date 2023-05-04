@@ -8,7 +8,7 @@ import Section1 from "./components/LandingPage/Section1";
 import Section2 from "./components/LandingPage/Section2";
 import Testimonial from "./components/LandingPage/Testimonial";
 import BackToTop from "./components/LandingPage/BackToTop";
-y;
+import React from "react";
 
 function App() {
   return (

@@ -1,17 +1,10 @@
-<<<<<<< HEAD:src/components/Section1.jsx
-import platform from "../assets/images/platform.png";
-import delivery from "../assets/images/delivery.png";
-import group from "../assets/images/group.png";
-import chat from "../assets/images/chat.png";
-import React from "react";
-=======
 import platform from "../../assets/images/platform.png";
 import delivery from "../../assets/images/delivery.png";
 import group from "../../assets/images/group.png";
 import chat from "../../assets/images/chat.png";
 import ScrollLine from "./ScrollLine";
+import React from "react";
 
->>>>>>> main:src/components/LandingPage/Section1.jsx
 function Section1() {
   return (
     <div name="services" className="section-root">
