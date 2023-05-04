@@ -1,8 +1,8 @@
-import community from "../assets/images/community.png";
-import connect from "../assets/images/connect.png";
-import delivery from "../assets/images/delivery2.png";
-import waste from "../assets/images/waste.png";
-import variety from "../assets/images/variety.png";
+import community from "../../assets/images/community.png";
+import connect from "../../assets/images/connect.png";
+import delivery from "../../assets/images/delivery2.png";
+import waste from "../../assets/images/waste.png";
+import variety from "../../assets/images/variety.png";
 import React, { useRef, useEffect } from "react";
 
 function Section2() {

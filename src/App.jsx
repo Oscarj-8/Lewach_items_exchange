@@ -1,14 +1,13 @@
 import "./App.css";
-import AboutUs from "./components/AboutUs";
-import ContactUs from "./components/ContactUs";
-import Footer from "./components/Footer";
-import Landing_Page from "./components/Landing_Page";
-import LastSec from "./components/LastSec";
-import Section1 from "./components/Section1";
-import Section2 from "./components/Section2";
-import Testimonial from "./components/Testimonial";
-import Header from "./components/Header";
-import BackToTop from "./components/BackToTop";
+import AboutUs from "./components/LandingPage/AboutUs";
+import ContactUs from "./components/LandingPage/ContactUs";
+import Footer from "./components/LandingPage/Footer";
+import Landing_Page from "./components/LandingPage/Landing_Page";
+import LastSec from "./components/LandingPage/LastSec";
+import Section1 from "./components/LandingPage/Section1";
+import Section2 from "./components/LandingPage/Section2";
+import Testimonial from "./components/LandingPage/Testimonial";
+import BackToTop from "./components/LandingPage/BackToTop";
 
 function App() {
   return (

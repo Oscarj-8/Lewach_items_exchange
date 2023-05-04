@@ -1,5 +1,4 @@
-import logo from "../assets/images/logoWhite.png";
-import sideimage from "../assets/images/sideimage.png";
+import sideimage from "../../assets/images/sideimage.png";
 import Header from "./Header";
 
 function Landing_Page() {

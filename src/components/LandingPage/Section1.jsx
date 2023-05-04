@@ -1,8 +1,8 @@
-import platform from "../assets/images/platform.png";
-import delivery from "../assets/images/delivery.png";
-import group from "../assets/images/group.png";
-import chat from "../assets/images/chat.png";
-import ScrollLine from "../components/ScrollLine";
+import platform from "../../assets/images/platform.png";
+import delivery from "../../assets/images/delivery.png";
+import group from "../../assets/images/group.png";
+import chat from "../../assets/images/chat.png";
+import ScrollLine from "./ScrollLine";
 
 function Section1() {
   return (
