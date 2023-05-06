@@ -1,9 +1,10 @@
 import logo from "../../assets/images/logoWhite.png";
+import "../../logreg.css";
 
 function Logreg() {
   return (
     <section className="container ">
-      <section classNameName="container-form container-form-sign-up">
+      <section className="container-form container-form-sign-up">
         <form action="" className="sign-up-form">
           <h1>Create Account</h1>
           <div className="container-social">
@@ -42,7 +43,7 @@ function Logreg() {
         <div className="overlay">
           <div className="overlay-panel overlay-sign-in">
             <h1 className="overlay__main-head">Welcome Back</h1>
-            <p className="overlay__slogan">
+            <p className="overlay__slogan new-class">
               To keep connected with us please login with your personal info
             </p>
             <button className="button overlay__button-ghost overlay__button-sign-in">
@@ -51,7 +52,7 @@ function Logreg() {
           </div>
           <div className="overlay-panel overlay-sign-up">
             <h1 className="overlay__main-head">Hello there!</h1>
-            <p className="overlay__slogan">
+            <p className="overlay__slogan  new-class">
               If your new here register and start your journey with us
             </p>
             <button className="button overlay__button-ghost overlay__button-sign-up">

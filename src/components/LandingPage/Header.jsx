@@ -28,7 +28,7 @@ const Header = () => {
           <li>
             <Link
               className="links"
-              to="#"
+              to="/"
               smooth={true}
               duration={1500}
               onClick={handler}
@@ -90,9 +90,13 @@ const Header = () => {
         )}
       </nav>
       <div className="login-section">
-        <a href="/" className="login-link links">
-          LOGIN
-        </a>
+        <ul className="nav-links">
+          <li>
+            <Link className="login-link links" to="../LoginPage/Logreg">
+              LOGIN
+            </Link>
+          </li>
+        </ul>
       </div>
       <div className="hamburger" onClick={toggleNav}>
         {showNav ? <FaTimes /> : <FaBars />}
