@@ -15,7 +15,7 @@ import Logreg from "./components/LoginPage/Logreg";
 function App() {
   return (
     <div className="root">
-      <BackToTop />
+     {/* / <BackToTop />
       <Landing_Page />
       <Routes>
         <Route path="../LoginPage/Logreg" component={Logreg} />
@@ -26,7 +26,8 @@ function App() {
       <Testimonial />
       <ContactUs />
       <LastSec />
-      <Footer />
+      <Footer /> */}
+      <Logreg />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import logo from "../../assets/images/logoWhite.png";
 import "../../logreg.css";
+import "../LoginPage/script.js"
 
 function Logreg() {
   return (
