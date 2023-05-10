@@ -8,11 +8,12 @@ import Section1 from "./components/LandingPage/Section1";
 import Section2 from "./components/LandingPage/Section2";
 import Testimonial from "./components/LandingPage/Testimonial";
 import BackToTop from "./components/LandingPage/BackToTop";
+import Home_page_header from "./components/HomePage/Home_page_header";
 
 function App() {
   return (
     <div className="root">
-      <BackToTop />
+      {/* <BackToTop />
       <Landing_Page />
       <Section1 />
       <Section2 />
@@ -20,7 +21,8 @@ function App() {
       <Testimonial />
       <ContactUs />
       <LastSec />
-      <Footer />
+      <Footer /> */}
+      <Home_page_header />
     </div>
   );
 }
