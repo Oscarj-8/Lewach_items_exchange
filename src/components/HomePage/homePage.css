@@ -106,3 +106,9 @@
   cursor: pointer;
   width: fit-content;
 }
+
+/* Section 2 starts here*/
+
+.card-top-text ul li {
+  list-style-type: none;
+}
