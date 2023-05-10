@@ -10,7 +10,7 @@ import Testimonial from "./components/LandingPage/Testimonial";
 import BackToTop from "./components/LandingPage/BackToTop";
 import Home_page_header from "./components/HomePage/Home_page_header";
 import Search_menu from "./components/HomePage/Search_menu";
-
+import HomePage_section1 from "./components/HomePage/HomePage_section1";
 function App() {
   return (
     <div className="root">
@@ -25,6 +25,7 @@ function App() {
       <Footer /> */}
       <Home_page_header />
       <Search_menu />
+      <HomePage_section1 />
     </div>
   );
 }
