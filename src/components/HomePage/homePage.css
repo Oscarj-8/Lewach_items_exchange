@@ -45,3 +45,64 @@
   display: flex;
   gap: 0.5em;
 }
+
+/* Section 1 starts here */
+
+.homePage-section1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  gap: 1em;
+  box-shadow: 0em 0.25em 0.25em rgba(0, 0, 0, 0.25);
+}
+
+.section1-card {
+  border-radius: 0.25em;
+  border: 0.063em solid #dbdbdb;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.section1-card-top {
+  display: flex;
+  gap: 0.5em;
+}
+
+.card-top-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  width: 60%;
+}
+
+.card-top-text h2 {
+  font-size: 1.125em;
+}
+
+.card-top-text span {
+  font-size: 0.75em;
+}
+
+.card-top-img {
+  background-color: rgb(177, 210, 236);
+  width: 5.625em;
+  height: 5.625em;
+}
+
+.section1-card-bottom {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.section1-card-bottom button {
+  background: none;
+  color: #03467a;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: fit-content;
+}
