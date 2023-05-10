@@ -11,6 +11,37 @@
   padding: 1em;
 }
 
-.home-page-header img {
+.home-page-header img,
+.search-menu img {
   width: 2em;
+}
+
+.search-menu {
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+}
+
+.search-section {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+}
+
+.search-bar {
+  width: 70%;
+  border: 1px solid #d4cbcb;
+  border-radius: 0.5em;
+  padding: 0.6em;
+}
+
+.search-btn {
+  background-color: #03467a;
+  color: white;
+  padding: 0.6em;
+  border-radius: 0.5em;
+  border: none;
+  display: flex;
+  gap: 0.5em;
 }

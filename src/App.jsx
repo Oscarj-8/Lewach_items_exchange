@@ -9,6 +9,7 @@ import Section2 from "./components/LandingPage/Section2";
 import Testimonial from "./components/LandingPage/Testimonial";
 import BackToTop from "./components/LandingPage/BackToTop";
 import Home_page_header from "./components/HomePage/Home_page_header";
+import Search_menu from "./components/HomePage/Search_menu";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <LastSec />
       <Footer /> */}
       <Home_page_header />
+      <Search_menu />
     </div>
   );
 }
