@@ -3,3 +3,14 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.home-page-header {
+  background-color: #03467a;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.home-page-header img {
+  width: 2em;
+}
