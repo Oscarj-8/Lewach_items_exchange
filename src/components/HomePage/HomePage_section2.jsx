@@ -1,35 +1,40 @@
-import React from "react";
+import ItemsDisplay from "./ItemsDisplay";
 
 function HomePage_section2() {
+  const sampleItems = [
+    {
+      id: 1,
+      type: "Shoe",
+      name: "Nike air force",
+      status: "Used for 4 months",
+      returns: "Shoe, Jacket, Sweater and a Hat",
+    },
+    {
+      id: 2,
+      type: "Music instrument",
+      name: "Guitar",
+      status: "Used for 4 months",
+      returns: "Shoe, Jacket, Sweater and a Hat",
+    },
+    {
+      id: 3,
+      type: "Household",
+      name: "Curtain",
+      status: "Used for 4 months",
+      returns: "Curtain, Shoe",
+    },
+    {
+      id: 4,
+      type: "Household",
+      name: "TV Stand",
+      status: "Used for 4 months",
+      returns: "Curtain, Shoe",
+    },
+  ];
   return (
     <div>
-      <div className="section1-card">
-        <div className="section1-card-top">
-          <div className="card-top-text">
-            <h2>Nike Shoe</h2>
-            <ul>
-              <li>
-                <strong>Item name:</strong>NIke air force
-              </li>
-              <li>
-                <strong>Item type:</strong>Shoe
-              </li>
-              <li>
-                <strong>Item name:</strong>Used for 4 months
-              </li>
-              <li>
-                <strong>Items in return:</strong>SHoe, Jacket, Sweater, and a
-                Hat.
-              </li>
-            </ul>
-          </div>
-          <div className="card-top-img"></div>
-        </div>
-        <div className="section1-card-bottom">
-          <button className="card-bottom-btn">Trade</button>
-          <button className="card-bottom-btn">Contact</button>
-        </div>
-      </div>
+      <ItemsDisplay items={sampleItems} />
+      <div className="ad-section"></div>
     </div>
   );
 }
