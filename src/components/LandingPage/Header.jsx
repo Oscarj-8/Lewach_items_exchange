@@ -92,9 +92,9 @@ const Header = () => {
       <div className="login-section">
         <ul className="nav-links">
           <li>
-            <Link className="login-link links" to="../LoginPage/Logreg">
+            <a className="login-link links" href="/login">
               LOGIN
-            </Link>
+            </a>
           </li>
         </ul>
       </div>
