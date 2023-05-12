@@ -48,20 +48,20 @@ function next(){
           <button onClick={next} className="nextBtn">Next</button>
           </div> 
 
-          <div className="form second">
+         <div className="form second">
           <h1>Address</h1> 
-        <div className="fl">
-          <input type="text" placeholder="Region" />
-          <input type="text" placeholder="City" />
-        </div>
-        <input type="text" placeholder=" Username" />
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
-        <input type="password" placeholder="Confirm Password" />
-        <button onClick={back} className="backtBtn">Back</button>
-        <button>Sign Up</button>
+        <div>
+          <input type="" placeholder="Region" />
+          <input type="text" placeholder="City/Zone" />
+          <input type="text" placeholder=" Subcity/Woreda" />
+          <input type="text" placeholder="P.O.Box" />
+          <input type="text" placeholder="Special Name for your location" />
+          <input type="text" placeholder="SSN" />
+           <input type="checkbox" name="" id="" /> 
+          <button onClick={back} className="backtBtn">Back</button>
+          <button>Register</button>
           </div>
-          
+          </div>
         </div>
       </section>
       <section>
@@ -76,7 +76,7 @@ function next(){
           </div>
           <input type="email" placeholder="Username or Email" />
           <input type="password" placeholder="Password" />
-          <a href="#" className="forget-password">
+          <a href="#" className="forget_password">
             Forgot Password
           </a>
           <button>Sign In</button>
