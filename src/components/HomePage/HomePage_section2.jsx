@@ -32,16 +32,14 @@ function HomePage_section2() {
     },
   ];
   return (
-    <div>
+    <div className="home-page-section2">
       <ItemsDisplay items={sampleItems} />
-      <div className="ad-section">
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse cumque
-          ab ipsam eos provident aliquid hic labore fugit laborum exercitationem
-          eligendi, voluptatibus culpa, delectus dolore ipsa earum nihil
-          aspernatur expedita.
-        </p>
+      <div className="adv-section"></div>
+      <ItemsDisplay items={sampleItems} />
+      <div className="load-more">
+        <span>Load more ...</span>
       </div>
+      <div className="adv-section"></div>
     </div>
   );
 }

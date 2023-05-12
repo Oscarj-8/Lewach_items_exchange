@@ -56,7 +56,7 @@
   gap: 1em;
   box-shadow: 0em 0.25em 0.25em rgba(0, 0, 0, 0.25);
 }
-
+/* 
 .section1-card {
   border-radius: 0.25em;
   border: 0.063em solid #dbdbdb;
@@ -105,24 +105,75 @@
   outline: none;
   cursor: pointer;
   width: fit-content;
+} */
+
+.section1-card {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: center;
+  border-radius: 0.25em;
+  padding: 1em;
+  box-shadow: 0em 0.2em 0.5em rgba(0, 0, 0, 0.15);
+  gap: 0.5em;
+}
+
+.section1-card-top {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.card-top-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.section1-card-bottom {
+  display: grid;
+  grid-template-columns: 40% 40%;
+}
+
+.section1-card-bottom button {
+  background: none;
+  color: #03467a;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: fit-content;
 }
 
 /* Section 2 starts here*/
 
+.home-page-section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
 .section2-card {
   margin: 1.5em;
+  width: 90%;
+  box-shadow: 0em 0em 1em rgba(0, 0, 0, 0.15);
 }
 
 .card-top-text ul li {
   list-style-type: none;
 }
 
-.section1-card-top {
-  align-items: center;
+.adv-section {
+  width: 100%;
+  height: 150px;
+  background-color: #f4e1eb;
 }
 
-.ad-section {
-  width: 70%;
-  height: 200px;
-  background-color: #03467a;
+.load-more {
+  color: #03467a;
+  margin: 2em 0 3em 0;
 }
