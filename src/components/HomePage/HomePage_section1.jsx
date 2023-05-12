@@ -5,9 +5,9 @@ import ItemsCard from "./ItemsCard";
 function HomePage_section1() {
   return (
     <div className="homePage-section1">
-      <FaChevronLeft size="2em" />
+      <FaChevronLeft size="3em" />
       <ItemsCard />
-      <FaChevronRight size="2em" />
+      <FaChevronRight size="3em" />
     </div>
   );
 }
