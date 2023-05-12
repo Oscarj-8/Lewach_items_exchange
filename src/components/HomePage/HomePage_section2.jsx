@@ -34,7 +34,14 @@ function HomePage_section2() {
   return (
     <div>
       <ItemsDisplay items={sampleItems} />
-      <div className="ad-section"></div>
+      <div className="ad-section">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse cumque
+          ab ipsam eos provident aliquid hic labore fugit laborum exercitationem
+          eligendi, voluptatibus culpa, delectus dolore ipsa earum nihil
+          aspernatur expedita.
+        </p>
+      </div>
     </div>
   );
 }

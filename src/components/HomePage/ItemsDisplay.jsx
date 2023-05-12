@@ -1,27 +1,26 @@
 import React from "react";
 
-function ItemsDisplay(props) {
-  const { items } = props;
+function ItemsDisplay({ items }) {
   return (
     <>
-      {items.map((item) => (
+      {items.map(({ id, type, name, status, returns }) => (
         <div className="section1-card section2-card">
           <div className="section1-card-top section2-card-top ">
             <div className="card-top-text">
               <ul>
-                <li key={item.id}>
-                  <h2>{item.name}</h2>
+                <li key={id}>
+                  <h2>{name}</h2>
                   <p>
                     <strong>Item type: </strong>
-                    {item.type}
+                    {type}
                   </p>
                   <p>
                     <strong>Status: </strong>
-                    {item.status}
+                    {status}
                   </p>
                   <p>
                     <strong>Items in return: </strong>
-                    {item.return}
+                    {returns}
                   </p>
                 </li>
               </ul>
