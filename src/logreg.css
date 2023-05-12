@@ -13,10 +13,12 @@ body {
   flex-direction: column;
   margin: -20px 0 50px;
 } */
+
 h1 {
   font-weight: bold;
   margin: 0;
   font-size: 30px;
+  padding: 20px;
 }
 .new-class {
   font-size: 14px;
@@ -50,7 +52,7 @@ img {
   border-radius: 15px;
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
 }
-.container-form form {
+.container-form .sign-up-form {
   background: #fff;
   display: flex;
   flex-direction: column;
@@ -60,19 +62,33 @@ img {
   align-items: center;
   text-align: center;
 }
-.container-social {
-  margin: 20px 0;
-}
-/*.container-social a {
-  border-radius: 50%;
-  display: inline-flex;
-  border: 1px solid #ddd;
+.container-form .sign-in-form {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+  height: 100%;
   justify-content: center;
   align-items: center;
-  margin: 0 5px;
-  height: 40px;
-  width: 40px;
-}*/
+  text-align: center;
+}
+.container-form .form {
+  position: absolute;
+  background-color: #fff;
+  }
+.second{
+  display: none;
+}
+.first{
+  display: contents;
+}
+.Active{
+  display: contents;
+}
+.Disable{
+  display: none;
+}
+
 .container-form input {
   background: transparent;
   border: none;

@@ -13,17 +13,30 @@ function Logreg() {
     const container = document.querySelector('.container');
     container.classList.remove('sign-out-panel-active');
   }
- 
+
+function next(){
+  const formFirst = document.querySelector(".first");
+  const formSecond = document.querySelector(".second");
+  formFirst.classList.add('Disable');
+  formSecond.classList.add('Active');
+  formSecond.classList.remove('Disable');
+  formFirst.classList.remove('Active');
+}
+  function back() {
+    const formFirst = document.querySelector(".first");
+    const formSecond = document.querySelector(".second");
+    formFirst.classList.remove('Disable');
+  formSecond.classList.remove('Active');
+  formSecond.classList.add('Disable');
+  formFirst.classList.add('Active');
+
+}
   return (
     <section className="container ">
       <section className="container-form container-form-sign-up">
-        <form action="" className="sign-up-form">
+        <div className="sign-up-form">
+          <div className="form first">
           <h1>Create Account</h1>
-          <div className="container-social">
-            <a href="#" className="social">
-              <i className="fab fa-facebook-f"></i>
-            </a>
-          </div>
           <div className="fl">
             <input type="text" placeholder="First Name" />
             <input type="text" placeholder="Last Name" />
@@ -32,11 +45,29 @@ function Logreg() {
           <input type="email" placeholder="Email" />
           <input type="password" placeholder="Password" />
           <input type="password" placeholder="Confirm Password" />
-          <button>Sign Up</button>
-        </form>
+          <button onClick={next} className="nextBtn">Next</button>
+          </div> 
+
+          <div className="form second">
+          <h1>Address</h1> 
+        <div className="fl">
+          <input type="text" placeholder="Region" />
+          <input type="text" placeholder="City" />
+        </div>
+        <input type="text" placeholder=" Username" />
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <input type="password" placeholder="Confirm Password" />
+        <button onClick={back} className="backtBtn">Back</button>
+        <button>Sign Up</button>
+          </div>
+          
+        </div>
+      </section>
+      <section>
       </section>
       <section className="container-form container-form-sign-in">
-        <form action="" className="sign-up-form">
+        <div action="" className="sign-in-form">
           <h1>Sign In</h1>
           <div className="container-social">
             <a href="#" className="social">
@@ -49,7 +80,7 @@ function Logreg() {
             Forgot Password
           </a>
           <button>Sign In</button>
-        </form>
+        </div>
       </section>
       <section className="overlay-container">
         <div className="overlay">
