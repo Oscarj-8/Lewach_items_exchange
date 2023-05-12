@@ -1,8 +1,19 @@
 import logo from "../../assets/images/logoWhite.png";
 import "../../logreg.css";
-import "../LoginPage/script.js"
+import { useState } from "react";
 
 function Logreg() {
+
+  function adder(){
+    const container = document.querySelector('.container');
+  container.classList.add('sign-out-panel-active');
+   
+  }
+  function remover(){
+    const container = document.querySelector('.container');
+    container.classList.remove('sign-out-panel-active');
+  }
+ 
   return (
     <section className="container ">
       <section className="container-form container-form-sign-up">
@@ -47,7 +58,7 @@ function Logreg() {
             <p className="overlay__slogan new-class">
               To keep connected with us please login with your personal info
             </p>
-            <button className="button overlay__button-ghost overlay__button-sign-in">
+            <button onClick={remover} className="button overlay__button-ghost overlay__button-sign-in">
               Sign in
             </button>
           </div>
@@ -56,7 +67,7 @@ function Logreg() {
             <p className="overlay__slogan  new-class">
               If your new here register and start your journey with us
             </p>
-            <button className="button overlay__button-ghost overlay__button-sign-up">
+            <button onClick={adder} className="button overlay__button-ghost overlay__button-sign-up">
               Register
             </button>
           </div>
