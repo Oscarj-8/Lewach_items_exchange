@@ -21,14 +21,14 @@ function HomePage_section2() {
       type: "Household",
       name: "Curtain",
       status: "Used for 4 months",
-      returns: "Curtain, Shoe",
+      returns: "Shoe, Jacket, Sweater and a Hat",
     },
     {
       id: 4,
       type: "Household",
       name: "TV Stand",
       status: "Used for 4 months",
-      returns: "Curtain, Shoe",
+      returns: "Phone, car spareparts, garage tools",
     },
   ];
   return (

@@ -4,7 +4,7 @@ function ItemsDisplay({ items }) {
   return (
     <>
       {items.map(({ id, type, name, status, returns }) => (
-        <div className="section1-card section2-card">
+        <div className="section2-card">
           <div className="section1-card-top section2-card-top ">
             <div className="card-top-text">
               <ul>

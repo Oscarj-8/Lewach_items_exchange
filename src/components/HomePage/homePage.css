@@ -56,56 +56,6 @@
   gap: 1em;
   box-shadow: 0em 0.25em 0.25em rgba(0, 0, 0, 0.25);
 }
-/* 
-.section1-card {
-  border-radius: 0.25em;
-  border: 0.063em solid #dbdbdb;
-  padding: 1em;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-
-.section1-card-top {
-  display: flex;
-  gap: 0.5em;
-}
-
-.card-top-text {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7em;
-  width: 60%;
-}
-
-.card-top-text h2 {
-  font-size: 1.125em;
-}
-
-.card-top-text span {
-  font-size: 0.75em;
-}
-
-.card-top-img {
-  background-color: rgb(177, 210, 236);
-  width: 5.625em;
-  height: 5.625em;
-}
-
-.section1-card-bottom {
-  width: 50%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.section1-card-bottom button {
-  background: none;
-  color: #03467a;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  width: fit-content;
-} */
 
 .section1-card {
   display: grid;
@@ -121,6 +71,7 @@
   display: flex;
   flex-direction: column;
   gap: 1em;
+  text-align: left;
 }
 
 .card-top-text {
@@ -129,14 +80,14 @@
   gap: 0.5em;
 }
 
-img {
+.card-top-img img {
   width: 100%;
   height: auto;
 }
 
 .section1-card-bottom {
   display: grid;
-  grid-template-columns: 40% 40%;
+  grid-template-columns: 5em 5em;
 }
 
 .section1-card-bottom button {
@@ -154,17 +105,24 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 5%;
 }
 
 .section2-card {
+  display: flex;
+  flex-direction: column-reverse;
   margin: 1.5em;
   width: 90%;
   box-shadow: 0em 0em 1em rgba(0, 0, 0, 0.15);
+  border-radius: 0.8em;
+  padding: 1em;
 }
 
 .card-top-text ul li {
   list-style-type: none;
+}
+
+.card-top-text ul li p {
+  padding-top: 0.2em;
 }
 
 .adv-section {
@@ -175,5 +133,8 @@ img {
 
 .load-more {
   color: #03467a;
-  margin: 2em 0 3em 0;
+  margin: 1em 0 2em 0;
+}
+
+@media screen and (max-width: 500px) {
 }
