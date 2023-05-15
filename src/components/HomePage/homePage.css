@@ -1,3 +1,6 @@
+body {
+  overflow-x: hidden;
+}
 * {
   padding: 0;
   margin: 0;
@@ -91,6 +94,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  z-index: 9999;
 }
 
 .no-scroll {
@@ -118,8 +122,9 @@
 }
 
 .section1-card {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap-reverse;
   align-items: center;
   border-radius: 0.25em;
   padding: 1em;
@@ -163,16 +168,16 @@
 
 .home-page-section2 {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .section2-card {
+  flex-basis: 80%;
   display: flex;
   flex-direction: column-reverse;
   margin: 1.5em;
-  width: 80%;
-  box-shadow: 0em 0em 0.5em rgba(0, 0, 0, 0.15);
+  box-shadow: 0em 0em 0.2em rgba(0, 0, 0, 0.25);
   border-radius: 0.4em;
   padding: 1em;
   gap: 1em;
@@ -193,17 +198,78 @@
 }
 
 .load-more {
+  width: 100%;
   color: #03467a;
   margin: 1em 0 2em 0;
+  text-align: center;
+}
+
+.load-more span {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 500px) {
-  .section2-card {
-    width: 90%;
-    flex-direction: row;
-    align-items: center;
+  .side-bar-btns {
+    width: 50%;
   }
 
-  .card-top-img {
+  .section1-card {
+    flex-wrap: nowrap;
+  }
+
+  .section2-card {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
+
+@media (min-width: 600px) {
+  .side-bar-btns {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-toggle {
+    display: none;
+  }
+
+  .section1-card {
+    width: 65%;
+  }
+
+  .section2-card {
+    flex-basis: 40%;
+    flex-direction: column-reverse;
+  }
+
+  .side-bar-btns {
+    top: 6.1em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .section2-card {
+    flex-basis: 44%;
+    flex-direction: row;
+  }
+
+  .side-bar-btns {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .section2-card {
+    flex-basis: calc(22%);
+  }
+
+  .section2-card:hover {
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1.02);
+  }
+
+  .side-bar-btns {
+    width: 20%;
   }
 }

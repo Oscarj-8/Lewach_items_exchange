@@ -3,7 +3,7 @@ import React from "react";
 function ItemsDisplay({ items }) {
   return (
     <>
-      {items.map(({ id, type, name, status, returns }) => (
+      {items.map(({ id, type, name, status, returns, image }) => (
         <div className="section2-card">
           <div className="section1-card-top section2-card-top ">
             <div className="card-top-text">
@@ -30,11 +30,8 @@ function ItemsDisplay({ items }) {
               <button className="card-bottom-btn">Contact</button>
             </div>
           </div>
-          <div className="card-top-img">
-            <img
-              src="https://plus.unsplash.com/premium_photo-1677013011737-ba61149ba70c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8b2xkJTIwY2xvdGhlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-              alt="Google Logo"
-            />
+          <div className="card-top-img section2-img">
+            <img src={image} alt="Google Logo" />
           </div>
         </div>
       ))}

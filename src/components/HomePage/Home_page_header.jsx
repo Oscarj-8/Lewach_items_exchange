@@ -48,7 +48,7 @@ function Home_page_header() {
           </div>
         )}
       </nav>
-      <div onClick={toggleNav}>
+      <div onClick={toggleNav} className="header-toggle">
         {showNav ? <FaTimes /> : <img src={menu} className="phone-menu" />}
       </div>
     </div>
