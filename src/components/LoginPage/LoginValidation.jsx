@@ -1,4 +1,5 @@
-function validation(values) {
+import React from "react"
+function Validation(values) {
     let error = {}
     const email_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     const password_pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/
@@ -24,4 +25,4 @@ function validation(values) {
     }
     return error;
 }
-export default validation;
+export default Validation;

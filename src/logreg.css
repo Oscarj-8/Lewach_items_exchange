@@ -96,6 +96,11 @@ img {
   outline: none;
   font-size: 16px;
 }
+.text-warning{
+  color: red;
+  font-size: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 select {
   background: transparent;
   border: none;

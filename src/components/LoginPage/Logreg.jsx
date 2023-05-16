@@ -1,21 +1,22 @@
 import logo from "../../assets/images/logoBlue.png";
 import "../../logreg.css";
 import React, { useState } from "react";
-import validation from "./LoginValidation";
+import Validation from "./LoginValidation";
 
 function Logreg() {
   const [values, setValues] = useState({
     email: "",
     password: ""
   })
-  const[errors, setErrors]  = useState({})
+  const [errors, setErrors] = useState({
+  })
   const handleInput = (event) => {
     setValues(prev => ({...prev, [event.target.name]: [event.target.values]}));
   }
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setValues(validation(values));
+    setErrors(Validation(values));
   }
 
   function adder(){
@@ -48,7 +49,7 @@ function next(){
   return (
     <section className="container ">
       <section className="container-form container-form-sign-in">
-        <div action="" className="sign-in-form" onSubmit={handleSubmit}>
+        <div action="" className="sign-in-form" >
           <h1>Sign In</h1>
           <div className="container-logo">
             <a href="#" className="logo">
@@ -57,14 +58,14 @@ function next(){
           </div>
           <input type="email" placeholder="Email" name="email"
             onChange={handleInput} />
-          {errors.email && <span className="forget_password">{ errors.email}</span>}
+          {errors.email && <span className="text-warning">{ errors.email}</span>}
           <input type="password" placeholder="Password" name="password"
             onChange={handleInput} />
-          {errors.password && <span >{ errors.password}</span>}
+          {errors.password && <span className="text-warning">{ errors.password}</span>}
           <a href="#" className="forget_password">
             Forgot Password
           </a>
-          <button type="submit" onClick={handleSubmit}>Sign In</button>
+          <button type="Submit" onClick={handleSubmit}>Sign In</button>
         </div>
       </section>
       <section className="container-form container-form-sign-up">
