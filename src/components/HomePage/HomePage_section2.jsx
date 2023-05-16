@@ -63,7 +63,9 @@ function HomePage_section2() {
       {/* <div className="adv-section"></div> */}
       <ItemsDisplay items={sampleItems} />
       <div className="load-more">
-        <span>Load more ...</span>
+        <span>
+          <a>Load more ...</a>
+        </span>
       </div>
       <div className="adv-section"></div>
     </div>
