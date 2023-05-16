@@ -1,8 +1,22 @@
-import logo from "../../assets/images/logoWhite.png";
+import logo from "../../assets/images/logoBlue.png";
 import "../../logreg.css";
-import { useState } from "react";
+import React, { useState } from "react";
+import validation from "./LoginValidation";
 
 function Logreg() {
+  const [values, setValues] = useState({
+    email: "",
+    password: ""
+  })
+  const[errors, setErrors]  = useState({})
+  const handleInput = (event) => {
+    setValues(prev => ({...prev, [event.target.name]: [event.target.values]}));
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setValues(validation(values));
+  }
 
   function adder(){
     const container = document.querySelector('.container');
@@ -33,6 +47,26 @@ function next(){
 }
   return (
     <section className="container ">
+      <section className="container-form container-form-sign-in">
+        <div action="" className="sign-in-form" onSubmit={handleSubmit}>
+          <h1>Sign In</h1>
+          <div className="container-logo">
+            <a href="#" className="logo">
+              <img src={logo} />
+            </a>
+          </div>
+          <input type="email" placeholder="Email" name="email"
+            onChange={handleInput} />
+          {errors.email && <span className="forget_password">{ errors.email}</span>}
+          <input type="password" placeholder="Password" name="password"
+            onChange={handleInput} />
+          {errors.password && <span >{ errors.password}</span>}
+          <a href="#" className="forget_password">
+            Forgot Password
+          </a>
+          <button type="submit" onClick={handleSubmit}>Sign In</button>
+        </div>
+      </section>
       <section className="container-form container-form-sign-up">
         <div className="sign-up-form">
           <div className="form first">
@@ -50,9 +84,19 @@ function next(){
 
          <div className="form second">
           <h1>Address</h1> 
-        <div>
-          <input type="" placeholder="Region" />
-          <input type="text" placeholder="City/Zone" />
+            <div >
+              <select name="region" id="region">
+              <option value="" disabled selected hidden>Region</option>
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+              </select>
+              <select name="region" id="region">
+              <option value="" disabled selected hidden>City/Zone</option>
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+              </select>
           <input type="text" placeholder=" Subcity/Woreda" />
           <input type="text" placeholder="P.O.Box" />
           <input type="text" placeholder="Special Name for your location" />
@@ -66,22 +110,7 @@ function next(){
       </section>
       <section>
       </section>
-      <section className="container-form container-form-sign-in">
-        <div action="" className="sign-in-form">
-          <h1>Sign In</h1>
-          <div className="container-social">
-            <a href="#" className="social">
-              <img src={logo} />
-            </a>
-          </div>
-          <input type="email" placeholder="Username or Email" />
-          <input type="password" placeholder="Password" />
-          <a href="#" className="forget_password">
-            Forgot Password
-          </a>
-          <button>Sign In</button>
-        </div>
-      </section>
+      
       <section className="overlay-container">
         <div className="overlay">
           <div className="overlay-panel overlay-sign-in">
