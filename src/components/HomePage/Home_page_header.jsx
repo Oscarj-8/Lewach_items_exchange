@@ -3,7 +3,14 @@ import logo from "../../assets/images/logoWhite.png";
 import menu from "../../assets/images/phone-menu.png";
 import { Link } from "react-scroll";
 import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import {
+  FaBars,
+  FaTimes,
+  FaHome,
+  FaUser,
+  FaBell,
+  FaEnvelope,
+} from "react-icons/fa";
 import HomePage_sidebar from "./HomePage_sidebar";
 
 function Home_page_header() {
@@ -28,17 +35,29 @@ function Home_page_header() {
       <nav className={`nav ${showNav ? "show-nav" : ""}`}>
         <ul className="nav-links">
           <li>
-            <Link onClick={handler}>Home</Link>
+            <Link onClick={handler}>
+              <FontAwesomeIcon icon={FaHome} />
+              Home
+            </Link>
           </li>
           <li>
-            <Link onClick={handler}>Profile</Link>
+            <Link onClick={handler}>
+              <FontAwesomeIcon icon={FaUser} />
+              Profile
+            </Link>
           </li>
 
           <li>
-            <Link onClick={handler}>Message</Link>
+            <Link onClick={handler}>
+              <FontAwesomeIcon icon={FaEnvelope} />
+              Message
+            </Link>
           </li>
           <li>
-            <Link onClick={handler}>Notification</Link>
+            <Link onClick={handler}>
+              <FontAwesomeIcon icon={FaBell} />
+              Notification
+            </Link>
           </li>
         </ul>
 
