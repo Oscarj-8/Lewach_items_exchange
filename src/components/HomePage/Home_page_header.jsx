@@ -2,15 +2,16 @@ import "./homePage.css";
 import logo from "../../assets/images/logoWhite.png";
 import menu from "../../assets/images/phone-menu.png";
 import { Link } from "react-scroll";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { FaTimes } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  FaBars,
-  FaTimes,
-  FaHome,
-  FaUser,
-  FaBell,
-  FaEnvelope,
-} from "react-icons/fa";
+  faHome,
+  faUser,
+  faBell,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import HomePage_sidebar from "./HomePage_sidebar";
 
 function Home_page_header() {
@@ -26,6 +27,14 @@ function Home_page_header() {
     setShowNav(!showNav);
   };
 
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowSize(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="home-page-header">
       <div>
@@ -33,33 +42,46 @@ function Home_page_header() {
       </div>
 
       <nav className={`nav ${showNav ? "show-nav" : ""}`}>
-        <ul className="nav-links">
-          <li>
-            <Link onClick={handler}>
-              <FontAwesomeIcon icon={FaHome} />
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link onClick={handler}>
-              <FontAwesomeIcon icon={FaUser} />
-              Profile
-            </Link>
-          </li>
+        {windowSize >= 500 && windowSize <= 992 ? (
+          <ul className="icon-links nav-links">
+            <li>
+              <Link onClick={handler}>
+                <FontAwesomeIcon icon={faHome} />
+              </Link>
+            </li>
+            <li>
+              <Link onClick={handler}>
+                <FontAwesomeIcon icon={faUser} />
+              </Link>
+            </li>
+            <li>
+              <Link onClick={handler}>
+                <FontAwesomeIcon icon={faBell} />
+              </Link>
+            </li>
+            <li>
+              <Link onClick={handler}>
+                <FontAwesomeIcon icon={faEnvelope} />
+              </Link>
+            </li>
+          </ul>
+        ) : (
+          <ul className="nav-links">
+            <li>
+              <Link onClick={handler}>Home</Link>
+            </li>
+            <li>
+              <Link onClick={handler}>Profile</Link>
+            </li>
 
-          <li>
-            <Link onClick={handler}>
-              <FontAwesomeIcon icon={FaEnvelope} />
-              Message
-            </Link>
-          </li>
-          <li>
-            <Link onClick={handler}>
-              <FontAwesomeIcon icon={FaBell} />
-              Notification
-            </Link>
-          </li>
-        </ul>
+            <li>
+              <Link onClick={handler}>Message</Link>
+            </li>
+            <li>
+              <Link onClick={handler}>Notification</Link>
+            </li>
+          </ul>
+        )}
 
         {showCloseIcon && (
           <div onClick={toggleNav}>
