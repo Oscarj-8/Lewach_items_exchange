@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 function SignUp() {
+  
   const [formStep, setFormStep] = useState(0);
   const [formData, setFormData] = useState({
     firstname: "",
@@ -109,7 +110,7 @@ function SignUp() {
               onChange={handleChange}
               required
             />
-            <button type="button" onClick={nextStep}>
+            <button type="submit" onClick={nextStep}>
               Next
             </button>
           </>
