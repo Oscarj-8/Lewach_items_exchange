@@ -51,7 +51,7 @@ function Home_page_header() {
             </li>
             <li>
               <Link onClick={handler}>
-                <FontAwesomeIcon icon={faUser} />
+                <FontAwesomeIcon icon={faEnvelope} />
               </Link>
             </li>
             <li>
@@ -61,7 +61,7 @@ function Home_page_header() {
             </li>
             <li>
               <Link onClick={handler}>
-                <FontAwesomeIcon icon={faEnvelope} />
+                <FontAwesomeIcon icon={faUser} />
               </Link>
             </li>
           </ul>
@@ -70,15 +70,15 @@ function Home_page_header() {
             <li>
               <Link onClick={handler}>Home</Link>
             </li>
-            <li>
-              <Link onClick={handler}>Profile</Link>
-            </li>
 
             <li>
               <Link onClick={handler}>Message</Link>
             </li>
             <li>
               <Link onClick={handler}>Notification</Link>
+            </li>
+            <li>
+              <Link onClick={handler}>Profile</Link>
             </li>
           </ul>
         )}
