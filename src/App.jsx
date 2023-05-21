@@ -10,10 +10,10 @@ function App() {
     <div className="root">
       {/* <FullLandingPage /> */}
       <Home_page_header />
-      {/* <Search_menu />
+      <Search_menu />
       <HomePage_section1 />
       <HomePage_section2 />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }

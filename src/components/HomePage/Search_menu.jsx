@@ -29,7 +29,12 @@ function Search_menu() {
         )}
       </div>
       <div className="search-section">
-        <input type="text" className="search-bar" placeholder="Search" />
+        <input
+          type="text"
+          className="search-bar"
+          placeholder="Search"
+          name="search"
+        />
         <button className="search-btn">
           <FaSearch /> Search
         </button>

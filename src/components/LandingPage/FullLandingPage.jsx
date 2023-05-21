@@ -7,6 +7,7 @@ import Section1 from "./Section1";
 import Section2 from "./Section2";
 import Testimonial from "./Testimonial";
 import BackToTop from "./BackToTop";
+import "./FullLandingPage.css";
 
 function FullLandingPage() {
   return (

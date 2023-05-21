@@ -41,7 +41,7 @@ function Home_page_header() {
         <img src={logo} />
       </div>
 
-      <nav className={`nav ${showNav ? "show-nav" : ""}`}>
+      <nav className={`nav2 ${showNav ? "show-nav" : ""}`}>
         {windowSize >= 500 && windowSize <= 992 ? (
           <ul className="icon-links nav-links">
             <li>
