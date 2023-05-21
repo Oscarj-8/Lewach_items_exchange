@@ -125,7 +125,6 @@ select {
   font-weight: bold;
   font-size: 13px;
   padding: 10px 45px;
-  margin-top: 20px;
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: transform 80ms ease-in;
@@ -138,7 +137,10 @@ button:active {
 button:focus {
   outline: none;
 }
-button:hover {
+
+.sign-in-form button:hover,
+.sign-up-form button:hover,
+.overlay-container button:hover {
   color: #002349;
   background-color: #fff;
 }
