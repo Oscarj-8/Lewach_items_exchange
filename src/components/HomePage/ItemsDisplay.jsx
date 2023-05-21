@@ -1,14 +1,12 @@
-import React from "react";
-
 function ItemsDisplay({ items }) {
   return (
     <>
       {items.map(({ id, type, name, status, returns, image }) => (
-        <div className="section2-card">
+        <div className="section2-card" key={`list-item-${id}`}>
           <div className="section1-card-top section2-card-top ">
             <div className="card-top-text">
               <ul>
-                <li key={id}>
+                <li>
                   <h2>{name}</h2>
                   <p>
                     <strong>Item type: </strong>

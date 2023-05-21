@@ -12,7 +12,6 @@ import {
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import HomePage_sidebar from "./HomePage_sidebar";
 
 function Home_page_header() {
   const [showNav, setShowNav] = useState(false);

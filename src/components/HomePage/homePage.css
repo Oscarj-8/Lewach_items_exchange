@@ -131,7 +131,7 @@
   padding: 4em;
   background-color: #ffffff;
   top: 4em;
-  transition: transform 2s ease-in-out;
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .side-bar-btns.active {
@@ -194,6 +194,7 @@
 
 .section1-card h2 {
   font-family: var(--ffbebas);
+  letter-spacing: 0.03em;
   font-weight: 500;
 }
 
@@ -247,6 +248,7 @@
 
 .section2-card h2 {
   font-family: var(--ffbebas);
+  letter-spacing: 0.03em;
   font-weight: 500;
 }
 
