@@ -1,5 +1,6 @@
 import sideimage from "../../assets/images/sideimage.png";
 import Header from "./Header";
+import React from "react";
 
 function Landing_Page() {
   return (

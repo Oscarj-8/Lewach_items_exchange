@@ -3,6 +3,7 @@ import delivery from "../../assets/images/delivery.png";
 import group from "../../assets/images/group.png";
 import chat from "../../assets/images/chat.png";
 import ScrollLine from "./ScrollLine";
+import React from "react";
 
 function Section1() {
   return (

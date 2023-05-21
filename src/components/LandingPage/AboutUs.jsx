@@ -1,4 +1,5 @@
 import aboutus from "../../assets/images/aboutus.jpg";
+import React from "react";
 
 function AboutUs() {
   return (

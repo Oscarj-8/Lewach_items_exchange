@@ -5,6 +5,7 @@ import {
   faTwitter,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import React from "react";
 function Footer() {
   return (
     <div className="footer-root">

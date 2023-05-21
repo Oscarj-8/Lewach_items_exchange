@@ -2,6 +2,7 @@ import logo from "../../assets/images/logoWhite.png";
 import { Link } from "react-scroll";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import React from "react";
 
 const Header = () => {
   const [showNav, setShowNav] = useState(false);
@@ -27,7 +28,7 @@ const Header = () => {
           <li>
             <Link
               className="links"
-              to="#"
+              to="/"
               smooth={true}
               duration={1500}
               onClick={handler}
@@ -89,9 +90,13 @@ const Header = () => {
         )}
       </nav>
       <div className="login-section">
-        <a href="/" className="login-link links">
-          LOGIN
-        </a>
+        <ul className="nav-links">
+          <li>
+            <a className="login-link links" href="/login">
+              LOGIN
+            </a>
+          </li>
+        </ul>
       </div>
       <div className="hamburger" onClick={toggleNav}>
         {showNav ? <FaTimes /> : <FaBars />}
