@@ -111,7 +111,7 @@ function SignUp() {
         {formStep === 0 && (
           <>
             <h1>Create Account</h1>
-            <div className="fl">
+            
               <input
                 type="text"
                 placeholder="First Name"
@@ -134,7 +134,7 @@ function SignUp() {
               {formErrors.lastname && (
                 <div className="error">{formErrors.lastname}</div>
               )}
-            </div>
+            
             <input
               type="text"
               placeholder="Username"
