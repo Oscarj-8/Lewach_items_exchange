@@ -1,13 +1,15 @@
-import platform from "../assets/images/platform.png";
-import delivery from "../assets/images/delivery.png";
-import group from "../assets/images/group.png";
-import chat from "../assets/images/chat.png";
+import platform from "../../assets/images/platform.png";
+import delivery from "../../assets/images/delivery.png";
+import group from "../../assets/images/group.png";
+import chat from "../../assets/images/chat.png";
+import ScrollLine from "./ScrollLine";
+import React from "react";
 
 function Section1() {
   return (
-    <div className="section-root">
+    <div name="services" className="section-root">
       <div className="sec-top">
-        <div className="green-line"></div>
+        <ScrollLine />
         <div>
           <h2>WHAT WE OFFER</h2>
         </div>
@@ -45,7 +47,7 @@ function Section1() {
           <div className="card-number">4</div>
         </div>
       </div>
-      <div className="green-line green-down"></div>
+      <ScrollLine />
     </div>
   );
 }

@@ -1,8 +1,8 @@
-import community from "../assets/images/community.png";
-import connect from "../assets/images/connect.png";
-import delivery from "../assets/images/delivery2.png";
-import waste from "../assets/images/waste.png";
-import variety from "../assets/images/variety.png";
+import community from "../../assets/images/community.png";
+import connect from "../../assets/images/connect.png";
+import delivery from "../../assets/images/delivery2.png";
+import waste from "../../assets/images/waste.png";
+import variety from "../../assets/images/variety.png";
 import React, { useRef, useEffect } from "react";
 
 function Section2() {
@@ -32,7 +32,10 @@ function Section2() {
   }, []);
 
   return (
-    <div className="page3-cards">
+    <div name="why-lewach" className="page3-cards">
+      <div>
+        <h2>WHY LEWACH</h2>
+      </div>
       <div
         className="page3-card card-1 fade-in"
         ref={(el) => (fadeIns.current[0] = el)}

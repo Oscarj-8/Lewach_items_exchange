@@ -1,10 +1,11 @@
-import footerLogo from "../assets/images/footerLogo.png";
+import footerLogo from "../../assets/images/footerLogo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
   faTwitter,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import React from "react";
 function Footer() {
   return (
     <div className="footer-root">
