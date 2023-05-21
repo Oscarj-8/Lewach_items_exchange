@@ -35,8 +35,20 @@ function Footer() {
         </div>
       </div>
       <div className="footer-center">
-        <input type="text" className="name-input" placeholder="Name" />
-        <input type="text" className="email-input" placeholder="Email" />
+        <input
+          type="text"
+          className="name-input"
+          placeholder="Name"
+          name="name"
+          autoComplete="on"
+        />
+        <input
+          type="text"
+          className="email-input"
+          placeholder="Email"
+          name="email"
+          autoComplete="on"
+        />
         <button className="btn-4">Subscribe</button>
       </div>
       <div className="footer-right">
