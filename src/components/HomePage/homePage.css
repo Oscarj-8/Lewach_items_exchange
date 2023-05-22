@@ -29,6 +29,7 @@
 .home-page-header a {
   font-size: 1.2em;
 }
+
 .home-page-header img,
 .search-menu img {
   width: 2em;
@@ -73,17 +74,6 @@
   cursor: pointer;
   font-size: 2em;
 }
-/* 
-.nav.show-nav2 {
-  transform: translateY(0);
-
-  z-index: 2;
-  background-color: #03467a;
-}
-
-.nav.show-nav2 li a {
-  color: #ffffff;
-} */
 
 .nav2 {
   position: fixed;
@@ -202,6 +192,7 @@
   font-weight: 100;
   font-size: var(--fxxsmall);
 }
+
 .card-top-text {
   display: flex;
   flex-direction: column;
@@ -354,5 +345,21 @@
 
   .side-bar-btns {
     width: 20%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .section1-card {
+    width: 50%;
+    box-shadow: none;
+    align-items: center;
+  }
+
+  .section1-card .card-top-img img {
+    width: 15em;
+  }
+
+  .section1-card-top {
+    width: 40%;
   }
 }
