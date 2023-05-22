@@ -7,12 +7,19 @@
 body {
   font-family: "Roboto Slab", serif;
 }
+.error{
+  position: relative;
+  color: red;
+  font-size: 12px;
+}
 
-.sign-in-form h1 {
+.sign-in-form, 
+.sign-up-form h1 {
   font-weight: bold;
   margin: 0;
   font-size: 28px;
-  padding: 20px;
+  padding: 30px;
+  
 }
 .new-class {
   font-size: 18px;
@@ -86,7 +93,7 @@ img {
   background: transparent;
   border: none;
   border-bottom: 1px solid;
-  padding: 8px 5px;
+  padding: 4px 5px;
   margin: 5px 0;
   width: 90%;
   outline: none;

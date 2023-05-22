@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 function SignUp() {
-  
   const [formStep, setFormStep] = useState(0);
   const [formData, setFormData] = useState({
     firstname: "",
@@ -17,16 +16,65 @@ function SignUp() {
     snl: "",
     ssn: "",
   });
+  const [formErrors, setFormErrors] = useState({});
 
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
+  const validateStep0 = () => {
+    const errors = {};
+    if (!formData.firstname.trim()) {
+      errors.firstname = "First name is required";
+    }
+    if (!formData.lastname.trim()) {
+      errors.lastname = "Last name is required";
+    }
+    if (!formData.username.trim()) {
+      errors.username = "Username is required";
+    }
+    if (!formData.email.trim()) {
+      errors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      errors.email = "Email is invalid";
+    }
+    if (!formData.password.trim()) {
+      errors.password = "Password is required";
+    } else if (formData.password.length < 8) {
+      errors.password = "Password must be at least 8 characters long";
+    }
+    if (!formData.confirmpassword.trim()) {
+      errors.confirmpassword = "Confirm password is required";
+    } else if (formData.password !== formData.confirmpassword) {
+      errors.confirmpassword = "Passwords do not match";
+    }
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
+  const validateStep1 = () => {
+    const errors = {};
+    if (!formData.region.trim()) {
+      errors.region = "Region is required";
+    }
+    if (!formData.cityzone.trim()) {
+      errors.cityzone = "City/Zone is required";
+    }
+    if (!formData.subcityworeda.trim()) {
+      errors.subcityworeda = "Subcity/Woreda is required";
+    }
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
   const handleRegister = async (event) => {
     event.preventDefault();
 
-    if (formData.password !== formData.confirmpassword) {
-      console.error("Error: Passwords do not match");
+    const isStep0Valid = validateStep0();
+    const isStep1Valid = validateStep1();
+
+    if (!isStep0Valid || !isStep1Valid) {
+      console.error("Error: Form is invalid");
       return;
     }
 
@@ -47,7 +95,10 @@ function SignUp() {
   };
 
   const nextStep = () => {
-    setFormStep(1);
+    const isStep0Valid = validateStep0();
+    if (isStep0Valid) {
+      setFormStep(1);
+    }
   };
 
   const previousStep = () => {
@@ -60,7 +111,7 @@ function SignUp() {
         {formStep === 0 && (
           <>
             <h1>Create Account</h1>
-            <div className="fl">
+            
               <input
                 type="text"
                 placeholder="First Name"
@@ -69,6 +120,9 @@ function SignUp() {
                 onChange={handleChange}
                 required
               />
+              {formErrors.firstname && (
+                <div className="error">{formErrors.firstname}</div>
+              )}
               <input
                 type="text"
                 placeholder="Last Name"
@@ -77,7 +131,10 @@ function SignUp() {
                 onChange={handleChange}
                 required
               />
-            </div>
+              {formErrors.lastname && (
+                <div className="error">{formErrors.lastname}</div>
+              )}
+            
             <input
               type="text"
               placeholder="Username"
@@ -86,6 +143,9 @@ function SignUp() {
               onChange={handleChange}
               required
             />
+            {formErrors.username && (
+              <div className="error">{formErrors.username}</div>
+            )}
             <input
               type="email"
               placeholder="Email"
@@ -94,6 +154,9 @@ function SignUp() {
               onChange={handleChange}
               required
             />
+            {formErrors.email && (
+              <div className="error">{formErrors.email}</div>
+            )}
             <input
               type="password"
               placeholder="Password"
@@ -102,6 +165,9 @@ function SignUp() {
               onChange={handleChange}
               required
             />
+            {formErrors.password && (
+              <div className="error">{formErrors.password}</div>
+            )}
             <input
               type="password"
               placeholder="Confirm Password"
@@ -110,7 +176,10 @@ function SignUp() {
               onChange={handleChange}
               required
             />
-            <button type="submit" onClick={nextStep}>
+            {formErrors.confirmpassword && (
+              <div className="error">{formErrors.confirmpassword}</div>
+            )}
+            <button type="button" onClick={nextStep}>
               Next
             </button>
           </>
@@ -133,6 +202,9 @@ function SignUp() {
                 <option>B</option>
                 <option>C</option>
               </select>
+              {formErrors.region && (
+                <div className="error">{formErrors.region}</div>
+              )}
               <select
                 name="cityzone"
                 value={formData.cityzone}
@@ -146,6 +218,9 @@ function SignUp() {
                 <option>B</option>
                 <option>C</option>
               </select>
+              {formErrors.cityzone && (
+                <div className="error">{formErrors.cityzone}</div>
+              )}
               <input
                 type="text"
                 placeholder="Subcity/Woreda"
@@ -154,6 +229,9 @@ function SignUp() {
                 onChange={handleChange}
                 required
               />
+              {formErrors.subcityworeda && (
+                <div className="error">{formErrors.subcityworeda}</div>
+              )}
               <input
                 type="text"
                 placeholder="P.O.Box"
