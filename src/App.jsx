@@ -8,11 +8,10 @@ import FullHomePage from "./components/HomePage/FullHomepage";
 function App() {
   return (
     <div className="root">
-      {/* <Routes>
+      <Routes>
         <Route path="/" Component={index} />
         <Route path="/login" Component={Logreg} />
-      </Routes> */}
-      <FullHomePage />
+      </Routes>
     </div>
   );
 }
