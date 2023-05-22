@@ -3,6 +3,7 @@ import "./components/LandingPage/FullLandingPage.css";
 import Logreg from "./components/LoginPage/Logreg";
 import { Routes, Route } from "react-router-dom";
 import index from "./components";
+
 function App() {
   return (
     <div className="root">

@@ -21,7 +21,7 @@ function Search_menu() {
       <div>
         <img src={phoneMenu} onClick={handler} />
         {isOpen && (
-          <div className="overlay" onClick={handleClose}>
+          <div className="home-overlay" onClick={handleClose}>
             <div className=" active">
               <HomePage_sidebar />
             </div>
