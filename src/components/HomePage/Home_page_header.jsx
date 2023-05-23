@@ -12,6 +12,7 @@ import {
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import Upload from "./Upload";
 
 function Home_page_header() {
   const [showNav, setShowNav] = useState(false);
@@ -91,6 +92,7 @@ function Home_page_header() {
       <div onClick={toggleNav} className="header-toggle">
         {showNav ? <FaTimes /> : <img src={menu} className="phone-menu" />}
       </div>
+      <Upload />
     </div>
   );
 }
