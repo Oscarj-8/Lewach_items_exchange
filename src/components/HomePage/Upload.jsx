@@ -5,6 +5,14 @@ function Upload() {
   const itemTypes = ["type one", "type two", "type three"];
   const itemBrands = ["Brand one", "Brand two", "Brand three"];
   const itemModels = ["Model one", "model two", "model three"];
+  const itemQuantitys = [1, 2, 3];
+  const itemRegions = ["Region one", "Region two", "Region three"];
+  const itemCityZones = ["City Zone one", "City Zone two", "City Zone three"];
+  const itemSubcityWoredas = [
+    "Subcity Woreda one",
+    "Subcity Woreda two",
+    "Subcity Woreda three",
+  ];
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const closeModal = () => setModalIsOpen(false);
@@ -12,6 +20,14 @@ function Upload() {
   const [itemType, setItemType] = useState("");
   const [brandName, setBrandName] = useState("");
   const [modelType, setModelType] = useState("");
+  const [itemQuantity, setItemQuantity] = useState("");
+  const [itemEstimatedValue, setItemEstimatedValue] = useState("");
+  const [itemDefects, setItemDefects] = useState("");
+  const [itemRegion, setItemRegion] = useState("");
+  const [itemCityZone, setItemCityZone] = useState("");
+  const [itemSubcityWoreda, setItemSubcityWoreda] = useState("");
+  const [itemSpecificArea, setItemSpecificArea] = useState("");
+  const [itemsWillingToAccept, setItemsWillingToAccept] = useState("");
 
   const itemTypeChangeHandler = (e) => {
     setItemType(e.target.value);
@@ -25,11 +41,36 @@ function Upload() {
     setModelType(e.target.value);
   };
 
+  const itemQuantityChangeHandler = (e) => {
+    setItemQuantity(e.target.value);
+  };
+
+  const estimatedValueChangeHandler = (e) => {
+    setItemEstimatedValue(e.target.value);
+  };
+
+  const itemDefectsChangeHandler = (e) => setItemDefects(e.taget.value);
+  const regionChangeHandler = (e) => setItemRegion(e.target.value);
+
+  const cityZoneChangeHandler = (e) => setItemCityZone(e.target.value);
+
+  function subcityWoredaChangeHandler(e) {
+    setItemSubcityWoreda(e.target.value);
+  }
+
+  function specificAreaNameChangeHandler(e) {
+    setItemSpecificArea(e.target.value);
+  }
+
+  const itemsWillingToAcceptChangeHandler = (e) => {
+    setItemsWillingToAccept(e.target.value);
+  };
   return (
     <div>
       <button onClick={() => setModalIsOpen(true)}>Upload</button>
       <UploadModal isOpen={modalIsOpen} onRequestClose={closeModal}>
         <form>
+          <h3>Item Details</h3>
           <label htmlFor="item-type">Item Type:</label>
           <select
             name="item-type"
@@ -72,6 +113,96 @@ function Upload() {
               </option>
             ))}
           </select>
+          <label htmlFor="item-quantity">Item Quantity:</label>
+          <select
+            name="item-quantity"
+            id="item-quantity"
+            value={itemQuantity}
+            onChange={itemQuantityChangeHandler}
+          >
+            <option value="">Select quantity</option>
+            {itemQuantitys.map((quantity) => (
+              <option value={quantity} key={quantity}>
+                {quantity}
+              </option>
+            ))}
+          </select>
+          <label htmlFor="estimated-value">Estimated value:</label>
+          <input
+            type="number"
+            id="estimated-value"
+            value={itemEstimatedValue}
+            onChange={estimatedValueChangeHandler}
+          />
+          <label htmlFor="defects-of-item">Defects of item:</label>
+          <textarea
+            id="defects-of-item"
+            value={itemDefects}
+            onChange={itemDefectsChangeHandler}
+          ></textarea>
+          <h3>Location</h3>
+          <label htmlFor="region">Region:</label>
+          <select
+            name="region"
+            id="region"
+            value={itemRegion}
+            onChange={regionChangeHandler}
+          >
+            <option value="">Select region</option>
+            {itemRegions.map((region) => (
+              <option value={region} key={region}>
+                {region}
+              </option>
+            ))}
+          </select>
+          <label htmlFor="city-zone">City/Zone:</label>
+          <select
+            name="city-zone"
+            id="city-zone"
+            value={itemCityZone}
+            onChange={cityZoneChangeHandler}
+          >
+            <option value="">Select City/Zone</option>
+            {itemCityZones.map((zone) => (
+              <option value={zone} key={zone}>
+                {zone}
+              </option>
+            ))}
+          </select>
+          <label htmlFor="subcity-woreda">Subcity/Woreda:</label>
+          <select
+            name="subcity-woreda"
+            id="subcity-woreda"
+            value={itemSubcityWoreda}
+            onChange={subcityWoredaChangeHandler}
+          >
+            <option value="">Select Subcity/Woreda</option>
+            {itemSubcityWoredas.map((subcityWoreda) => (
+              <option value={subcityWoreda} key={subcityWoreda}>
+                {subcityWoreda}
+              </option>
+            ))}
+          </select>
+          <label htmlFor="specific-area">Specific Area Name:</label>
+          <input
+            type="text"
+            id="specific-area"
+            name="specific-area"
+            value={itemSpecificArea}
+            onChange={specificAreaNameChangeHandler}
+          />
+          <label htmlFor="items-willing-to-accept">
+            Items Willing to Accept:
+          </label>
+          <textarea
+            id="items-willing-to-accept"
+            value={itemsWillingToAccept}
+            onChange={itemsWillingToAcceptChangeHandler}
+          ></textarea>
+          <div className="upload-btn">
+            <button>Upload</button>
+            <button>Cancel</button>
+          </div>
         </form>
       </UploadModal>
     </div>
