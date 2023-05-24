@@ -3,6 +3,9 @@ import "./components/LandingPage/FullLandingPage.css";
 import Logreg from "./components/LoginPage/Logreg";
 import { Routes, Route } from "react-router-dom";
 import index from "./components";
+import FullHomepage from "./components/HomePage/FullHomepage";
+import "./components/HomePage/FullHomepage";
+import FullHomepage from "./components/HomePage/FullHomepage";
 
 function App() {
   return (
@@ -10,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" Component={index} />
         <Route path="/login" Component={Logreg} />
+        <Route path="/fullhomepage" Component={FullHomepage} />
       </Routes>
     </div>
   );
