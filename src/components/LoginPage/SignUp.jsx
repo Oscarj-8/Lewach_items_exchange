@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import regionOptions from "./Regions";
+import cityzoneOptions from"./CityZone"
 
 function SignUp() {
   const [formStep, setFormStep] = useState(0);
@@ -25,26 +27,26 @@ function SignUp() {
   const validateStep0 = () => {
     const errors = {};
     if (!formData.firstname.trim()) {
-      errors.firstname = "First name is required";
+      errors.firstname = "*";
     }
     if (!formData.lastname.trim()) {
-      errors.lastname = "Last name is required";
+      errors.lastname = "*";
     }
     if (!formData.username.trim()) {
-      errors.username = "Username is required";
+      errors.username = "*";
     }
     if (!formData.email.trim()) {
-      errors.email = "Email is required";
+      errors.email = "*";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      errors.email = "Email is invalid";
+      errors.email = "Invalid Email";
     }
     if (!formData.password.trim()) {
-      errors.password = "Password is required";
+      errors.password = "*";
     } else if (formData.password.length < 8) {
-      errors.password = "Password must be at least 8 characters long";
+      errors.password = "Must be at least 8 characters long";
     }
     if (!formData.confirmpassword.trim()) {
-      errors.confirmpassword = "Confirm password is required";
+      errors.confirmpassword = "*";
     } else if (formData.password !== formData.confirmpassword) {
       errors.confirmpassword = "Passwords do not match";
     }
@@ -55,13 +57,13 @@ function SignUp() {
   const validateStep1 = () => {
     const errors = {};
     if (!formData.region.trim()) {
-      errors.region = "Region is required";
+      errors.region = "*";
     }
     if (!formData.cityzone.trim()) {
-      errors.cityzone = "City/Zone is required";
+      errors.cityzone = "*";
     }
     if (!formData.subcityworeda.trim()) {
-      errors.subcityworeda = "Subcity/Woreda is required";
+      errors.subcityworeda = "*";
     }
     setFormErrors(errors);
     return Object.keys(errors).length === 0;
@@ -119,7 +121,7 @@ function SignUp() {
                 value={formData.firstname}
                 onChange={handleChange}
                 required
-              />
+              /> 
               {formErrors.firstname && (
                 <div className="error">{formErrors.firstname}</div>
               )}
@@ -195,32 +197,31 @@ function SignUp() {
                 onChange={handleChange}
                 required
               >
-                <option value="" disabled hidden>
-                  Region
+                {regionOptions.map((option) => (
+                <option key={option.value} value={option.value}>
+                {option.label}
                 </option>
-                <option>A</option>
-                <option>B</option>
-                <option>C</option>
+                ))}
               </select>
               {formErrors.region && (
                 <div className="error">{formErrors.region}</div>
               )}
+              
               <select
                 name="cityzone"
                 value={formData.cityzone}
                 onChange={handleChange}
                 required
               >
-                <option value="" disabled hidden>
-                  City/Zone
-                </option>
-                <option>A</option>
-                <option>B</option>
-                <option>C</option>
-              </select>
+                {cityzoneOptions.map((option) => (
+                <option key={option.value} value={option.value}>
+                 {option.label}
+                  </option>
+                ))}
               {formErrors.cityzone && (
                 <div className="error">{formErrors.cityzone}</div>
-              )}
+                )}
+                </select>
               <input
                 type="text"
                 placeholder="Subcity/Woreda"
