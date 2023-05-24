@@ -36,6 +36,17 @@
   display: flex;
 }
 
+#upload-button {
+  border: none;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 0.5em;
+  border-radius: 0.3em;
+  font-family: var(--ffbebas);
+  font-size: var(--fxxsmall);
+  letter-spacing: 0.15em;
+}
+
 .search-menu {
   padding: 1em;
   display: grid;
@@ -320,6 +331,11 @@
 
   .side-bar-btns {
     top: 6.1em;
+  }
+
+  #upload-button {
+    padding: 0.5em 1.1em;
+    font-size: var(--fxsmall);
   }
 }
 

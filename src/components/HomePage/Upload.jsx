@@ -65,15 +65,21 @@ function Upload() {
   const itemsWillingToAcceptChangeHandler = (e) => {
     setItemsWillingToAccept(e.target.value);
   };
+
+  function formSubmitHandler(e) {
+    e.preventDefault();
+  }
   return (
     <div>
-      <button onClick={() => setModalIsOpen(true)}>Upload</button>
+      <button id="upload-button" onClick={() => setModalIsOpen(true)}>
+        Upload
+      </button>
       <UploadModal isOpen={modalIsOpen} onRequestClose={closeModal}>
         <div className="modal-username-section">
           <span>User - Alex Moreno</span>
         </div>
         <hr />
-        <form className="upload-form">
+        <form className="upload-form" onSubmit={formSubmitHandler}>
           <input type="file" className="form-items" id="file-uploader" />
           <h3>Item Details</h3>
           <div className="form-items">
