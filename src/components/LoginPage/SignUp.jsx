@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import regionOptions from "./Regions";
-import cityzoneOptions from"./CityZone"
+import React, { useState, useEffect } from "react";
+import regions from "./regions";
+import cityZones from"./CityZones"
 
 function SignUp() {
   const [formStep, setFormStep] = useState(0);
@@ -106,6 +106,17 @@ function SignUp() {
   const previousStep = () => {
     setFormStep(0);
   };
+  
+  const [filteredCityZones, setFilteredCityZones] = useState([]);
+
+  useEffect(() => {
+    if (formData.region) {
+      setFilteredCityZones(cityZones[formData.region]);
+    } else {
+      setFilteredCityZones([]);
+    }
+  }, [formData.region]);
+
 
   return (
     <section className="container-form container-form-sign-up">
@@ -197,10 +208,13 @@ function SignUp() {
                 onChange={handleChange}
                 required
               >
-                {regionOptions.map((option) => (
-                <option key={option.value} value={option.value}>
-                {option.label}
+                <option value="" disabled hidden>
+                  Region
                 </option>
+                {regions.map((region) => (
+                  <option key={region.value} value={region.value}>
+                    {region.label}
+                  </option>
                 ))}
               </select>
               {formErrors.region && (
@@ -208,16 +222,19 @@ function SignUp() {
               )}
               
               <select
-                name="cityzone"
-                value={formData.cityzone}
-                onChange={handleChange}
-                required
-              >
-                {cityzoneOptions.map((option) => (
-                <option key={option.value} value={option.value}>
-                 {option.label}
-                  </option>
-                ))}
+               name="cityzone"
+               value={formData.cityzone}
+               onChange={handleChange}
+               required
+             >
+               <option value="" disabled hidden>
+                 City/Zone
+               </option>
+                {cityZones.map((cityZone) => (
+                 <option key={cityZone.value} value={cityZone.value}>
+                   {cityZone.label}
+                 </option>
+                     ))}
               {formErrors.cityzone && (
                 <div className="error">{formErrors.cityzone}</div>
                 )}
