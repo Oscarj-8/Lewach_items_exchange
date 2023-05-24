@@ -3,8 +3,8 @@ import "./components/LandingPage/FullLandingPage.css";
 import Logreg from "./components/LoginPage/Logreg";
 import { Routes, Route } from "react-router-dom";
 import index from "./components";
-import "./components/HomePage/FullHomepage"
 import FullHomepage from "./components/HomePage/FullHomepage";
+import "./components/HomePage/FullHomepage";
 
 function App() {
   return (
