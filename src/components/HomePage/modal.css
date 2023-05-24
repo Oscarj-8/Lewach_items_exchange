@@ -1,0 +1,80 @@
+:root {
+  --space: 0.1em;
+  --fsizelogo: 32px;
+
+  --fcolorlightblack: #323232;
+
+  --p3tfsize: 25px;
+  --p3flspacing: 0.01em;
+  --p3tlhieght: 32px;
+
+  --fxxsmall: 0.875em;
+  --fxsmall: 1em;
+  --fsmall: 1.125em;
+  --fmid: 1.25em;
+  --flarge: 1.5em;
+  --fxxlarge: 2.625em;
+
+  --fpagetop: 2.5em;
+  --fspagetop: 0.03em;
+  --fwpagetop: 400;
+
+  --fcolorwhite: white;
+  --fcolorlightblack: #323232;
+  --fcolorlighterblack: #5e5e5e;
+
+  --ffbebas: "Bebas Neue", cursive;
+  --ffquicksand: "Quicksand";
+  --ffroboto: "Roboto", sans-serif;
+}
+
+.ReactModal__Content {
+  background-color: yellow !important;
+  padding: 1em !important;
+  width: 90%;
+  height: 80vh;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5em !important;
+  gap: 0.25em;
+}
+
+.modal-username-section {
+  background-color: #03467a;
+  color: white;
+  padding: 1em;
+  border-radius: 0.25em;
+}
+
+hr {
+  margin-top: 0.5em;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: center;
+}
+
+.form-items {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-items label {
+  width: 56%;
+}
+
+.form-items select {
+  border: none;
+}
+
+.form-textarea label {
+  width: 10%;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import Modal from "react-modal";
+import "./modal.css";
 
 const UploadModal = ({ isOpen, onRequestClose, children }) => {
   return (
@@ -7,6 +8,7 @@ const UploadModal = ({ isOpen, onRequestClose, children }) => {
       isOpen={isOpen}
       onRequestClose={onRequestClose}
       contentLabel="Upload Modal"
+      // className="modal-modal"
     >
       {children}
     </Modal>

@@ -69,136 +69,164 @@ function Upload() {
     <div>
       <button onClick={() => setModalIsOpen(true)}>Upload</button>
       <UploadModal isOpen={modalIsOpen} onRequestClose={closeModal}>
-        <form>
+        <div className="modal-username-section">
+          <span>User - Alex Moreno</span>
+        </div>
+        <hr />
+        <form className="upload-form">
+          <input type="file" className="form-items" />
           <h3>Item Details</h3>
-          <label htmlFor="item-type">Item Type:</label>
-          <select
-            name="item-type"
-            id="item-type"
-            value={itemType}
-            onChange={itemTypeChangeHandler}
-          >
-            <option value="">Select item type</option>
-            {itemTypes.map((type) => (
-              <option value={type} key={type}>
-                {type}
-              </option>
-            ))}
-          </select>
-          <label htmlFor="item-brand">Item Brand:</label>
-          <select
-            id="item-brand"
-            name="item-brand"
-            value={brandName}
-            onChange={brandTypeChangeHandler}
-          >
-            <option value="">Select item brand</option>
-            {itemBrands.map((brand) => (
-              <option value={brand} key={brand}>
-                {brand}
-              </option>
-            ))}
-          </select>
-          <label htmlFor="model-type">Model Type:</label>
-          <select
-            name="model-type"
-            id="model-type"
-            value={modelType}
-            onChange={modelTypeChangeHandler}
-          >
-            <option value="">Select model type</option>
-            {itemModels.map((model) => (
-              <option value={model} key={model}>
-                {model}
-              </option>
-            ))}
-          </select>
-          <label htmlFor="item-quantity">Item Quantity:</label>
-          <select
-            name="item-quantity"
-            id="item-quantity"
-            value={itemQuantity}
-            onChange={itemQuantityChangeHandler}
-          >
-            <option value="">Select quantity</option>
-            {itemQuantitys.map((quantity) => (
-              <option value={quantity} key={quantity}>
-                {quantity}
-              </option>
-            ))}
-          </select>
-          <label htmlFor="estimated-value">Estimated value:</label>
-          <input
-            type="number"
-            id="estimated-value"
-            value={itemEstimatedValue}
-            onChange={estimatedValueChangeHandler}
-          />
-          <label htmlFor="defects-of-item">Defects of item:</label>
-          <textarea
-            id="defects-of-item"
-            value={itemDefects}
-            onChange={itemDefectsChangeHandler}
-          ></textarea>
+          <div className="form-items">
+            <label htmlFor="item-type">Item Type:</label>
+            <select
+              name="item-type"
+              id="item-type"
+              value={itemType}
+              onChange={itemTypeChangeHandler}
+            >
+              <option value=""></option>
+              {itemTypes.map((type) => (
+                <option value={type} key={type}>
+                  {type}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="form-items">
+            <label htmlFor="item-brand">Item Brand:</label>
+            <select
+              id="item-brand"
+              name="item-brand"
+              value={brandName}
+              onChange={brandTypeChangeHandler}
+            >
+              <option value=""></option>
+              {itemBrands.map((brand) => (
+                <option value={brand} key={brand}>
+                  {brand}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="form-items">
+            <label htmlFor="model-type">Model Type:</label>
+            <select
+              name="model-type"
+              id="model-type"
+              value={modelType}
+              onChange={modelTypeChangeHandler}
+            >
+              <option value=""></option>
+              {itemModels.map((model) => (
+                <option value={model} key={model}>
+                  {model}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="form-items">
+            <label htmlFor="item-quantity">Item Quantity:</label>
+            <select
+              name="item-quantity"
+              id="item-quantity"
+              value={itemQuantity}
+              onChange={itemQuantityChangeHandler}
+            >
+              <option value=""></option>
+              {itemQuantitys.map((quantity) => (
+                <option value={quantity} key={quantity}>
+                  {quantity}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="form-items">
+            <label htmlFor="estimated-value">Estimated value:</label>
+            <input
+              type="number"
+              id="estimated-value"
+              value={itemEstimatedValue}
+              onChange={estimatedValueChangeHandler}
+            />
+          </div>
+          <div className="form-items form-textarea">
+            <label htmlFor="defects-of-item">Defects of item:</label>
+            <textarea
+              id="defects-of-item"
+              value={itemDefects}
+              onChange={itemDefectsChangeHandler}
+            ></textarea>
+          </div>
+
           <h3>Location</h3>
-          <label htmlFor="region">Region:</label>
-          <select
-            name="region"
-            id="region"
-            value={itemRegion}
-            onChange={regionChangeHandler}
-          >
-            <option value="">Select region</option>
-            {itemRegions.map((region) => (
-              <option value={region} key={region}>
-                {region}
-              </option>
-            ))}
-          </select>
-          <label htmlFor="city-zone">City/Zone:</label>
-          <select
-            name="city-zone"
-            id="city-zone"
-            value={itemCityZone}
-            onChange={cityZoneChangeHandler}
-          >
-            <option value="">Select City/Zone</option>
-            {itemCityZones.map((zone) => (
-              <option value={zone} key={zone}>
-                {zone}
-              </option>
-            ))}
-          </select>
-          <label htmlFor="subcity-woreda">Subcity/Woreda:</label>
-          <select
-            name="subcity-woreda"
-            id="subcity-woreda"
-            value={itemSubcityWoreda}
-            onChange={subcityWoredaChangeHandler}
-          >
-            <option value="">Select Subcity/Woreda</option>
-            {itemSubcityWoredas.map((subcityWoreda) => (
-              <option value={subcityWoreda} key={subcityWoreda}>
-                {subcityWoreda}
-              </option>
-            ))}
-          </select>
-          <label htmlFor="specific-area">Specific Area Name:</label>
-          <input
-            type="text"
-            id="specific-area"
-            name="specific-area"
-            value={itemSpecificArea}
-            onChange={specificAreaNameChangeHandler}
-          />
-          <label htmlFor="items-willing-to-accept">
-            Items Willing to Accept:
-          </label>
-          <textarea
-            id="items-willing-to-accept"
-            value={itemsWillingToAccept}
-            onChange={itemsWillingToAcceptChangeHandler}
-          ></textarea>
+          <div className="form-items">
+            <label htmlFor="region">Region:</label>
+            <select
+              name="region"
+              id="region"
+              value={itemRegion}
+              onChange={regionChangeHandler}
+            >
+              <option value=""></option>
+              {itemRegions.map((region) => (
+                <option value={region} key={region}>
+                  {region}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="form-items">
+            <label htmlFor="city-zone">City/Zone:</label>
+            <select
+              name="city-zone"
+              id="city-zone"
+              value={itemCityZone}
+              onChange={cityZoneChangeHandler}
+            >
+              <option value=""></option>
+              {itemCityZones.map((zone) => (
+                <option value={zone} key={zone}>
+                  {zone}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="form-items">
+            <label htmlFor="subcity-woreda">Subcity/Woreda:</label>
+            <select
+              name="subcity-woreda"
+              id="subcity-woreda"
+              value={itemSubcityWoreda}
+              onChange={subcityWoredaChangeHandler}
+            >
+              <option value=""></option>
+              {itemSubcityWoredas.map((subcityWoreda) => (
+                <option value={subcityWoreda} key={subcityWoreda}>
+                  {subcityWoreda}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="form-items">
+            <label htmlFor="specific-area">Specific area name</label>
+            <input
+              type="text"
+              id="specific-area"
+              name="specific-area"
+              value={itemSpecificArea}
+              onChange={specificAreaNameChangeHandler}
+            />
+          </div>
+          <div className="form-items form-textarea">
+            <label htmlFor="items-willing-to-accept">
+              Items Willing to Accept:
+            </label>
+            <textarea
+              id="items-willing-to-accept"
+              value={itemsWillingToAccept}
+              onChange={itemsWillingToAcceptChangeHandler}
+            ></textarea>
+          </div>
           <div className="upload-btn">
             <button>Upload</button>
             <button>Cancel</button>

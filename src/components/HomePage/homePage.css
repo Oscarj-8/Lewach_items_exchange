@@ -89,6 +89,7 @@
   transform: translatex(100%);
   transition: transform 0.5s ease-in-out;
   z-index: 9;
+  display: flex;
 }
 
 .nav2.show-nav {
