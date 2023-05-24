@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-const connectionString = 'mongodb+srv://binizele18:lewachabmss@cluster0.b7yxnkw.mongodb.net/';
+const connectionString = 'mongodb+srv://lewach:lewachabmss@lewachdb.vdgyobf.mongodb.net/';
 
 
 mongoose.connect(connectionString, {

@@ -37,11 +37,12 @@ function SignIn() {
 
     if (response.ok) {
       const user = await response.json();
-      console.log("Logged in:", user);
+      window.location.href = "/FullHomepage";
     } else {
       console.error("Error:", response.statusText);
     }
   };
+
 
   return (
     <section className="container-form container-form-sign-in">

@@ -2,7 +2,11 @@ import sideimage from "../../assets/images/sideimage.png";
 import Header from "./Header";
 import React from "react";
 
-function Landing_Page() {
+function Landing_Page()
+{
+  const handleButtonClick = () => {
+    window.location.href = "/login"; 
+  };
   return (
     <div className="landing-root">
       <div className="first-page">
@@ -17,8 +21,8 @@ function Landing_Page() {
               Trade your treasures, find new pleasures - Exchange with ease on
               our website
             </p>
-            <button className="btn">
-              <span>REGISTER NOW</span>
+            <button className="btn" onClick={handleButtonClick}>
+              REGISTER NOW
             </button>
           </div>
           <div className="landing-body-images">
