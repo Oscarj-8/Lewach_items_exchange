@@ -5,7 +5,6 @@ import { Routes, Route } from "react-router-dom";
 import index from "./components";
 import FullHomepage from "./components/HomePage/FullHomepage";
 import "./components/HomePage/FullHomepage";
-import FullHomepage from "./components/HomePage/FullHomepage";
 
 function App() {
   return (
