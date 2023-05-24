@@ -9,6 +9,8 @@ body {
 }
 .error{
   position: relative;
+  top: -25px;
+  right: -100px;
   color: red;
   font-size: 12px;
 }
