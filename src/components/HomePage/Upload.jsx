@@ -49,7 +49,7 @@ function Upload() {
     setItemEstimatedValue(e.target.value);
   };
 
-  const itemDefectsChangeHandler = (e) => setItemDefects(e.taget.value);
+  const itemDefectsChangeHandler = (e) => setItemDefects(e.target.value);
   const regionChangeHandler = (e) => setItemRegion(e.target.value);
 
   const cityZoneChangeHandler = (e) => setItemCityZone(e.target.value);
@@ -74,7 +74,7 @@ function Upload() {
         </div>
         <hr />
         <form className="upload-form">
-          <input type="file" className="form-items" />
+          <input type="file" className="form-items" id="file-uploader" />
           <h3>Item Details</h3>
           <div className="form-items">
             <label htmlFor="item-type">Item Type:</label>
@@ -143,7 +143,7 @@ function Upload() {
           <div className="form-items">
             <label htmlFor="estimated-value">Estimated value:</label>
             <input
-              type="number"
+              type="text"
               id="estimated-value"
               value={itemEstimatedValue}
               onChange={estimatedValueChangeHandler}
@@ -158,7 +158,7 @@ function Upload() {
             ></textarea>
           </div>
 
-          <h3>Location</h3>
+          <h3>Location Details</h3>
           <div className="form-items">
             <label htmlFor="region">Region:</label>
             <select
@@ -208,7 +208,7 @@ function Upload() {
             </select>
           </div>
           <div className="form-items">
-            <label htmlFor="specific-area">Specific area name</label>
+            <label htmlFor="specific-area">Specific area name:</label>
             <input
               type="text"
               id="specific-area"

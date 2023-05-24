@@ -22,6 +22,7 @@
   --fcolorwhite: white;
   --fcolorlightblack: #323232;
   --fcolorlighterblack: #5e5e5e;
+  --fcoloruploadlabel: #302d2d;
 
   --ffbebas: "Bebas Neue", cursive;
   --ffquicksand: "Quicksand";
@@ -29,8 +30,7 @@
 }
 
 .ReactModal__Content {
-  background-color: yellow !important;
-  padding: 1em !important;
+  padding: 0.8em !important;
   width: 90%;
   height: 80vh;
   top: 50% !important;
@@ -40,6 +40,7 @@
   flex-direction: column;
   border-radius: 0.5em !important;
   gap: 0.25em;
+  box-shadow: 0px 0px 20px rgba(64, 64, 64, 0.4);
 }
 
 .modal-username-section {
@@ -47,6 +48,8 @@
   color: white;
   padding: 1em;
   border-radius: 0.25em;
+  font-family: var(--ffroboto);
+  font-size: var(--fsmall);
 }
 
 hr {
@@ -65,16 +68,67 @@ hr {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: var(--fcoloruploadlabel);
+}
+
+#file-uploader {
+  margin: 4em 0em;
+  width: 50%;
+}
+
+.upload-form h3 {
+  font-family: var(--ffroboto);
+  font-size: var(--fsmall);
+  font-weight: 500;
+  margin-top: 1em;
 }
 
 .form-items label {
   width: 56%;
+  font-family: var(--ffroboto);
+  font-size: var(--fxxsmall);
 }
 
 .form-items select {
   border: none;
 }
 
+.form-items textarea {
+  width: 100%;
+}
+
 .form-textarea label {
-  width: 10%;
+  width: 100%;
+}
+
+.form-textarea {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25em;
+  margin-top: 3%;
+}
+
+#estimated-value,
+#specific-area {
+  border: none;
+  border-bottom: 1px solid #000000;
+  width: 60%;
+}
+
+.upload-btn {
+  display: flex;
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.upload-btn button {
+  background-color: #03467a;
+  box-shadow: 0 4px 11px rgba(0, 0, 0, 0.4);
+  color: white;
+  border-radius: 0.4em;
+  border: none;
+  font-family: var(--ffbebas);
+  font-size: var(--fsmall);
+  letter-spacing: 0.05em;
+  padding: 0.5em 1.5em;
 }
