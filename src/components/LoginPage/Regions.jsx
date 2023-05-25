@@ -1,4 +1,4 @@
-const regionOptions = [
+const regions = [
     { value: "", label: "Region" },
     { value: "Addis Ababa", label: "Addis Ababa" },
     { value: "Afar", label: "Afar" },
@@ -14,4 +14,4 @@ const regionOptions = [
     { value: "Tigray", label: "Tigray" },    
   ];
   
-export default regionOptions;
+export default regions;
