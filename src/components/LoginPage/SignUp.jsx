@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import regions from "./regions";
-import cityZones from"./CityZones"
+import regions from "./Regions";
+import cityZones from "./CityZones";
 
 function SignUp() {
   const [formStep, setFormStep] = useState(0);
@@ -106,7 +106,7 @@ function SignUp() {
   const previousStep = () => {
     setFormStep(0);
   };
-  
+
   const [filteredCityZones, setFilteredCityZones] = useState([]);
 
   useEffect(() => {
@@ -117,37 +117,36 @@ function SignUp() {
     }
   }, [formData.region]);
 
-
   return (
     <section className="container-form container-form-sign-up">
       <form onSubmit={handleRegister} className="sign-up-form">
         {formStep === 0 && (
           <>
             <h1>Create Account</h1>
-            
-              <input
-                type="text"
-                placeholder="First Name"
-                name="firstname"
-                value={formData.firstname}
-                onChange={handleChange}
-                required
-              /> 
-              {formErrors.firstname && (
-                <div className="error">{formErrors.firstname}</div>
-              )}
-              <input
-                type="text"
-                placeholder="Last Name"
-                name="lastname"
-                value={formData.lastname}
-                onChange={handleChange}
-                required
-              />
-              {formErrors.lastname && (
-                <div className="error">{formErrors.lastname}</div>
-              )}
-            
+
+            <input
+              type="text"
+              placeholder="First Name"
+              name="firstname"
+              value={formData.firstname}
+              onChange={handleChange}
+              required
+            />
+            {formErrors.firstname && (
+              <div className="error">{formErrors.firstname}</div>
+            )}
+            <input
+              type="text"
+              placeholder="Last Name"
+              name="lastname"
+              value={formData.lastname}
+              onChange={handleChange}
+              required
+            />
+            {formErrors.lastname && (
+              <div className="error">{formErrors.lastname}</div>
+            )}
+
             <input
               type="text"
               placeholder="Username"
@@ -220,25 +219,25 @@ function SignUp() {
               {formErrors.region && (
                 <div className="error">{formErrors.region}</div>
               )}
-              
+
               <select
-               name="cityzone"
-               value={formData.cityzone}
-               onChange={handleChange}
-               required
-             >
-               <option value="" disabled hidden>
-                 City/Zone
-               </option>
+                name="cityzone"
+                value={formData.cityzone}
+                onChange={handleChange}
+                required
+              >
+                <option value="" disabled hidden>
+                  City/Zone
+                </option>
                 {cityZones.map((cityZone) => (
-                 <option key={cityZone.value} value={cityZone.value}>
-                   {cityZone.label}
-                 </option>
-                     ))}
-              {formErrors.cityzone && (
-                <div className="error">{formErrors.cityzone}</div>
+                  <option key={cityZone.value} value={cityZone.value}>
+                    {cityZone.label}
+                  </option>
+                ))}
+                {formErrors.cityzone && (
+                  <div className="error">{formErrors.cityzone}</div>
                 )}
-                </select>
+              </select>
               <input
                 type="text"
                 placeholder="Subcity/Woreda"
