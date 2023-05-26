@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import regions from "./regions";
-import cityZones from"./CityZones"
 
 function SignUp() {
   const [formStep, setFormStep] = useState(0);
@@ -19,11 +18,11 @@ function SignUp() {
     ssn: "",
   });
   const [formErrors, setFormErrors] = useState({});
-
+  const [selectedRegion, setSelectedRegion] = useState("");
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
-
+console.log(selectedRegion);
   const validateStep0 = () => {
     const errors = {};
     if (!formData.firstname.trim()) {
@@ -107,16 +106,14 @@ function SignUp() {
     setFormStep(0);
   };
   
-  const [filteredCityZones, setFilteredCityZones] = useState([]);
+  const [cityZones, setCityZones] = useState([]);
 
-  useEffect(() => {
-    if (formData.region) {
-      setFilteredCityZones(cityZones[formData.region]);
-    } else {
-      setFilteredCityZones([]);
-    }
-  }, [formData.region]);
-
+  function handleRegionChange(event) {
+    const region = event.target.value;
+    setSelectedRegion(region);
+    setCityZones(regions[region] || []);
+  }
+;
 
   return (
     <section className="container-form container-form-sign-up">
@@ -204,45 +201,36 @@ function SignUp() {
             <div>
               <select
                 name="region"
-                value={formData.region}
-                onChange={handleChange}
-                required
+                value={selectedRegion}
+                onChange={handleRegionChange}
               >
-                <option value="" disabled hidden>
-                  Region
-                </option>
-                {regions.map((region) => (
-                  <option key={region.value} value={region.value}>
-                    {region.label}
-                  </option>
-                ))}
+                <option value="">Region/City</option>
+                    {Object.keys(regions).map(region => (
+                    <option key={region} value={region}>
+                    {region}
+                 </option>
+                    ))}
               </select>
               {formErrors.region && (
                 <div className="error">{formErrors.region}</div>
               )}
-              
               <select
-               name="cityzone"
-               value={formData.cityzone}
-               onChange={handleChange}
-               required
+               name="subcityzone"
              >
-               <option value="" disabled hidden>
-                 City/Zone
-               </option>
-                {cityZones.map((cityZone) => (
-                 <option key={cityZone.value} value={cityZone.value}>
-                   {cityZone.label}
-                 </option>
-                     ))}
+                <option value="">Subcity/Zone</option>
+                    {cityZones.map(cityZone => (
+                    <option key={cityZone} value={cityZone}>
+                    {cityZone}
+                </option>
+                   ))}
+              </select>
               {formErrors.cityzone && (
                 <div className="error">{formErrors.cityzone}</div>
                 )}
-                </select>
               <input
                 type="text"
-                placeholder="Subcity/Woreda"
-                name="subcityworeda"
+                placeholder="City/Woreda"
+                name="cityworeda"
                 value={formData.subcityworeda}
                 onChange={handleChange}
                 required
