@@ -72,7 +72,7 @@ function Upload() {
   return (
     <div>
       <button id="upload-button" onClick={() => setModalIsOpen(true)}>
-        Upload
+        Upload item
       </button>
       <UploadModal isOpen={modalIsOpen} onRequestClose={closeModal}>
         <div className="modal-username-section">
