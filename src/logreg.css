@@ -6,6 +6,8 @@
 
 body {
   font-family: "Roboto Slab", serif;
+  background-image: url(./assets/images/Logregback.jpg);
+  background-size: cover;
 }
 .error{
   position: relative;
@@ -52,7 +54,7 @@ img {
   max-width: 786px;
   min-height: 480px;
   border-radius: 5px;
-  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: -2px 2px 20px rgba(0, 0, 0, 1);
 }
 .container-form .sign-up-form {
   background: #fff;

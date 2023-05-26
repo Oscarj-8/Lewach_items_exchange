@@ -24,14 +24,23 @@ const regions = {
       "Jimma", "North Shewa", "Southwest Shewa", "West Arsi ", "West Guji",
       "West Hararghe", "West Shewa", "West Welega", "Oromia Special Zone Surrounding Finfinne"],
   "Sidama":
-    ["City Zone 4", "City Zone 5", "City Zone 6"],
+    ["Aleta Chuko",'Aleta Wondo',"Arbegona","Aroresa","Hawassa Zuria","Bensa","Bona Zuria","Boricha","Bursa","Chere", "Dale", "Dara", "Gorche", "Hawassa", "Hula", "Loko Abaya", "Malga", "Shebedin", "Wonsho" ,"Wondo Genet"],
   "Somali":
-    ["City Zone 4", "City Zone 5", "City Zone 6"],
-  "South West Ethiopia Peoples' Region": ["City Zone 4", "City Zone 5", "City Zone 6"],
+    ["Afder Zone","Dollo" ,"Erer " ,"Fafan"  ,"Jarar" ,"Korahee",
+    "Liben" ,"Dhawa" ,"Nogob"  ,"Shabelle" ,"Sitti" ,"Degehabur",
+    "Gode" ,"Harawo" ,"Kebri Beyah", "Tog Wajale "],
+  "South West Ethiopia Peoples' Region":
+   [" Keffa", "Sheka", "Bench Sheko", "Dawro", "West Omo", "Konta"],
   "SNNPR":
-    ["City Zone 4", "City Zone 5", "City Zone 6"],
+    ["Gamo (Arba Minch)","Gofa (Sawula)","Gedeo (Dilla)","Gurage (Welkite)"
+      , "Hadiya 	(Hosaena)", "Kembata Tembaro 	(Durame)", "Silt'e (Worabe)",
+      "Debub Omo (Jinka)", "Wolayita (Sodo)", "Alaba (Halaba Kulito)",
+      "Amaro special woreda	(Kele)", "Alle Special Woreda	",
+      "Basketo special woreda	(Laska)","Burji special woreda	(Soyama)",
+      "Dirashe special woreda	(Gidole)","Konso (Karat)", "Yem special woreda	(Fofa)"],
   "Tigray":
-    ["City Zone 7", "City Zone 8", "City Zone 9"]
+    ["Central Tigray", "East Tigray", "North West Tigray", "South Tigray"
+      , "South East Tigray", "West Tigray", "Mekele"]
 };
   
 export default regions;
