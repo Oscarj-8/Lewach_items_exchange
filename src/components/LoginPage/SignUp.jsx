@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import regions from "./regions";
-import cityZones from"./CityZones"
 
 function SignUp() {
   const [formStep, setFormStep] = useState(0);
@@ -107,16 +106,14 @@ console.log(selectedRegion);
     setFormStep(0);
   };
   
-  const [filteredCityZones, setFilteredCityZones] = useState([]);
+  const [cityZones, setCityZones] = useState([]);
 
-  useEffect(() => {
-    if (formData.region) {
-      setFilteredCityZones(cityZones[formData.region]);
-    } else {
-      setFilteredCityZones([]);
-    }
-  }, [formData.region]);
-
+  function handleRegionChange(event) {
+    const region = event.target.value;
+    setSelectedRegion(region);
+    setCityZones(regions[region] || []);
+  }
+;
 
   return (
     <section className="container-form container-form-sign-up">
@@ -217,25 +214,19 @@ console.log(selectedRegion);
               {formErrors.region && (
                 <div className="error">{formErrors.region}</div>
               )}
-              
               <select
-               name="cityzone"
-               value={formData.cityzone}
-               onChange={handleChange}
-               required
+               name="subcityzone"
              >
-               <option value="" disabled hidden>
-                 City/Zone
-               </option>
-                {cityZones.map((cityZone) => (
-                 <option key={cityZone.value} value={cityZone.value}>
-                   {cityZone.label}
-                 </option>
-                     ))}
+                <option value="">Subcity/Zone</option>
+                    {cityZones.map(cityZone => (
+                    <option key={cityZone} value={cityZone}>
+                    {cityZone}
+                </option>
+                   ))}
+              </select>
               {formErrors.cityzone && (
                 <div className="error">{formErrors.cityzone}</div>
                 )}
-                </select>
               <input
                 type="text"
                 placeholder="City/Woreda"
