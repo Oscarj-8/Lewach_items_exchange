@@ -190,7 +190,8 @@ hr {
   }
 
   #estimated-value,
-  #specific-area {
+  #specific-area,
+  #duration-of-usage {
     width: 87%;
   }
 }
