@@ -70,15 +70,15 @@ hr {
 
 .file-upload label {
   display: block;
-  padding: 6em 2em;
-  background-color: #b4b4b4;
+  padding: 6em 1.5em;
+  background-color: #8b8b8b;
   color: #fff;
   cursor: pointer;
   margin-top: 5%;
 }
 
 .file-upload label:hover {
-  background-color: #c2bebe;
+  background-color: #979797;
 }
 
 .upload-form {
