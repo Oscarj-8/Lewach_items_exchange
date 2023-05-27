@@ -1,5 +1,7 @@
 import UploadModal from "./UploadModal";
 import { useState } from "react";
+import { FaTimes } from "react-icons/fa";
+import CustomFileInput from "./CustomFileInput";
 
 function Upload() {
   const itemTypes = ["type one", "type two", "type three"];
@@ -22,6 +24,7 @@ function Upload() {
   const [modelType, setModelType] = useState("");
   const [itemQuantity, setItemQuantity] = useState("");
   const [itemEstimatedValue, setItemEstimatedValue] = useState("");
+  const [itemDurationOfUsage, setItemDurationOfUsage] = useState("");
   const [itemDefects, setItemDefects] = useState("");
   const [itemRegion, setItemRegion] = useState("");
   const [itemCityZone, setItemCityZone] = useState("");
@@ -49,6 +52,10 @@ function Upload() {
     setItemEstimatedValue(e.target.value);
   };
 
+  const durationOfUsageChangeHandler = (e) => {
+    setItemDurationOfUsage(e.target.value);
+  };
+
   const itemDefectsChangeHandler = (e) => setItemDefects(e.target.value);
   const regionChangeHandler = (e) => setItemRegion(e.target.value);
 
@@ -69,6 +76,12 @@ function Upload() {
   function formSubmitHandler(e) {
     e.preventDefault();
   }
+
+  const [file, setFile] = useState(null);
+
+  function handleFileChange(e) {
+    setFile(e.target.files[0]);
+  }
   return (
     <div>
       <button id="upload-button" onClick={() => setModalIsOpen(true)}>
@@ -77,10 +90,19 @@ function Upload() {
       <UploadModal isOpen={modalIsOpen} onRequestClose={closeModal}>
         <div className="modal-username-section">
           <span>User - Alex Moreno</span>
+          <FaTimes size="30" />
         </div>
         <hr />
         <form className="upload-form" onSubmit={formSubmitHandler}>
-          <input type="file" className="form-items" id="file-uploader" />
+          {/* <input type="file" className="form-items" id="file-uploader" /> */}
+          <div>
+            <CustomFileInput
+              id="my-file-input"
+              label="Choose a file"
+              onChange={handleFileChange}
+            />
+            {file && <p>Selected file: {file.name}</p>}
+          </div>
           <h3>Item Details</h3>
           <div className="form-items">
             <label htmlFor="item-type">Item Type:</label>
@@ -146,13 +168,22 @@ function Upload() {
               ))}
             </select>
           </div>
-          <div className="form-items">
+          <div className="form-items form-text-inpts">
             <label htmlFor="estimated-value">Estimated value:</label>
             <input
               type="text"
               id="estimated-value"
               value={itemEstimatedValue}
               onChange={estimatedValueChangeHandler}
+            />
+          </div>
+          <div className="form-items form-text-inpts">
+            <label htmlFor="duration-of-usage">Duration of usage</label>
+            <input
+              type="text"
+              id="duration-of-usage"
+              value={itemDurationOfUsage}
+              onChange={durationOfUsageChangeHandler}
             />
           </div>
           <div className="form-items form-textarea">
@@ -213,7 +244,7 @@ function Upload() {
               ))}
             </select>
           </div>
-          <div className="form-items">
+          <div className="form-items form-text-inpts">
             <label htmlFor="specific-area">Specific area name:</label>
             <input
               type="text"

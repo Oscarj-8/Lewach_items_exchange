@@ -5,6 +5,9 @@ import { Routes, Route } from "react-router-dom";
 import index from "./components";
 import FullHomepage from "./components/HomePage/FullHomepage";
 import "./components/HomePage/FullHomepage";
+import Modal from "react-modal";
+
+Modal.setAppElement("#root");
 
 function App() {
   return (
