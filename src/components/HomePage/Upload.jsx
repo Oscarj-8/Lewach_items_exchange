@@ -1,4 +1,5 @@
 import UploadModal from "./UploadModal";
+import Modal from "react-modal";
 import { useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import CustomFileInput from "./CustomFileInput";
@@ -82,6 +83,10 @@ function Upload() {
   function handleFileChange(e) {
     setFile(e.target.files[0]);
   }
+
+  function handleClose() {
+    closeModal();
+  }
   return (
     <div>
       <button id="upload-button" onClick={() => setModalIsOpen(true)}>
@@ -90,11 +95,13 @@ function Upload() {
       <UploadModal isOpen={modalIsOpen} onRequestClose={closeModal}>
         <div className="modal-username-section">
           <span>User - Alex Moreno</span>
-          <FaTimes size="30" />
+          <button className="uploadModal-close-btn" onClick={handleClose}>
+            <FaTimes />
+          </button>
+          {/* <FaTimes size="30" /> */}
         </div>
         <hr />
         <form className="upload-form" onSubmit={formSubmitHandler}>
-          {/* <input type="file" className="form-items" id="file-uploader" /> */}
           <div>
             <CustomFileInput
               id="my-file-input"

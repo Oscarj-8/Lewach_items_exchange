@@ -55,6 +55,15 @@
   align-items: center;
 }
 
+.uploadModal-close-btn {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+}
+
 hr {
   margin-top: 0.5em;
 }
@@ -94,11 +103,6 @@ hr {
   align-items: center;
   justify-content: space-between;
   color: var(--fcoloruploadlabel);
-}
-
-#file-uploader {
-  margin: 4em 0em;
-  width: 50%;
 }
 
 .upload-form h3 {
@@ -172,10 +176,6 @@ hr {
 @media screen and (min-width: 500px) {
   .ReactModal__Content {
     width: 80%;
-  }
-
-  #file-uploader {
-    width: 56%;
   }
 
   .upload-btn {
