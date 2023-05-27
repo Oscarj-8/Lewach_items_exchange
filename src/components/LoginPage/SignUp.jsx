@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import regions from "./regions";
+import regions from "./Regions";
 
 function SignUp() {
   const [formStep, setFormStep] = useState(0);
@@ -22,7 +22,7 @@ function SignUp() {
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
-console.log(selectedRegion);
+  console.log(selectedRegion);
   const validateStep0 = () => {
     const errors = {};
     if (!formData.firstname.trim()) {
@@ -105,7 +105,7 @@ console.log(selectedRegion);
   const previousStep = () => {
     setFormStep(0);
   };
-  
+
   const [cityZones, setCityZones] = useState([]);
 
   function handleRegionChange(event) {
@@ -113,8 +113,6 @@ console.log(selectedRegion);
     setSelectedRegion(region);
     setCityZones(regions[region] || []);
   }
-;
-
   return (
     <section className="container-form container-form-sign-up">
       <form onSubmit={handleRegister} className="sign-up-form">
@@ -205,28 +203,26 @@ console.log(selectedRegion);
                 onChange={handleRegionChange}
               >
                 <option value="">Region/City</option>
-                    {Object.keys(regions).map(region => (
-                    <option key={region} value={region}>
+                {Object.keys(regions).map((region) => (
+                  <option key={region} value={region}>
                     {region}
-                 </option>
-                    ))}
+                  </option>
+                ))}
               </select>
               {formErrors.region && (
                 <div className="error">{formErrors.region}</div>
               )}
-              <select
-               name="subcityzone"
-             >
+              <select name="subcityzone">
                 <option value="">Subcity/Zone</option>
-                    {cityZones.map(cityZone => (
-                    <option key={cityZone} value={cityZone}>
+                {cityZones.map((cityZone) => (
+                  <option key={cityZone} value={cityZone}>
                     {cityZone}
-                </option>
-                   ))}
+                  </option>
+                ))}
               </select>
               {formErrors.cityzone && (
                 <div className="error">{formErrors.cityzone}</div>
-                )}
+              )}
               <input
                 type="text"
                 placeholder="City/Woreda"
