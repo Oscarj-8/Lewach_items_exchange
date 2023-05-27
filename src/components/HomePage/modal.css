@@ -50,6 +50,9 @@
   border-radius: 0.25em;
   font-family: var(--ffroboto);
   font-size: var(--fsmall);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 hr {
@@ -174,4 +177,30 @@ hr {
   .upload-btn {
     gap: 6em;
   }
+}
+
+.file-upload input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-upload label {
+  display: block;
+  padding: 6em 2em;
+  background-color: #b4b4b4;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 5%;
+}
+
+.file-upload label:hover {
+  background-color: #c2bebe;
+}
+
+.file-upload span {
+  display: block;
 }
