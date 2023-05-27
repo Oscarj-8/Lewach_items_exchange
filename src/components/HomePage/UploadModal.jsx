@@ -8,7 +8,6 @@ const UploadModal = ({ isOpen, onRequestClose, children }) => {
       isOpen={isOpen}
       onRequestClose={onRequestClose}
       contentLabel="Upload Modal"
-      // className="modal-modal"
     >
       {children}
     </Modal>

@@ -50,10 +50,35 @@
   border-radius: 0.25em;
   font-family: var(--ffroboto);
   font-size: var(--fsmall);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 hr {
   margin-top: 0.5em;
+}
+
+.file-upload input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-upload label {
+  display: block;
+  padding: 6em 1.5em;
+  background-color: #8b8b8b;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 5%;
+}
+
+.file-upload label:hover {
+  background-color: #979797;
 }
 
 .upload-form {
@@ -110,8 +135,13 @@ hr {
   margin-top: 3%;
 }
 
+.form-text-inpts {
+  margin: 2% 0;
+}
+
 #estimated-value,
-#specific-area {
+#specific-area,
+#duration-of-usage {
   border: none;
   border-bottom: 1px solid #000000;
   width: 60%;
@@ -160,7 +190,8 @@ hr {
   }
 
   #estimated-value,
-  #specific-area {
+  #specific-area,
+  #duration-of-usage {
     width: 87%;
   }
 }
