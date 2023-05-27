@@ -98,7 +98,6 @@ function Upload() {
           <button className="uploadModal-close-btn" onClick={handleClose}>
             <FaTimes />
           </button>
-          {/* <FaTimes size="30" /> */}
         </div>
         <hr />
         <form className="upload-form" onSubmit={formSubmitHandler}>
@@ -273,7 +272,7 @@ function Upload() {
           </div>
           <div className="upload-btn">
             <button>Upload</button>
-            <button>Cancel</button>
+            <button onClick={handleClose}>Cancel</button>
           </div>
         </form>
       </UploadModal>
