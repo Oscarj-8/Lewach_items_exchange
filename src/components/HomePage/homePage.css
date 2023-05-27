@@ -112,6 +112,7 @@
 
 .nav2.show-nav {
   transform: translateY(0);
+  z-index: 9;
 }
 
 .nav2-links {
@@ -137,14 +138,9 @@
   flex-direction: column;
   align-items: center;
   gap: 1em;
-  padding: 4em;
+  padding: 2em;
   background-color: #ffffff;
-  top: 4em;
-  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.side-bar-btns.active {
-  left: 0;
+  top: 4.6em;
 }
 
 .home-overlay {
@@ -155,12 +151,10 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 9999;
-  transition: transform 2s ease-in-out;
 }
 
 .no-scroll {
   overflow: hidden;
-  transition: transform 2s ease-in-out;
 }
 
 .side-bar-btn {
@@ -338,10 +332,6 @@
   .section2-card {
     flex-basis: 40%;
     flex-direction: column-reverse;
-  }
-
-  .side-bar-btns {
-    top: 6.1em;
   }
 
   #upload-button {
