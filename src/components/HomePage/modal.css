@@ -59,6 +59,28 @@ hr {
   margin-top: 0.5em;
 }
 
+.file-upload input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-upload label {
+  display: block;
+  padding: 6em 2em;
+  background-color: #b4b4b4;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 5%;
+}
+
+.file-upload label:hover {
+  background-color: #c2bebe;
+}
+
 .upload-form {
   display: flex;
   flex-direction: column;
@@ -113,8 +135,13 @@ hr {
   margin-top: 3%;
 }
 
+.form-text-inpts {
+  margin: 2% 0;
+}
+
 #estimated-value,
-#specific-area {
+#specific-area,
+#duration-of-usage {
   border: none;
   border-bottom: 1px solid #000000;
   width: 60%;
@@ -177,30 +204,4 @@ hr {
   .upload-btn {
     gap: 6em;
   }
-}
-
-.file-upload input[type="file"] {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.file-upload label {
-  display: block;
-  padding: 6em 2em;
-  background-color: #b4b4b4;
-  color: #fff;
-  cursor: pointer;
-  margin-top: 5%;
-}
-
-.file-upload label:hover {
-  background-color: #c2bebe;
-}
-
-.file-upload span {
-  display: block;
 }

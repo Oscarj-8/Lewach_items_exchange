@@ -24,6 +24,7 @@ function Upload() {
   const [modelType, setModelType] = useState("");
   const [itemQuantity, setItemQuantity] = useState("");
   const [itemEstimatedValue, setItemEstimatedValue] = useState("");
+  const [itemDurationOfUsage, setItemDurationOfUsage] = useState("");
   const [itemDefects, setItemDefects] = useState("");
   const [itemRegion, setItemRegion] = useState("");
   const [itemCityZone, setItemCityZone] = useState("");
@@ -49,6 +50,10 @@ function Upload() {
 
   const estimatedValueChangeHandler = (e) => {
     setItemEstimatedValue(e.target.value);
+  };
+
+  const durationOfUsageChangeHandler = (e) => {
+    setItemDurationOfUsage(e.target.value);
   };
 
   const itemDefectsChangeHandler = (e) => setItemDefects(e.target.value);
@@ -163,13 +168,22 @@ function Upload() {
               ))}
             </select>
           </div>
-          <div className="form-items">
+          <div className="form-items form-text-inpts">
             <label htmlFor="estimated-value">Estimated value:</label>
             <input
               type="text"
               id="estimated-value"
               value={itemEstimatedValue}
               onChange={estimatedValueChangeHandler}
+            />
+          </div>
+          <div className="form-items form-text-inpts">
+            <label htmlFor="duration-of-usage">Duration of usage</label>
+            <input
+              type="text"
+              id="duration-of-usage"
+              value={itemDurationOfUsage}
+              onChange={durationOfUsageChangeHandler}
             />
           </div>
           <div className="form-items form-textarea">
@@ -230,7 +244,7 @@ function Upload() {
               ))}
             </select>
           </div>
-          <div className="form-items">
+          <div className="form-items form-text-inpts">
             <label htmlFor="specific-area">Specific area name:</label>
             <input
               type="text"
