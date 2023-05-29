@@ -4,6 +4,12 @@
   padding: 0;
 }
 
+body {
+  background: url("./assets/images/firstpageBackground.jpg") center center
+    no-repeat;
+  background-size: cover;
+}
+
 :root {
   --ffbebas: "Bebas Neue", cursive;
   --ffquicksand: "Quicksand";
@@ -54,6 +60,7 @@
 }
 
 .container-form {
+  background-color: #ededed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -211,9 +218,10 @@ button:focus {
 }
 
 .overlay {
-  background: linear-gradient(to right bottom, #002349, #0352a7) no-repeat 0 0 /
-    cover;
-  color: #fff;
+  font-family: var(--ffroboto);
+  /* background: linear-gradient(to right bottom, #002349, #0352a7) no-repeat 0 0 /
+    cover; */
+
   left: -100%;
   width: 200%;
   height: 100%;

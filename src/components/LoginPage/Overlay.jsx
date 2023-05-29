@@ -11,19 +11,19 @@ function Overlay({ isSignUpActive, toggleSignUpActive }) {
           </p>
           <button
             onClick={toggleSignUpActive}
-            className="signIn-register-btn overlay__button-ghost overlay__button-sign-in"
+            className="overlay-btns signIn-register-btn"
           >
             Sign in
           </button>
         </div>
         <div className="overlay-panel overlay-sign-up">
-          <h1 className="overlay__main-head">Hello there!</h1>
+          <h1 className="overlay__main-head">New To The Platform?</h1>
           <p className="overlay__slogan new-class">
             If your new here register and start your journey with us
           </p>
           <button
             onClick={toggleSignUpActive}
-            className="signIn-register-btn overlay__button-ghost overlay__button-sign-up"
+            className="overlay-btns signIn-register-btn"
           >
             Register
           </button>
