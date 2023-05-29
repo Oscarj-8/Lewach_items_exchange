@@ -127,6 +127,7 @@ function SignUp() {
               value={formData.firstname}
               onChange={handleChange}
               required
+              autoComplete="on"
             />
             {formErrors.firstname && (
               <div className="error">{formErrors.firstname}</div>
@@ -138,6 +139,7 @@ function SignUp() {
               value={formData.lastname}
               onChange={handleChange}
               required
+              autoComplete="on"
             />
             {formErrors.lastname && (
               <div className="error">{formErrors.lastname}</div>
@@ -150,6 +152,7 @@ function SignUp() {
               value={formData.username}
               onChange={handleChange}
               required
+              autoComplete="on"
             />
             {formErrors.username && (
               <div className="error">{formErrors.username}</div>
@@ -161,6 +164,7 @@ function SignUp() {
               value={formData.email}
               onChange={handleChange}
               required
+              autoComplete="on"
             />
             {formErrors.email && (
               <div className="error">{formErrors.email}</div>
@@ -234,6 +238,7 @@ function SignUp() {
                 value={formData.subcityworeda}
                 onChange={handleChange}
                 required
+                autoComplete="on"
               />
               {formErrors.subcityworeda && (
                 <div className="error">{formErrors.subcityworeda}</div>
@@ -244,6 +249,7 @@ function SignUp() {
                 name="pobox"
                 value={formData.pobox}
                 onChange={handleChange}
+                autoComplete="on"
               />
               <input
                 type="text"
@@ -251,6 +257,7 @@ function SignUp() {
                 name="snl"
                 value={formData.snl}
                 onChange={handleChange}
+                autoComplete="on"
               />
               <input
                 type="text"
@@ -258,6 +265,7 @@ function SignUp() {
                 name="ssn"
                 value={formData.ssn}
                 onChange={handleChange}
+                autoComplete="on"
               />
               <button
                 type="button"
