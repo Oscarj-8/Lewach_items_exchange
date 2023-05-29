@@ -43,14 +43,13 @@ function SignIn() {
     }
   };
 
-
   return (
     <section className="container-form container-form-sign-in">
       <form onSubmit={handleSubmit} className="sign-in-form">
         <h1>Sign In</h1>
         <div className="container-logo">
           <a href="#" className="logo">
-            <img src={logo} alt="Logo" />
+            <img src={logo} className="login-logo" alt="Logo" />
           </a>
         </div>
         <input
@@ -70,7 +69,9 @@ function SignIn() {
         <a href="#" className="forget_password">
           Forgot Password
         </a>
-        <button type="submit">Sign In</button>
+        <button type="submit" className="signIn-register-btn">
+          Sign In
+        </button>
       </form>
     </section>
   );
