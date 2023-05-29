@@ -189,7 +189,7 @@ function SignUp() {
             )}
             <button
               type="button"
-              className="signIn-register-btn next-back-reg-btn"
+              className="signIn-register-btn next-back-reg-btn  next-btn"
               onClick={nextStep}
             >
               Next
@@ -261,14 +261,14 @@ function SignUp() {
               />
               <button
                 type="button"
-                className="signIn-register-btn back-reg-btn next-back-btn"
+                className="signIn-register-btn next-back-reg-btn back-btn"
                 onClick={previousStep}
               >
                 Back
               </button>
               <button
                 type="submit"
-                className="signIn-register-btn next-back-btn"
+                className="signIn-register-btn next-back-reg-btn next-back-btn"
               >
                 Register
               </button>

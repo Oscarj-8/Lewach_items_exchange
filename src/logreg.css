@@ -157,7 +157,7 @@ select {
 }
 
 .next-back-reg-btn {
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 button:active {
@@ -173,29 +173,6 @@ button:focus {
 .overlay-container button:hover {
   color: #002349;
   background-color: #fff;
-}
-
-.backtBtn,
-.nextBtn {
-  border-radius: 20px;
-  border: 1px solid #002349;
-  background-color: transparent;
-  color: #002349;
-  font-weight: bold;
-  font-size: 12px;
-  padding: 8px 35px;
-  margin-top: 20px;
-  margin-right: 20px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: transform 80ms ease-in;
-}
-
-.nextBtn:hover,
-.backtBtn:hover {
-  transform: scale(1.2);
-  border: 1px solid #1fa40e;
-  color: #1fa40e;
 }
 
 .overlay__button-ghost {
