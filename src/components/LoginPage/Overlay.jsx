@@ -11,7 +11,7 @@ function Overlay({ isSignUpActive, toggleSignUpActive }) {
           </p>
           <button
             onClick={toggleSignUpActive}
-            className="overlay-btns signIn-register-btn"
+            className="signIn-register-btn overlay__button-ghost overlay__button-sign-in"
           >
             Sign in
           </button>
@@ -23,7 +23,7 @@ function Overlay({ isSignUpActive, toggleSignUpActive }) {
           </p>
           <button
             onClick={toggleSignUpActive}
-            className="overlay-btns signIn-register-btn"
+            className="signIn-register-btn overlay__button-ghost overlay__button-sign-up"
           >
             Register
           </button>

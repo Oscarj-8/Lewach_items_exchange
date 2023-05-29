@@ -46,9 +46,7 @@ function SignIn() {
   return (
     <section className="container-form container-form-sign-in">
       <div className="container-logo">
-        <a href="#" className="logo">
-          <img src={logo} className="login-logo" alt="Logo" />
-        </a>
+        <img src={logo} className="login-logo" alt="Logo" />
         <h1>Sign In</h1>
       </div>
       <form onSubmit={handleSubmit} className="sign-in-form">
