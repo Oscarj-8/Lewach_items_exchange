@@ -49,7 +49,7 @@ function SignIn() {
         <h1>Sign In</h1>
         <div className="container-logo">
           <a href="#" className="logo">
-            <img src={logo} alt="Logo" />
+            <img src={logo} className="login-logo" alt="Logo" />
           </a>
         </div>
         <input
