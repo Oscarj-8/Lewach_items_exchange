@@ -43,7 +43,6 @@ function SignIn() {
     }
   };
 
-
   return (
     <section className="container-form container-form-sign-in">
       <form onSubmit={handleSubmit} className="sign-in-form">
@@ -70,7 +69,9 @@ function SignIn() {
         <a href="#" className="forget_password">
           Forgot Password
         </a>
-        <button type="submit">Sign In</button>
+        <button type="submit" className="signIn-register-btn">
+          Sign In
+        </button>
       </form>
     </section>
   );

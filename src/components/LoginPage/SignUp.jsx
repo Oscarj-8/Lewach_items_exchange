@@ -187,7 +187,11 @@ function SignUp() {
             {formErrors.confirmpassword && (
               <div className="error">{formErrors.confirmpassword}</div>
             )}
-            <button type="button" onClick={nextStep}>
+            <button
+              type="button"
+              className="signIn-register-btn next-back-reg-btn"
+              onClick={nextStep}
+            >
               Next
             </button>
           </>
@@ -255,10 +259,19 @@ function SignUp() {
                 value={formData.ssn}
                 onChange={handleChange}
               />
-              <button type="button" onClick={previousStep}>
+              <button
+                type="button"
+                className="signIn-register-btn back-reg-btn next-back-btn"
+                onClick={previousStep}
+              >
                 Back
               </button>
-              <button type="submit">Register</button>
+              <button
+                type="submit"
+                className="signIn-register-btn next-back-btn"
+              >
+                Register
+              </button>
             </div>
           </>
         )}
