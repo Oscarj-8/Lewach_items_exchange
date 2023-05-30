@@ -64,8 +64,9 @@
 
 .sidebar-link span {
   font-family: var(--ffroboto);
-  font-size: var(--fxxsmall);
+  font-size: 12px;
   color: #03467a;
+  letter-spacing: 0;
 }
 
 /* main section starts here */

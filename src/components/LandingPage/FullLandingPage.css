@@ -113,7 +113,7 @@
 }
 
 .links,
-a {
+.terms-privacy {
   text-decoration: none;
   color: var(--fcolorwhite);
   font-size: var(--fmid);
@@ -127,8 +127,8 @@ a {
 
 .links:focus,
 .links:hover,
-a:focus,
-a:hover {
+.terms-privacy:focus,
+.terms-privacy:hover {
   color: #31c719;
 }
 

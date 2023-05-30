@@ -1,4 +1,5 @@
 import "./FullAdminPage.css";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import manageacc from "../../assets/images/group.png";
@@ -16,16 +17,22 @@ function AdminDashboard() {
         </div>
         <div className="sidebar-pages">
           <div className="sidebar-link sidebar-page1">
-            <img src={platform} alt="dashbaord icon" />
-            <span>Dashbaord</span>
+            <Link to="/admin/dashboard">
+              <img src={platform} alt="dashbaord icon" />
+              <span>Dashboard</span>
+            </Link>
           </div>
           <div className="sidebar-link sidebar-page2">
-            <img src={delivery} alt="delivery icon" />
-            <span>Delivery requests</span>
+            <Link to="/admin/deliveryRequest">
+              <img src={delivery} alt="delivery icon" />
+              <span>Delivery requests</span>
+            </Link>
           </div>
           <div className="sidebar-link sidebar-page3">
-            <img src={manageacc} alt="manage account icon" />
-            <span>Manage account </span>
+            <Link to="/admin/manageAccount">
+              <img src={manageacc} alt="manage account icon" />
+              <span>Manage account </span>
+            </Link>
           </div>
         </div>
       </div>

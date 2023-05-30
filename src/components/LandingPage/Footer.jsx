@@ -58,8 +58,13 @@ function Footer() {
       </div>
       <div className="footer-bottom">
         <span>
-          <a href="/">Terms of Service</a> | <a>Privacy Policy</a> | @2023
-          Lewach. All Rights Reserved
+          <a href="/" className="terms-privacy">
+            Terms of Service |
+          </a>
+          <a href="/" className="terms-privacy">
+            Privacy Policy |
+          </a>
+          @2023 Lewach. All Rights Reserved
         </span>
       </div>
     </div>
