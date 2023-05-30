@@ -1,9 +1,9 @@
 import "./FullAdminPage.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChartLine, faTruck } from "@fortawesome/free-solid-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import manageacc from "../../assets/images/group.png";
-import delivery from "../../assets/images/delivery.png";
 import logo from "../../assets/images/logoWhite.png";
 import platform from "../../assets/images/platform.png";
 
@@ -16,20 +16,20 @@ function AdminDashboard() {
           <p>Lewach</p>
         </div>
         <div className="sidebar-pages">
-          <div className="sidebar-link sidebar-page1">
-            <Link to="/admin/dashboard">
-              <img src={platform} alt="dashbaord icon" />
+          <div className=" sidebar-page1">
+            <Link to="/admin/dashboard" className="sidebar-link">
+              <FontAwesomeIcon icon={faChartLine} />
               <span>Dashboard</span>
             </Link>
           </div>
-          <div className="sidebar-link sidebar-page2">
-            <Link to="/admin/deliveryRequest">
-              <img src={delivery} alt="delivery icon" />
+          <div className=" sidebar-page2">
+            <Link to="/admin/deliveryRequest" className="sidebar-link">
+              <FontAwesomeIcon icon={faTruck} />
               <span>Delivery requests</span>
             </Link>
           </div>
-          <div className="sidebar-link sidebar-page3">
-            <Link to="/admin/manageAccount">
+          <div className=" sidebar-page3">
+            <Link to="/admin/manageAccount" className="sidebar-link">
               <img src={manageacc} alt="manage account icon" />
               <span>Manage account </span>
             </Link>
