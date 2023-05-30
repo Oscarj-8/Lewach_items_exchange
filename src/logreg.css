@@ -4,11 +4,6 @@
   padding: 0;
 }
 
-body {
-  background: url("./assets/images/Loginbackground.jpg") repeat;
-  background-size: cover;
-}
-
 :root {
   --ffbebas: "Bebas Neue", cursive;
   --ffquicksand: "Quicksand";
@@ -28,6 +23,7 @@ body {
   right: -100px;
   color: red;
   font-size: 12px;
+  height: 0;
 }
 
 .new-class {
@@ -69,7 +65,7 @@ body {
   height: 100%;
   transform: translateX(0);
   transition: transform 0.6s ease-out;
-  gap: 1em;
+  text-align: center;
 }
 
 .sign-in-form {
@@ -77,7 +73,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.6em;
 }
 
 .sign-in-form input {
@@ -89,7 +84,8 @@ body {
   width: 65%;
 }
 
-.sign-in-form input:focus {
+.sign-in-form input:focus,
+.sign-up-form input {
   outline: none;
 }
 
@@ -109,35 +105,61 @@ body {
   margin: 0.5em;
 }
 
-.sign-up-form {
-  background: #fff;
+.peronal-address-form {
   display: flex;
   flex-direction: column;
-  padding: 0 40px;
-  height: 100%;
   justify-content: center;
   align-items: center;
   text-align: center;
+  gap: 0.7em;
+  height: 100vh;
 }
 
-select {
+.address-form {
+  margin-bottom: 10%;
+}
+
+.address-form input {
+  gap: 2em;
+}
+
+.address-form button {
+  margin-top: 10%;
+}
+
+.register-first-page {
+  font-family: var(--ffbebas);
+  font-size: var(--fmid);
+  letter-spacing: 0.11em;
+  font-weight: 200;
+  color: #393939;
+  margin-bottom: 5%;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.register-first-page img {
+  width: 2em;
+}
+
+.peronal-address-form input {
+  width: 70%;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 0.5em;
+  background-color: transparent;
+}
+
+.sign-up-form select {
   background: transparent;
   border: none;
   border-bottom: 1px solid;
   padding: 8px 5px;
   margin: 5px 0;
-  width: 90%;
+  width: 70%;
   outline: none;
   font-size: 16px;
-}
-
-.container-form .fl {
-  display: flex;
-  width: 90%;
-}
-
-.container-form .fl input {
-  margin-right: 10px;
 }
 
 .signIn-register-btn {

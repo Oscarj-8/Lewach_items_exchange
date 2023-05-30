@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import regions from "./Regions";
+import logo from "../../assets/images/logoBlue.png";
 
 function SignUp() {
   const [formStep, setFormStep] = useState(0);
@@ -117,9 +118,11 @@ function SignUp() {
     <section className="container-form container-form-sign-up">
       <form onSubmit={handleRegister} className="sign-up-form">
         {formStep === 0 && (
-          <>
-            <h1>Create Account</h1>
-
+          <div className="personal-info-form peronal-address-form">
+            <div className="register-first-page">
+              <img src={logo} />
+              <h1>Personal Information</h1>
+            </div>
             <input
               type="text"
               placeholder="First Name"
@@ -198,12 +201,15 @@ function SignUp() {
             >
               Next
             </button>
-          </>
+          </div>
         )}
 
         {formStep === 1 && (
-          <>
-            <h1>Address</h1>
+          <div className="address-form peronal-address-form">
+            <div className="register-first-page">
+              <img src={logo} />
+              <h1>Address</h1>
+            </div>
             <div>
               <select
                 name="region"
@@ -281,7 +287,7 @@ function SignUp() {
                 Register
               </button>
             </div>
-          </>
+          </div>
         )}
       </form>
     </section>
