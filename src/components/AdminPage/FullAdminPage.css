@@ -1,0 +1,112 @@
+:root {
+  --ffbebas: "Bebas Neue", cursive;
+  --ffquicksand: "Quicksand";
+  --ffroboto: "Roboto", sans-serif;
+
+  --fxxsmall: 0.875em;
+  --fxsmall: 1em;
+  --fsmall: 1.125em;
+  --fmid: 1.25em;
+  --flarge: 1.5em;
+  --fxxlarge: 2.625em;
+}
+
+.adminPage-root {
+  background-color: #f9f9f9;
+  display: flex;
+}
+
+.adminPage-sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: #03467a;
+  width: 12%;
+  height: 100vh;
+  align-items: center;
+  gap: 3em;
+}
+
+.adminPage-logo {
+  display: flex;
+  gap: 0.3em;
+  color: white;
+  font-family: var(--ffbebas);
+  font-size: 2em;
+  align-items: center;
+  padding-top: 0.5em;
+}
+
+.adminPage-logo img {
+  width: 40px;
+}
+
+.sidebar-pages {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 100%;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  background-color: rgb(255, 255, 255);
+  padding: 0.4em;
+  margin-left: 10%;
+  border-radius: 0.25em 0 0 0.25em;
+}
+
+.sidebar-link img,
+.mainTop-profile-sec img {
+  width: 30px;
+}
+
+.sidebar-link span {
+  font-family: var(--ffroboto);
+  font-size: var(--fxxsmall);
+  color: #03467a;
+}
+
+/* main section starts here */
+
+.adminPage-main {
+  width: 88%;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.mainTop-sec {
+  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em;
+}
+
+.mainTop-search-sec {
+  background-color: yellowgreen;
+  width: 60%;
+  margin-left: 5%;
+}
+
+.mainTop-search-sec form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.mainTop-search-sec input {
+  width: 100%;
+  border: 1px solid #d4cbcb;
+  border-radius: 0.5em;
+  padding: 0.8em;
+}
+
+.mainTop-search-sec input::placeholder {
+  color: #c3c1c1;
+}
+
+.mainTop-profile-sec {
+  background-color: violet;
+}
