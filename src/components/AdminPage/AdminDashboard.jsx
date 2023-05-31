@@ -21,13 +21,13 @@ function AdminDashboard() {
         </div>
         <div className="sidebar-pages">
           <div className=" sidebar-page1">
-            <Link to="/admin/dashboard" className="sidebar-link">
+            <Link to="/" className="sidebar-link">
               <FontAwesomeIcon icon={faChartLine} />
               <span>Dashboard</span>
             </Link>
           </div>
           <div className=" sidebar-page2">
-            <Link to="/admin/deliveryRequest" className="sidebar-link">
+            <Link to="/" className="sidebar-link">
               <FontAwesomeIcon icon={faTruck} />
               <span>Delivery requests</span>
             </Link>

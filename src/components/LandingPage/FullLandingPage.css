@@ -134,8 +134,8 @@
 
 .links:focus:after,
 .links:hover:after,
-a:focus:after,
-a:hover:after {
+.terms-privacy:focus,
+.terms-privacy:hover {
   width: 100%;
   left: 0%;
 }
