@@ -51,12 +51,11 @@
   display: flex;
   align-items: center;
   gap: 0.7em;
-  background-color: rgb(255, 255, 255);
-  padding: 0.4em;
+  padding: 0.5em;
   margin-left: 10%;
   border-radius: 0.25em 0 0 0.25em;
   text-decoration: none;
-  color: #03467a;
+  color: #fdfdfd;
 }
 
 .sidebar-link img,
@@ -67,8 +66,12 @@
 .sidebar-link span {
   font-family: var(--ffroboto);
   font-size: 12px;
-  color: #03467a;
   letter-spacing: 0;
+}
+
+.sidebar-link:hover {
+  color: #03467a;
+  background-color: rgb(255, 255, 255);
 }
 
 /* main section starts here */

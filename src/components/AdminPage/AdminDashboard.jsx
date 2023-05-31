@@ -1,7 +1,11 @@
 import "./FullAdminPage.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChartLine, faTruck } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChartLine,
+  faTruck,
+  faUserCog,
+} from "@fortawesome/free-solid-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import manageacc from "../../assets/images/group.png";
 import logo from "../../assets/images/logoWhite.png";
@@ -30,7 +34,7 @@ function AdminDashboard() {
           </div>
           <div className=" sidebar-page3">
             <Link to="/admin/manageAccount" className="sidebar-link">
-              <img src={manageacc} alt="manage account icon" />
+              <FontAwesomeIcon icon={faUserCog} />
               <span>Manage account </span>
             </Link>
           </div>
