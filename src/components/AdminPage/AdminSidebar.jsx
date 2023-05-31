@@ -5,7 +5,6 @@ import {
   faTruck,
   faUserCog,
 } from "@fortawesome/free-solid-svg-icons";
-
 import logo from "../../assets/images/logoWhite.png";
 
 function AdminSidebar() {
