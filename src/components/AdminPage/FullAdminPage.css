@@ -56,6 +56,7 @@
   border-radius: 0.25em 0 0 0.25em;
   text-decoration: none;
   color: #fdfdfd;
+  transition: color 0.2s ease-in-out;
 }
 
 .sidebar-link img,
@@ -69,7 +70,8 @@
   letter-spacing: 0;
 }
 
-.sidebar-link:hover {
+.sidebar-link:hover,
+.sidebar-link:focus {
   color: #03467a;
   background-color: rgb(255, 255, 255);
 }
