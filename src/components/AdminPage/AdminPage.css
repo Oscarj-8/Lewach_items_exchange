@@ -1,0 +1,79 @@
+:root {
+  --ffbebas: "Bebas Neue", cursive;
+  --ffquicksand: "Quicksand";
+  --ffroboto: "Roboto", sans-serif;
+
+  --fxxsmall: 0.875em;
+  --fxsmall: 1em;
+  --fsmall: 1.125em;
+  --fmid: 1.25em;
+  --flarge: 1.5em;
+  --fxxlarge: 2.625em;
+}
+
+.adminPage-logo {
+  margin-top: 5%;
+}
+
+.admin-sideBar {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  transform: translatex(-110%);
+  width: 70%;
+  background-color: #03467a;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin-sideBar.open {
+  transform: translateX(0);
+}
+
+.adminPage-sidebar ul {
+  width: 100%;
+  margin-left: 20%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 15%;
+}
+
+.adminPage-sidebar a {
+  color: white;
+  text-decoration: none;
+  font-family: var(--ffroboto);
+  font-size: var(--fsmall);
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  height: 40px;
+  padding: 1em 1em;
+}
+
+.admin-sideBar a:hover,
+.admin-sideBar a:focus {
+  background-color: #ffffff;
+  color: #03467a;
+  border-radius: 0.25em 0 0 0.25em;
+}
+
+.fab {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  color: #000000;
+  background: transparent;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.fab:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
