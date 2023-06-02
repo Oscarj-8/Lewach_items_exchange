@@ -85,3 +85,13 @@
   cursor: pointer;
   transform: scale(1.1);
 }
+
+.admin-notification-profile {
+  display: flex;
+  gap: 2.5em;
+  color: #03467a;
+}
+
+.notification-profile {
+  scale: 1.5;
+}

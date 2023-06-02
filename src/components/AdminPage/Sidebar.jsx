@@ -23,10 +23,16 @@ function Sidebar() {
   return (
     <div className="adminPage-sidebar">
       <div className="adminPage-header">
-        <img src={logoBlue} className="adminPage-logo" />
         <button onClick={ToggleSidebar} className="fab">
           <FontAwesomeIcon icon={faBars} size="2x" />
         </button>
+        <div className="admin-notification-profile">
+          <FontAwesomeIcon icon={faBell} className="notification-profile" />
+          <FontAwesomeIcon
+            icon={faUserCircle}
+            className="notification-profile"
+          />
+        </div>
       </div>
       <nav className={`admin-sideBar ${isOpen ? "open" : ""}`}>
         <div className="adminPage-sidebar-logo">
@@ -49,18 +55,6 @@ function Sidebar() {
             <Link to="/">
               <FontAwesomeIcon icon={faUserCog} />
               Manage account
-            </Link>
-          </li>
-          <li>
-            <Link to="/">
-              <FontAwesomeIcon icon={faBell} />
-              Notification
-            </Link>
-          </li>
-          <li>
-            <Link to="/">
-              <FontAwesomeIcon icon={faUserCircle} />
-              Profile
             </Link>
           </li>
         </ul>
