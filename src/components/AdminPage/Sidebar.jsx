@@ -12,6 +12,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import logoBlue from "../../assets/images/logoBlue.png";
 import logoWhite from "../../assets/images/logoWhite.png";
+import SearchBar from "./SearchBar";
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);

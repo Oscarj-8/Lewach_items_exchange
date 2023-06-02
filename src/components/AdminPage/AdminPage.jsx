@@ -1,11 +1,12 @@
 import React from "react";
 import Sidebar from "./Sidebar";
 import AdminDashboard from "./AdminDashboard";
+import SearchBar from "./SearchBar";
 function AdminPage() {
   return (
-    <div>
+    <div className="adminPage-root">
       <Sidebar />
-      <AdminDashboard />
+      <SearchBar />
     </div>
   );
 }

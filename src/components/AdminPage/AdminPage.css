@@ -95,3 +95,33 @@
 .notification-profile {
   scale: 1.5;
 }
+
+/* search bar starts here */
+
+.adminSeachbar {
+  display: flex;
+
+  padding: 1em;
+}
+
+.adminSeachbar input {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid #d4cbcb;
+  border-radius: 0.5em;
+}
+
+.adminSeachbar input::placeholder {
+  font-size: var(--fmid);
+  color: #c3c1c1;
+}
+
+.adminsearch-btn {
+  scale: 1.5;
+  position: absolute;
+  right: 2rem;
+  top: 6.8em;
+  background-color: transparent;
+  border: none;
+  color: #03467a;
+}
