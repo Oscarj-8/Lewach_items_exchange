@@ -125,3 +125,72 @@
   border: none;
   color: #03467a;
 }
+
+/* dashboard starts here */
+
+.adminDashboard-root {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 10em;
+}
+
+.dashbaord-card {
+  background-color: #ffffff;
+  box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.15);
+  margin: 0 1em;
+  color: #03467a;
+  border-radius: 0.25em;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  text-align: center;
+}
+
+.time {
+  background-color: #f9f9f9;
+  padding: 0.5em;
+  border: 1px solid #c3c1c1;
+  border-radius: 0.25em;
+}
+
+.deliveryItem-card {
+  display: flex;
+  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.15);
+  margin: 1.5em 1em;
+  padding: 1em 0.2em;
+  gap: 0.5em;
+}
+
+.deliveryItem-card img {
+  width: 6em;
+}
+
+.item-img-side {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.itemcard-btns {
+  display: flex;
+  gap: 1em;
+}
+.itemCard-btn {
+  width: 6em;
+  border-radius: 2em;
+  height: 2em;
+  outline: none;
+  border: none;
+  color: white;
+  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.view-btn {
+  background-color: #31c719;
+}
+
+.forward-btn {
+  background-color: #03467a;
+}
