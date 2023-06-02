@@ -7,9 +7,11 @@ import {
   faChartLine,
   faTruck,
   faUserCog,
+  faBell,
+  faUserCircle,
 } from "@fortawesome/free-solid-svg-icons";
+import logoBlue from "../../assets/images/logoBlue.png";
 import logoWhite from "../../assets/images/logoWhite.png";
-import { Button } from "react-scroll";
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,11 +22,14 @@ function Sidebar() {
 
   return (
     <div className="adminPage-sidebar">
-      <button onClick={ToggleSidebar} className="fab">
-        <FontAwesomeIcon icon={faBars} size="2x" />
-      </button>
+      <div className="adminPage-header">
+        <img src={logoBlue} className="adminPage-logo" />
+        <button onClick={ToggleSidebar} className="fab">
+          <FontAwesomeIcon icon={faBars} size="2x" />
+        </button>
+      </div>
       <nav className={`admin-sideBar ${isOpen ? "open" : ""}`}>
-        <div className="adminPage-logo">
+        <div className="adminPage-sidebar-logo">
           <img src={logoWhite} />
         </div>
         <ul>
@@ -44,6 +49,18 @@ function Sidebar() {
             <Link to="/">
               <FontAwesomeIcon icon={faUserCog} />
               Manage account
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <FontAwesomeIcon icon={faBell} />
+              Notification
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <FontAwesomeIcon icon={faUserCircle} />
+              Profile
             </Link>
           </li>
         </ul>

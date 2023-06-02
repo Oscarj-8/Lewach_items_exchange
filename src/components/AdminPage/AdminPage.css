@@ -11,7 +11,18 @@
   --fxxlarge: 2.625em;
 }
 
+.adminPage-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+}
+
 .adminPage-logo {
+  width: 2.5em;
+}
+
+.adminPage-sidebar-logo {
   margin-top: 5%;
 }
 
@@ -19,7 +30,7 @@
   position: fixed;
   top: 0;
   height: 100%;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
   transform: translatex(-110%);
   width: 70%;
   background-color: #03467a;
@@ -34,7 +45,7 @@
 }
 
 .adminPage-sidebar ul {
-  width: 100%;
+  width: 80%;
   margin-left: 20%;
   list-style: none;
   display: flex;
@@ -47,7 +58,7 @@
   color: white;
   text-decoration: none;
   font-family: var(--ffroboto);
-  font-size: var(--fsmall);
+  font-size: var(--fxxsmall);
   display: flex;
   align-items: center;
   gap: 1em;
@@ -63,10 +74,7 @@
 }
 
 .fab {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  color: #000000;
+  color: #03467a;
   background: transparent;
   border: none;
   outline: none;
