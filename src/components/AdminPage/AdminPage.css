@@ -1,0 +1,229 @@
+:root {
+  --ffbebas: "Bebas Neue", cursive;
+  --ffquicksand: "Quicksand";
+  --ffroboto: "Roboto", sans-serif;
+
+  --fxxsmall: 0.875em;
+  --fxsmall: 1em;
+  --fsmall: 1.125em;
+  --fmid: 1.25em;
+  --flarge: 1.5em;
+  --fxxlarge: 2.625em;
+}
+
+.adminPage-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.adminPage-logo {
+  width: 2.5em;
+}
+
+.adminPage-sidebar-logo {
+  margin-top: 5%;
+}
+
+.admin-sideBar {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+  transform: translatex(-110%);
+  width: 70%;
+  background-color: #03467a;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin-sideBar.open {
+  transform: translateX(0);
+}
+
+.adminPage-sidebar ul {
+  width: 80%;
+  margin-left: 20%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 15%;
+}
+
+.adminPage-sidebar a {
+  color: white;
+  text-decoration: none;
+  font-family: var(--ffroboto);
+  font-size: var(--fxxsmall);
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  height: 40px;
+  padding: 1em 1em;
+}
+
+.admin-sideBar a:hover,
+.admin-sideBar a:focus {
+  background-color: #ffffff;
+  color: #03467a;
+  border-radius: 0.25em 0 0 0.25em;
+}
+
+.fab {
+  color: #03467a;
+  background: transparent;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.fab:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.admin-notification-profile {
+  display: flex;
+  gap: 2.5em;
+  color: #03467a;
+}
+
+.notification-profile {
+  scale: 1.5;
+}
+
+/* search bar starts here */
+
+.adminSeachbar {
+  display: flex;
+
+  padding: 1em;
+}
+
+.adminSeachbar input {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid #d4cbcb;
+  border-radius: 0.5em;
+}
+
+.adminSeachbar input::placeholder {
+  font-size: var(--fmid);
+  color: #c3c1c1;
+}
+
+.adminsearch-btn {
+  scale: 1.5;
+  position: absolute;
+  right: 2rem;
+  top: 6.8em;
+  background-color: transparent;
+  border: none;
+  color: #03467a;
+}
+
+/* dashboard starts here */
+
+.adminDashboard-root {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 10em;
+}
+
+.dashbaord-card {
+  background-color: #ffffff;
+  box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.15);
+  margin: 0 1em;
+  color: #03467a;
+  border-radius: 0.25em;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  text-align: center;
+}
+
+.time {
+  background-color: #f9f9f9;
+  padding: 0.5em;
+  border: 1px solid #c3c1c1;
+  border-radius: 0.25em;
+}
+
+.deliveryItem-card {
+  display: flex;
+  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.15);
+  margin: 1.5em 1em;
+  padding: 1em 0.2em;
+  gap: 0.5em;
+}
+
+.deliveryItem-card img {
+  width: 6em;
+}
+
+.item-img-side {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.itemcard-btns {
+  display: flex;
+  gap: 1em;
+}
+.itemCard-btn {
+  width: 6em;
+  border-radius: 2em;
+  height: 2em;
+  outline: none;
+  border: none;
+  color: white;
+  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.view-btn {
+  background-color: #31c719;
+}
+
+.forward-btn {
+  background-color: #03467a;
+}
+
+/* Manage account starts here */
+
+.manage-account-table {
+  text-align: left;
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 350px;
+}
+
+.manage-account-table .action {
+  text-align: center;
+  color: #03467a;
+}
+
+.manage-account-table th,
+.manage-account-table td {
+  text-align: left;
+  padding: 1em;
+  border-bottom: 1px solid #ddd;
+}
+
+.manage-account-table th {
+  color: #444444;
+}
+
+tr:last-child {
+  border-bottom: none;
+}
+
+tr:hover {
+  background-color: #ddd;
+}

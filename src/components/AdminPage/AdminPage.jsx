@@ -1,13 +1,17 @@
-import "./FullAdminPage.css";
-import AdminPageHeader from "./AdminPageHeader";
-import AdminSidebar from "./AdminSidebar";
-import AdminPageMain from "./AdminPageMain";
-
+import React from "react";
+import Sidebar from "./Sidebar";
+import AdminDashboard from "./AdminDashboard";
+import SearchBar from "./SearchBar";
+import AdminDeliveryRequest from "./AdminDeliveryRequest";
+import ManageAccount from "./ManageAccount";
 function AdminPage() {
   return (
     <div className="adminPage-root">
-      <AdminSidebar />
-      <AdminPageMain />
+      <Sidebar />
+      <SearchBar />
+      {/* <AdminDashboard /> */}
+      {/* <AdminDeliveryRequest /> */}
+      <ManageAccount />
     </div>
   );
 }
