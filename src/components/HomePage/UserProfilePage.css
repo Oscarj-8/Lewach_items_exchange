@@ -1,0 +1,112 @@
+:root {
+  --ffbebas: "Bebas Neue", cursive;
+  --ffquicksand: "Quicksand";
+  --ffroboto: "Roboto", sans-serif;
+
+  --fxxsmall: 0.875em;
+  --fxsmall: 1em;
+  --fsmall: 1.125em;
+  --fmid: 1.25em;
+  --flarge: 1.5em;
+  --fxxlarge: 2.625em;
+}
+
+.userProfile-root {
+  background-color: aqua;
+  height: 100vh;
+  display: flex;
+}
+
+.useProfile-section {
+  width: 15%;
+  background-color: #03467a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3%;
+  gap: 2em;
+  color: white;
+}
+
+.userProfile-pic {
+  width: 9.5em;
+  height: 9.5em;
+  background-color: aliceblue;
+  border-radius: 50%;
+}
+
+.userProfile-nameEmail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6em;
+  font-family: var(--ffroboto);
+}
+
+.useProfile-section button {
+  background-color: white;
+  border: none;
+  padding: 0.6em 2em;
+  border-radius: 1em;
+  color: #03467a;
+  box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.25);
+}
+
+.useProfile-section button:hover {
+  box-shadow: none;
+}
+
+/* main section starts here*/
+
+.userProfile-main {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  gap: 3em;
+}
+
+.userProfile-header {
+  width: 12em;
+  background-color: yellow;
+}
+
+.userProfile-infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.userInfo-1,
+.userInfo-2 {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  gap: 0.3em;
+  font-size: var(--fxsmall);
+}
+
+.userInfo-1 h2,
+.userInfo-2 h2 {
+  margin-bottom: 5%;
+  color: #03467a;
+  font-size: 2em;
+}
+
+.userProfile-editBtn {
+  align-self: center;
+}
+
+.userProfile-editBtn button {
+  background-color: #03467a;
+
+  border: none;
+  padding: 1em 2.5em;
+  border-radius: 1em;
+  color: #fff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.userProfile-editBtn button:hover {
+  box-shadow: none;
+}

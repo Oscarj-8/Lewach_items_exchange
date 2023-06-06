@@ -7,6 +7,7 @@ import FullHomepage from "./components/HomePage/FullHomepage";
 import "./components/HomePage/FullHomepage";
 import Modal from "react-modal";
 import AdminPage from "./components/AdminPage/AdminPage";
+import UserProfilePage from "./components/HomePage/UserProfilePage";
 
 Modal.setAppElement("#root");
 
@@ -18,7 +19,7 @@ function App() {
         <Route path="/login" Component={Logreg} />
         <Route path="/fullhomepage" Component={FullHomepage} />
       </Routes> */}
-      <AdminPage />
+      <UserProfilePage />
     </div>
   );
 }
