@@ -88,7 +88,9 @@
 
 .admin-notification-profile {
   display: flex;
-  gap: 2.5em;
+}
+
+.admin-notification-profile button {
   color: #03467a;
 }
 

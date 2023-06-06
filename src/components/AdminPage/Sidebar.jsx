@@ -1,4 +1,5 @@
 import "./AdminPage.css";
+import Modal from "react-modal";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,9 +14,12 @@ import {
 import logoBlue from "../../assets/images/logoBlue.png";
 import logoWhite from "../../assets/images/logoWhite.png";
 import SearchBar from "./SearchBar";
+import UploadModal from "../HomePage/UploadModal";
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const closeModal = () => setModalIsOpen(false);
 
   function ToggleSidebar() {
     setIsOpen(!isOpen);
@@ -28,11 +32,15 @@ function Sidebar() {
           <FontAwesomeIcon icon={faBars} size="2x" />
         </button>
         <div className="admin-notification-profile">
-          <FontAwesomeIcon icon={faBell} className="notification-profile" />
-          <FontAwesomeIcon
-            icon={faUserCircle}
+          <button className="notification-profile">
+            <FontAwesomeIcon icon={faBell} />
+          </button>
+          <button
+            onClick={() => setModalIsOpen(true)}
             className="notification-profile"
-          />
+          >
+            <FontAwesomeIcon icon={faUserCircle} />
+          </button>
         </div>
       </div>
       <nav className={`admin-sideBar ${isOpen ? "open" : ""}`}>
@@ -60,6 +68,10 @@ function Sidebar() {
           </li>
         </ul>
       </nav>
+      <UploadModal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+      ></UploadModal>
     </div>
   );
 }
