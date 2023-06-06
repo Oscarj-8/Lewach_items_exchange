@@ -60,7 +60,7 @@ function UserProfilePage() {
         <div className="userInfo-sec">
           <div className="userProfile-header">
             <span>
-              <FontAwesomeIcon icon={faLongArrowAltLeft} /> Go back to home
+              <FontAwesomeIcon icon={faLongArrowAltLeft} /> Go back to Home
             </span>
           </div>
           <div className="userProfile-mainSection">

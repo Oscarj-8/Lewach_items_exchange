@@ -12,7 +12,7 @@
 }
 
 .userProfile-root {
-  height: 100vh;
+  height: 100%;
   display: flex;
 }
 
@@ -93,10 +93,12 @@
   flex-direction: column;
   gap: 1em;
   font-size: var(--fxsmall);
+  font-family: var(--ffroboto);
 }
 
 .userInfo-1 h2,
 .userInfo-2 h2 {
+  font-family: var(--ffroboto);
   margin-bottom: 5%;
   color: #03467a;
   font-size: 2em;
@@ -127,6 +129,7 @@
 }
 
 .mainItems-header {
+  font-family: var(--ffroboto);
   margin-top: 5em;
   color: #03467a;
 }
@@ -144,11 +147,13 @@
 }
 
 .userTransaction-sec h2 {
+  font-family: var(--ffroboto);
   color: #03467a;
-  margin-bottom: 2%;
+  margin-bottom: 3%;
 }
 
 .userTransaction-table {
+  font-family: var(--ffroboto);
   width: 90%;
   border-collapse: collapse;
   text-align: left;
