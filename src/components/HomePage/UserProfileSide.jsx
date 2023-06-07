@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClose } from "@fortawesome/free-solid-svg-icons";
 import UploadModal from "./UploadModal";
 
 function UserProfileSide() {
@@ -13,10 +15,25 @@ function UserProfileSide() {
         <span>__LilaSis</span>
       </div>
       <button onClick={() => setModalIsOpen(true)}>Edit</button>
-      <UploadModal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-      ></UploadModal>
+      <UploadModal isOpen={modalIsOpen} onRequestClose={closeModal}>
+        <div>
+          <div className="personalInfo-closeBtn">
+            <h2>Account Information</h2>
+            <button onClick={closeModal}>
+              <FontAwesomeIcon icon={faClose} size="2x" />
+            </button>
+          </div>
+          <form>
+            <input type="text" placeholder="Full name" />
+            <input type="text" placeholder="Email" />
+            <input type="text" placeholder="Username" />
+            <div className="accountInfo-editBtns">
+              <button>Save</button>
+              <button>Cancle</button>
+            </div>
+          </form>
+        </div>
+      </UploadModal>
     </section>
   );
 }

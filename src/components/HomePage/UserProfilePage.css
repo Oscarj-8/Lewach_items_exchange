@@ -247,7 +247,8 @@
   gap: 2em;
 }
 
-.infoEdit-btns button {
+.infoEdit-btns button,
+.accountInfo-editBtns button {
   background-color: #03467a;
   color: white;
   width: 7em;
