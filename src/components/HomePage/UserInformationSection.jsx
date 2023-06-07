@@ -1,7 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLongArrowAltLeft } from "@fortawesome/free-solid-svg-icons";
+import UploadModal from "./UploadModal";
+import { useState } from "react";
 
 function UserInformationSection() {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
   return (
     <div className="userInfo-sec">
       <div className="userProfile-header">
@@ -32,7 +39,47 @@ function UserInformationSection() {
             <span>SSN : 329569-3455</span>
           </div>
           <div className="userProfile-editBtn">
-            <button>Edit</button>
+            <button onClick={() => setModalIsOpen(true)}>Edit</button>
+            <UploadModal isOpen={modalIsOpen} onRequestClose={closeModal}>
+              <div className="persomal-info-edit">
+                <div className="personal-info-edit">
+                  <div>
+                    <span>First name : </span>
+                    <input type="text" />
+                  </div>
+                  <div>
+                    <span>Last name : </span>
+                    <input type="text" />
+                  </div>
+                  <div>
+                    <span>Email : </span>
+                    <input type="text" />
+                  </div>
+                  <div>
+                    <span>Password: </span>
+                    <input type="text" />
+                  </div>
+                </div>
+                <div className="address-info-edit">
+                  <div>
+                    <span>City : </span>
+                    <input type="text" />
+                  </div>
+                  <div>
+                    <span>Subcity : </span>
+                    <input type="text" />
+                  </div>
+                  <div>
+                    <span>Woreda : </span>
+                    <input type="text" />
+                  </div>
+                  <div>
+                    <span>SSN : </span>
+                    <input type="text" />
+                  </div>
+                </div>
+              </div>
+            </UploadModal>
           </div>
         </div>
       </div>
