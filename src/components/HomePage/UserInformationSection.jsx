@@ -13,7 +13,7 @@ function UserInformationSection() {
     <div className="userInfo-sec">
       <div className="userProfile-header">
         <span>
-          <FontAwesomeIcon icon={faLongArrowAltLeft} /> Go back to Home
+          <a href="/FullHomepage"><FontAwesomeIcon icon={faLongArrowAltLeft} /> Go back to Home</a>
         </span>
       </div>
       <div className="userProfile-mainSection">

@@ -78,7 +78,7 @@ function Home_page_header() {
               <Link onClick={handler}>Notification</Link>
             </li>
             <li>
-              <Link onClick={handler}>Profile</Link>
+              <a className="nav-links" href="/profilepage" onClick={handler} style={{ textDecoration: 'none' }}>Profile</a>
             </li>
           </ul>
         )}

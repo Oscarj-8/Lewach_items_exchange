@@ -14,13 +14,12 @@ Modal.setAppElement("#root");
 function App() {
   return (
     <div className="root">
-      {/* <Routes>
+      { <Routes>
         <Route path="/" Component={index} />
         <Route path="/login" Component={Logreg} />
         <Route path="/fullhomepage" Component={FullHomepage} />
-      </Routes> */}
-      {/* <UserProfilePage /> */}
-      <FullHomepage />
+        <Route path="/profilepage" Component={UserProfilePage} />
+      </Routes> }
     </div>
   );
 }
