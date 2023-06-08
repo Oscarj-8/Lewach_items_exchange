@@ -18,10 +18,10 @@ function Search_menu() {
 
   return (
     <div className="search-menu">
-      <div>
+      <div onClick={handleClose}>
         <img src={phoneMenu} onClick={handler} />
         {isOpen && (
-          <div className="home-overlay" onClick={handleClose}>
+          <div className="home-overlay">
             <div className=" active">
               <HomePage_sidebar />
             </div>

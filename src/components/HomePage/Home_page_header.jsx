@@ -10,6 +10,7 @@ import {
   faUser,
   faBell,
   faEnvelope,
+  faUserCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import Upload from "./Upload";
@@ -70,7 +71,6 @@ function Home_page_header() {
             <li>
               <Link onClick={handler}>Home</Link>
             </li>
-
             <li>
               <Link onClick={handler}>Message</Link>
             </li>
@@ -92,7 +92,15 @@ function Home_page_header() {
       <div onClick={toggleNav} className="header-toggle">
         {showNav ? <FaTimes /> : <img src={menu} className="phone-menu" />}
       </div>
-      <Upload />
+      <div className="Homepage-profile">
+        <button>
+          <FontAwesomeIcon
+            icon={faUserCircle}
+            size="2x"
+            style={{ color: "white" }}
+          />
+        </button>
+      </div>
     </div>
   );
 }

@@ -170,6 +170,10 @@
   border: none;
 }
 
+.Homepage-profile button {
+  background: transparent;
+  border: none;
+}
 /* Section 1 starts here */
 
 .homePage-section1 {
@@ -372,7 +376,7 @@
   }
 
   .side-bar-btns {
-    width: 20%;
+    width: 10%;
   }
 }
 

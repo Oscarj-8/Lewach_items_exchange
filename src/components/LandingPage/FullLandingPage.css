@@ -103,6 +103,7 @@
 
 .nav-links li {
   margin: 0.6em;
+  cursor: pointer;
 }
 
 .close-icon {
