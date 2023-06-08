@@ -1,7 +1,7 @@
 import "./homePage.css";
 import logo from "../../assets/images/logoWhite.png";
 import menu from "../../assets/images/phone-menu.png";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -25,6 +25,7 @@ function Home_page_header() {
 
   const handler = () => {
     setShowNav(!showNav);
+
   };
 
   const [windowSize, setWindowSize] = useState(window.innerWidth);
@@ -78,7 +79,7 @@ function Home_page_header() {
               <Link onClick={handler}>Notification</Link>
             </li>
             <li>
-              <a className="nav-links" href="/profilepage" onClick={handler} style={{ textDecoration: 'none' }}>Profile</a>
+              <Link to="/profilepage" onClick={handler}>Profile</Link>
             </li>
           </ul>
         )}
