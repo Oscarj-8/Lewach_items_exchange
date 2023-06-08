@@ -74,6 +74,10 @@
   padding: 0.6em;
 }
 
+.search-bar:focus {
+  outline: none;
+}
+
 .search-btn {
   background-color: #03467a;
   color: white;
@@ -140,7 +144,7 @@
   gap: 1em;
   padding: 2em;
   background-color: #ffffff;
-  top: 4.6em;
+  top: 4em;
 }
 
 .home-overlay {
@@ -306,6 +310,7 @@
 
   .side-bar-btns {
     width: 50%;
+    top: 4.6em;
   }
 
   .section1-card {
@@ -338,6 +343,10 @@
     padding: 0.5em 1.1em;
     font-size: var(--fxsmall);
     width: 8em;
+  }
+
+  .side-bar-btns {
+    top: 4.15em;
   }
 }
 

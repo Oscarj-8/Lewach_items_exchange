@@ -20,7 +20,6 @@ function App() {
         <Route path="/fullhomepage" Component={FullHomepage} />
         <Route path="/profilepage" Component={UserProfilePage} />
       </Routes> }
-      
     </div>
   );
 }
