@@ -14,11 +14,16 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import Upload from "./Upload";
+import UserProfileModal from "./UserProfileModal";
 
 function Home_page_header() {
   const [showNav, setShowNav] = useState(false);
   const [showCloseIcon, setShowCloseIcon] = useState(false);
+  const [openProfileModal, setOpenProfileModal] = useState(false);
 
+  const OpenProfile = () => {
+    setOpenProfileModal(!openProfileModal);
+  };
   const toggleNav = () => {
     setShowNav(!showNav);
     setShowCloseIcon(!showCloseIcon);
@@ -60,11 +65,11 @@ function Home_page_header() {
                 <FontAwesomeIcon icon={faBell} />
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link onClick={handler}>
                 <FontAwesomeIcon icon={faUser} />
               </Link>
-            </li>
+            </li> */}
           </ul>
         ) : (
           <ul className="nav-links">
@@ -77,9 +82,16 @@ function Home_page_header() {
             <li>
               <Link onClick={handler}>Notification</Link>
             </li>
-            <li>
-              <a className="nav-links" href="/profilepage" onClick={handler} style={{ textDecoration: 'none' }}>Profile</a>
-            </li>
+            {/* <li>
+              <a
+                className="nav-links"
+                href="/profilepage"
+                onClick={handler}
+                style={{ textDecoration: "none" }}
+              >
+                Profile
+              </a>
+            </li> */}
           </ul>
         )}
 
@@ -93,13 +105,14 @@ function Home_page_header() {
         {showNav ? <FaTimes /> : <img src={menu} className="phone-menu" />}
       </div>
       <div className="Homepage-profile">
-        <button>
+        <button onClick={OpenProfile}>
           <FontAwesomeIcon
             icon={faUserCircle}
             size="2x"
             style={{ color: "white" }}
           />
         </button>
+        {openProfileModal && <UserProfileModal />}
       </div>
     </div>
   );

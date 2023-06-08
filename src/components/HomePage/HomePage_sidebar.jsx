@@ -12,11 +12,47 @@ function HomePage_sidebar() {
         Location
       </button>
       {open && (
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, ex.
-          Molestias sed quia, iure harum cum sunt eum in labore accusantium
-          aspernatur inventore sit modi, perspiciatis, ratione dolor consequatur
-          eligendi!
+        <div className="test">
+          <select>
+            <option>hey</option>
+            <option>hey</option>
+            <option>hey</option>
+            <option>hey</option>
+            <option>hey</option>
+            <option>hey</option>
+            <option>hey</option>
+            <option>hey</option>
+          </select>
+          <select>
+            <option>yeh</option>
+            <option>yeh</option>
+            <option>yeh</option>
+            <option>yeh</option>
+            <option>yeh</option>
+            <option>yeh</option>
+            <option>yeh</option>
+            <option>yeh</option>
+          </select>
+          <select>
+            <option>ehy</option>
+            <option>ehy</option>
+            <option>ehy</option>
+            <option>ehy</option>
+            <option>ehy</option>
+            <option>ehy</option>
+            <option>ehy</option>
+            <option>ehy</option>
+          </select>
+          <select>
+            <option>hye</option>
+            <option>hye</option>
+            <option>hye</option>
+            <option>hye</option>
+            <option>hye</option>
+            <option>hye</option>
+            <option>hye</option>
+            <option>hye</option>
+          </select>
         </div>
       )}
 

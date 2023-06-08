@@ -174,6 +174,41 @@
   background: transparent;
   border: none;
 }
+
+.HomeUserProfile-upload {
+  background-color: #ffffff;
+  padding: 1em;
+  position: absolute;
+  top: 3em;
+  right: 1em;
+  width: 10em;
+  border-radius: 0.32em;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.13);
+  display: grid;
+  justify-content: center;
+  gap: 0.5em;
+  transition: transform 2s ease-in-out;
+}
+
+.HomeUserProfile-upload a {
+  text-decoration: none;
+  color: #03467a;
+  letter-spacing: 0.04em;
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.test select {
+  background: transparent;
+  width: 6em;
+  border: none;
+  border-bottom: 1px solid rgb(143, 140, 140);
+  padding: 0.5em;
+}
 /* Section 1 starts here */
 
 .homePage-section1 {
