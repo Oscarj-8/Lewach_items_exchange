@@ -1,7 +1,7 @@
 import "./homePage.css";
 import logo from "../../assets/images/logoWhite.png";
 import menu from "../../assets/images/phone-menu.png";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

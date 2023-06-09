@@ -2,6 +2,7 @@ import phoneMenu from "../../assets/images/phone-sidebar.png";
 import { FaSearch } from "react-icons/fa";
 import { useState } from "react";
 import HomePage_sidebar from "./HomePage_sidebar";
+import Upload from "./Upload";
 
 function Search_menu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,6 +40,7 @@ function Search_menu() {
           <FaSearch /> Search
         </button>
       </div>
+      <Upload />
     </div>
   );
 }
