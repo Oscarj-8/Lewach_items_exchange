@@ -8,18 +8,22 @@ import "./components/HomePage/FullHomepage";
 import Modal from "react-modal";
 import AdminPage from "./components/AdminPage/AdminPage";
 import UserProfilePage from "./components/HomePage/UserProfilePage";
+import TestPage from "./components/HomePage/TestPage";
 
 Modal.setAppElement("#root");
 
 function App() {
   return (
     <div className="root">
-      {/* { <Routes>
-        <Route path="/" Component={index} />
-        <Route path="/login" Component={Logreg} />
-        <Route path="/fullhomepage" Component={FullHomepage} />
-        <Route path="/profilepage" Component={UserProfilePage} />
-      </Routes> } */}
+      {/* {
+        <Routes>
+          <Route path="/" Component={index} />
+          <Route path="/login" Component={Logreg} />
+          <Route path="/fullhomepage" Component={FullHomepage} />
+          <Route path="/profilepage" Component={UserProfilePage} />
+        </Routes>
+      } */}
+      {/* <TestPage /> */}
       <FullHomepage />
     </div>
   );

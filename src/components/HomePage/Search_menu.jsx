@@ -8,23 +8,25 @@ function Search_menu() {
   const [isOpen, setIsOpen] = useState(false);
 
   function handler() {
-    setIsOpen(true);
+    setIsOpen(!isOpen);
     document.body.classList.add("no-scroll");
   }
 
   function handleClose() {
-    setIsOpen(false);
+    setIsOpen(!isOpen);
     document.body.classList.remove("no-scroll");
   }
 
   return (
     <div className="search-menu">
       <div>
-        <img src={phoneMenu} onClick={handler} />
+        <div className="search-menu-img">
+          <img src={phoneMenu} onClick={handler} />
+        </div>
         {isOpen && (
-          <div onClick={handleClose}>
+          <div className="home-overlay">
             <div>
-              <HomePage_sidebar />
+              <HomePage_sidebar handleClose={handleClose} />
             </div>
           </div>
         )}

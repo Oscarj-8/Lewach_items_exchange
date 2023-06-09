@@ -143,20 +143,47 @@
 .side-bar-btns {
   height: 100vh;
   position: absolute;
-  width: 70%;
+  width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 1em;
-  padding: 2em;
+  align-items: center;
   background-color: #ffffff;
   top: 4em;
+  left: 0;
+  z-index: 999;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
 .side-bar-btns span {
   font-family: var(--ffroboto);
   font-size: var(--fsmall);
-  color: #03467a;
+  color: #ffffff;
   font-weight: 600;
+  border-bottom: 0.02em solid rgba(0, 0, 0, 0.5);
+  width: 100%;
+  background-color: #03467a;
+  padding: 0.5em;
+}
+
+.HomepageSide-btns {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1em 0;
+}
+
+.HomepageSide-btns button {
+  background: transparent;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgb(143, 140, 140);
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ffroboto);
+  letter-spacing: 0.1em;
 }
 
 .home-overlay {
@@ -165,26 +192,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.05);
   z-index: 9999;
 }
 
 .no-scroll {
   overflow: hidden;
-}
-
-.HomepageDropdown {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-}
-
-.HomepageDropdown select {
-  background: transparent;
-  width: 8em;
-  border: none;
-  border-bottom: 1px solid rgb(143, 140, 140);
-  padding: 0.3em;
 }
 
 .HomeUserProfile-upload {
@@ -351,7 +364,7 @@
   }
 
   .side-bar-btns {
-    width: 50%;
+    width: 30%;
     top: 4.6em;
   }
 
@@ -362,12 +375,6 @@
   .section2-card {
     flex-direction: row-reverse;
     align-items: center;
-  }
-}
-
-@media (min-width: 600px) {
-  .side-bar-btns {
-    width: 40%;
   }
 }
 
@@ -388,7 +395,7 @@
   }
 
   .side-bar-btns {
-    top: 4.15em;
+    top: 3.9em;
   }
 }
 
@@ -400,21 +407,6 @@
 
   .side-bar-btns {
     width: 30%;
-  }
-}
-
-@media screen and (min-width: 1700px) {
-  .section2-card {
-    flex-basis: calc(22%);
-  }
-
-  .section2-card:hover {
-    transition: transform 0.5s ease-in-out;
-    transform: scale(1.02);
-  }
-
-  .side-bar-btns {
-    width: 10%;
   }
 }
 
@@ -431,5 +423,20 @@
 
   .section1-card-top {
     width: 40%;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .section2-card {
+    flex-basis: calc(22%);
+  }
+
+  .section2-card:hover {
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1.02);
+  }
+
+  .side-bar-btns {
+    width: 10%;
   }
 }

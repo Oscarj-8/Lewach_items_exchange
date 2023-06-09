@@ -1,6 +1,7 @@
 import React from "react";
 import Sidebar from "react-sidebar";
 import { useState } from "react";
+import FullHomepage from "./FullHomepage";
 function TestPage() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -40,7 +41,7 @@ function TestPage() {
         }}
       >
         <button onClick={toggleSidebar}>☰ Open Sidebar</button>
-        <div>Main Content</div>
+        <div>{<FullHomepage />}</div>
       </Sidebar>
     </div>
   );
