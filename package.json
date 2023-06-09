@@ -27,7 +27,8 @@
     "react-icons": "^4.8.0",
     "react-modal": "^3.16.1",
     "react-router-dom": "^6.11.2",
-    "react-scroll": "^1.8.9"
+    "react-scroll": "^1.8.9",
+    "react-sidebar": "^3.0.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
