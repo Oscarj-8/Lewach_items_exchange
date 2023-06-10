@@ -157,13 +157,12 @@
 
 .side-bar-btns span {
   font-family: var(--ffroboto);
-  font-size: var(--fsmall);
+  font-size: var(--fxxsmall);
   color: #ffffff;
-  font-weight: 600;
   border-bottom: 0.02em solid rgba(0, 0, 0, 0.5);
   width: 100%;
   background-color: #03467a;
-  padding: 0.5em;
+  padding: 0.7em;
 }
 
 .HomepageSide-btns {
@@ -184,6 +183,11 @@
   justify-content: center;
   font-family: var(--ffroboto);
   letter-spacing: 0.1em;
+}
+
+.HomepageSide-btns button:hover {
+  background-color: #03467a;
+  color: white;
 }
 
 .home-overlay {
