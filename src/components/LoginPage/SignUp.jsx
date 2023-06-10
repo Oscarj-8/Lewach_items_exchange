@@ -23,7 +23,6 @@ function SignUp() {
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
-  console.log(selectedRegion);
   const validateStep0 = () => {
     const errors = {};
     if (!formData.firstname.trim()) {
@@ -50,6 +49,7 @@ function SignUp() {
     } else if (formData.password !== formData.confirmpassword) {
       errors.confirmpassword = "Passwords do not match";
     }
+    console.log("Step 0 errors:", errors);
     setFormErrors(errors);
     return Object.keys(errors).length === 0;
   };
@@ -65,10 +65,11 @@ function SignUp() {
     if (!formData.subcityworeda.trim()) {
       errors.subcityworeda = "*";
     }
+    console.log("Step 1 errors:", errors);
     setFormErrors(errors);
     return Object.keys(errors).length === 0;
   };
-
+ 
   const handleRegister = async (event) => {
     event.preventDefault();
 
@@ -226,7 +227,10 @@ function SignUp() {
               {formErrors.region && (
                 <div className="error">{formErrors.region}</div>
               )}
-              <select name="subcityzone">
+              <select name="cityzone"
+                value={formData.cityzone}
+                onChange={handleChange}
+                >
                 <option value="">Subcity/Zone</option>
                 {cityZones.map((cityZone) => (
                   <option key={cityZone} value={cityZone}>
@@ -240,7 +244,7 @@ function SignUp() {
               <input
                 type="text"
                 placeholder="City/Woreda"
-                name="cityworeda"
+                name="subcityworeda"
                 value={formData.subcityworeda}
                 onChange={handleChange}
                 required

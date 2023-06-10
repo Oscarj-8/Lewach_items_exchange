@@ -1,4 +1,10 @@
+import { useState } from "react";
+import UploadModal from "./UploadModal";
+
 function ItemsDisplay({ items }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const closeModal = () => setIsOpen(false);
   return (
     <>
       {items.map(({ id, type, name, status, returns, image }) => (
@@ -25,6 +31,10 @@ function ItemsDisplay({ items }) {
             </div>
             <div className="section1-card-bottom">
               <button className="card-bottom-btn">Trade</button>
+              <UploadModal
+                onRequestClose={closeModal}
+                isOpen={isOpen}
+              ></UploadModal>
               <button className="card-bottom-btn">Contact</button>
             </div>
           </div>

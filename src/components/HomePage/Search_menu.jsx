@@ -2,28 +2,31 @@ import phoneMenu from "../../assets/images/phone-sidebar.png";
 import { FaSearch } from "react-icons/fa";
 import { useState } from "react";
 import HomePage_sidebar from "./HomePage_sidebar";
+import Upload from "./Upload";
 
 function Search_menu() {
   const [isOpen, setIsOpen] = useState(false);
 
   function handler() {
-    setIsOpen(true);
+    setIsOpen(!isOpen);
     document.body.classList.add("no-scroll");
   }
 
   function handleClose() {
-    setIsOpen(false);
+    setIsOpen(!isOpen);
     document.body.classList.remove("no-scroll");
   }
 
   return (
     <div className="search-menu">
       <div>
-        <img src={phoneMenu} onClick={handler} />
+        <div className="search-menu-img">
+          <img src={phoneMenu} onClick={handler} />
+        </div>
         {isOpen && (
-          <div className="home-overlay" onClick={handleClose}>
-            <div className=" active">
-              <HomePage_sidebar />
+          <div className="home-overlay">
+            <div>
+              <HomePage_sidebar handleClose={handleClose} />
             </div>
           </div>
         )}
@@ -39,6 +42,7 @@ function Search_menu() {
           <FaSearch /> Search
         </button>
       </div>
+      <Upload />
     </div>
   );
 }

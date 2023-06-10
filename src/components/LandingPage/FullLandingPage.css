@@ -98,10 +98,12 @@
   align-items: center;
   justify-content: center;
   height: 100%;
+  color: white;
 }
 
 .nav-links li {
   margin: 0.6em;
+  cursor: pointer;
 }
 
 .close-icon {

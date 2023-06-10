@@ -1,7 +1,7 @@
 import "./homePage.css";
 import logo from "../../assets/images/logoWhite.png";
 import menu from "../../assets/images/phone-menu.png";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,14 +10,20 @@ import {
   faUser,
   faBell,
   faEnvelope,
+  faUserCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import Upload from "./Upload";
+import UserProfileModal from "./UserProfileModal";
 
 function Home_page_header() {
   const [showNav, setShowNav] = useState(false);
   const [showCloseIcon, setShowCloseIcon] = useState(false);
+  const [openProfileModal, setOpenProfileModal] = useState(false);
 
+  const OpenProfile = () => {
+    setOpenProfileModal(!openProfileModal);
+  };
   const toggleNav = () => {
     setShowNav(!showNav);
     setShowCloseIcon(!showCloseIcon);
@@ -59,26 +65,38 @@ function Home_page_header() {
                 <FontAwesomeIcon icon={faBell} />
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link onClick={handler}>
                 <FontAwesomeIcon icon={faUser} />
               </Link>
-            </li>
+            </li> */}
           </ul>
         ) : (
           <ul className="nav-links">
             <li>
               <Link onClick={handler}>Home</Link>
             </li>
-
             <li>
               <Link onClick={handler}>Message</Link>
             </li>
             <li>
               <Link onClick={handler}>Notification</Link>
             </li>
+            {/* <li>
+              <a
+                className="nav-links"
+                href="/profilepage"
+                onClick={handler}
+                style={{ textDecoration: "none" }}
+              >
+                Profile
+              </a>
+            </li> */}
+
             <li>
-              <Link onClick={handler}>Profile</Link>
+              <Link to="/profilepage" onClick={handler}>
+                Profile
+              </Link>
             </li>
           </ul>
         )}
@@ -92,7 +110,16 @@ function Home_page_header() {
       <div onClick={toggleNav} className="header-toggle">
         {showNav ? <FaTimes /> : <img src={menu} className="phone-menu" />}
       </div>
-      <Upload />
+      <div className="Homepage-profile">
+        <button onClick={OpenProfile}>
+          <FontAwesomeIcon
+            icon={faUserCircle}
+            size="2x"
+            style={{ color: "white" }}
+          />
+        </button>
+        {openProfileModal && <UserProfileModal />}
+      </div>
     </div>
   );
 }

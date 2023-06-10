@@ -28,6 +28,8 @@
 
 .home-page-header a {
   font-size: 1.2em;
+  color: white;
+  text-decoration: none;
 }
 
 .home-page-header img,
@@ -38,14 +40,18 @@
 
 #upload-button {
   border: none;
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
+  background-color: #03467a;
+  color: rgb(255, 255, 255);
   padding: 0.5em;
   border-radius: 0.3em;
   font-family: var(--ffbebas);
   font-size: var(--fxxsmall);
   letter-spacing: 0.15em;
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#upload-button span {
+  font-size: 10px;
 }
 
 #upload-button:hover,
@@ -56,8 +62,8 @@
 
 .search-menu {
   padding: 1em;
-  display: grid;
-  grid-template-columns: 1fr 5fr;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -72,6 +78,10 @@
   border: 1px solid #d4cbcb;
   border-radius: 0.5em;
   padding: 0.6em;
+}
+
+.search-bar:focus {
+  outline: none;
 }
 
 .search-btn {
@@ -133,14 +143,51 @@
 .side-bar-btns {
   height: 100vh;
   position: absolute;
-  width: 70%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1em;
-  padding: 2em;
   background-color: #ffffff;
-  top: 4.6em;
+  top: 4em;
+  left: 0;
+  z-index: 999;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.side-bar-btns span {
+  font-family: var(--ffroboto);
+  font-size: var(--fxxsmall);
+  color: #ffffff;
+  border-bottom: 0.02em solid rgba(0, 0, 0, 0.5);
+  width: 100%;
+  background-color: #03467a;
+  padding: 0.7em;
+}
+
+.HomepageSide-btns {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1em 0;
+}
+
+.HomepageSide-btns button {
+  background: transparent;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgb(143, 140, 140);
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ffroboto);
+  letter-spacing: 0.1em;
+}
+
+.HomepageSide-btns button:hover {
+  background-color: #03467a;
+  color: white;
 }
 
 .home-overlay {
@@ -149,7 +196,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.05);
   z-index: 9999;
 }
 
@@ -157,15 +204,31 @@
   overflow: hidden;
 }
 
-.side-bar-btn {
-  width: 9em;
-  background-color: #03467a;
-  color: white;
-  padding: 0.8em;
-  border-radius: 1.5em;
-  border: none;
+.HomeUserProfile-upload {
+  background-color: #ffffff;
+  padding: 1em;
+  position: absolute;
+  top: 3em;
+  right: 1em;
+  width: 10em;
+  border-radius: 0.32em;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.13);
+  display: grid;
+  justify-content: center;
+  gap: 0.5em;
+  transition: transform 2s ease-in-out;
 }
 
+.HomeUserProfile-upload a {
+  text-decoration: none;
+  color: #03467a;
+  letter-spacing: 0.04em;
+}
+
+.Homepage-profile button {
+  background: transparent;
+  border: none;
+}
 /* Section 1 starts here */
 
 .homePage-section1 {
@@ -305,7 +368,8 @@
   }
 
   .side-bar-btns {
-    width: 50%;
+    width: 30%;
+    top: 4.6em;
   }
 
   .section1-card {
@@ -315,12 +379,6 @@
   .section2-card {
     flex-direction: row-reverse;
     align-items: center;
-  }
-}
-
-@media (min-width: 600px) {
-  .side-bar-btns {
-    width: 40%;
   }
 }
 
@@ -339,6 +397,10 @@
     font-size: var(--fxsmall);
     width: 8em;
   }
+
+  .side-bar-btns {
+    top: 3.9em;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -349,21 +411,6 @@
 
   .side-bar-btns {
     width: 30%;
-  }
-}
-
-@media screen and (min-width: 1700px) {
-  .section2-card {
-    flex-basis: calc(22%);
-  }
-
-  .section2-card:hover {
-    transition: transform 0.5s ease-in-out;
-    transform: scale(1.02);
-  }
-
-  .side-bar-btns {
-    width: 20%;
   }
 }
 
@@ -380,5 +427,20 @@
 
   .section1-card-top {
     width: 40%;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .section2-card {
+    flex-basis: calc(22%);
+  }
+
+  .section2-card:hover {
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1.02);
+  }
+
+  .side-bar-btns {
+    width: 10%;
   }
 }
