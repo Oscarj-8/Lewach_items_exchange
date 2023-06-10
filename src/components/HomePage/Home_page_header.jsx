@@ -92,6 +92,12 @@ function Home_page_header() {
                 Profile
               </a>
             </li> */}
+
+            <li>
+              <Link to="/profilepage" onClick={handler}>
+                Profile
+              </Link>
+            </li>
           </ul>
         )}
 
