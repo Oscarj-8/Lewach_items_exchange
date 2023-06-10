@@ -1,0 +1,45 @@
+:root {
+  --ffbebas: "Bebas Neue", cursive;
+  --ffquicksand: "Quicksand";
+  --ffroboto: "Roboto", sans-serif;
+
+  --fxxsmall: 0.875em;
+  --fxsmall: 1em;
+  --fsmall: 1.125em;
+  --fmid: 1.25em;
+  --flarge: 1.5em;
+  --fxxlarge: 2.625em;
+}
+
+.userNotification-root {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+}
+
+.notification-card {
+  border: 1px solid beige;
+  display: flex;
+  gap: 0.5em;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+  padding: 1em;
+  margin: 0.5em;
+}
+
+.notification-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.notification-card img {
+  width: 2em;
+  height: 2em;
+}
+
+.notification-card h2 {
+  font-size: var(--fsmall);
+  font-family: var(--ffroboto);
+  color: rgb(61, 61, 61);
+}
