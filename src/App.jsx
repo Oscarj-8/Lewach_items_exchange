@@ -14,6 +14,20 @@ import UserMessagePage from "./components/HomePage/UserMessagePage";
 
 Modal.setAppElement("#root");
 
+// const isAuthenticated = () => {
+//   // implement your authentication logic here
+//   // for example, you could check if the user has a valid token in local storage
+//   return localStorage.getItem('token') !== null;
+// };
+
+// function PrivateRoute({ component: Component, ...rest }) {
+//   return (
+//     <Route {...rest} render={(props) => (
+//       isAuthenticated() ? <Component {...props} /> : <Navigate to="/login" />
+//     )} />
+//   );
+// }
+
 function App() {
   return (
     <div className="root">

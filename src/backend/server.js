@@ -2,6 +2,8 @@ import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import cors from 'cors';
+import jwt from 'jsonwebtoken';
+import bcrypt from 'bcryptjs';
 
 const app = express();
 app.use(cors());
@@ -58,6 +60,27 @@ app.post('/login', async (req, res) => {
     res.status(500).send(error);
   }
 });
+
+// app.post('/login', async (req, res) => {
+//   try {
+//     const user = await User.findOne({ email: req.body.email });
+//     if (!user) {
+//       return res.status(404).send('User not found');
+//     }
+
+//     const validPassword = await bcrypt.compare(req.body.password, user.password);
+//     if (!validPassword) {
+//       return res.status(401).send('Incorrect password');
+//     }
+
+//     const token = jwt.sign({ _id: user._id }, '$2a$10$JZJZJZJZJZJZJZJZJZJZJZJZ', { expiresIn: '1h' });
+
+//     res.status(200).json({ token });
+//   } catch (error) {
+//     res.status(500).send(error);
+//   }
+// });
+
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
