@@ -49,19 +49,19 @@ function Sidebar() {
         </div>
         <ul>
           <li>
-            <Link to="/">
+            <Link to="/" onClick={ToggleSidebar}>
               <FontAwesomeIcon icon={faChartLine} />
               Dashbaord
             </Link>
           </li>
           <li>
-            <Link to="/">
+            <Link to="/" onClick={ToggleSidebar}>
               <FontAwesomeIcon icon={faTruck} />
               Delivery request
             </Link>
           </li>
           <li>
-            <Link to="/">
+            <Link to="/" onClick={ToggleSidebar}>
               <FontAwesomeIcon icon={faUserCog} />
               Manage account
             </Link>
