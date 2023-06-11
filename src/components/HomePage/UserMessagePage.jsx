@@ -2,6 +2,7 @@ import React from "react";
 import Home_page_header from "./Home_page_header";
 import variety from "../../assets/images/variety.png";
 import testimonial from "../../assets/images/testimonial.jpg";
+import Footer from "../LandingPage/Footer";
 import "./UserMessagePage.css";
 
 function UserMessagePage() {
@@ -54,19 +55,31 @@ function UserMessagePage() {
       <Home_page_header />
       <div className="userMessage-top">
         <h3>Messages</h3>
-        <div className="userMessage-counter">
-          <span>3</span>
+        <div className="userMessage-counter-top">
+          <span>7</span>
         </div>
       </div>
       {message.map(({ id, image, userName, text }) => (
         <div className="userMessage-card" key={`message-${id}`}>
-          <img src={image} alt="" />
-          <div className="userMessage-main">
-            <h2>{userName}</h2>
-            <span>{text}</span>
+          <div className="img-main-wrapper">
+            <img src={image} alt="" />
+            <div className="userMessage-main">
+              <h2>{userName}</h2>
+              <span>{text}</span>
+            </div>
+          </div>
+
+          <div className="userMessage-counter-bottom">
+            <span>1</span>
           </div>
         </div>
       ))}
+      <div className="load-more">
+        <span>
+          <a>Load more ...</a>
+        </span>
+      </div>
+      <Footer />
     </div>
   );
 }
