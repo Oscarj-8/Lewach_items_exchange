@@ -16,20 +16,21 @@ import logoWhite from "../../assets/images/logoWhite.png";
 import SearchBar from "./SearchBar";
 import UploadModal from "../HomePage/UploadModal";
 import AdminNotificationModalOne from "./AdminNotificationModalOne";
+import UserProfileModal from "../HomePage/UserProfileModal";
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [notificationModal, setNotificationModal] = useState(false);
+  const [userProfile, setUserProfile] = useState(false);
   const closeModal = () => setModalIsOpen(false);
 
   function ToggleSidebar() {
     setIsOpen(!isOpen);
   }
 
-  const [notificationModal, setNotificationModal] = useState(false);
-  const closeIt = () => setNotificationModal(false);
-
   const openIt = () => setNotificationModal(!notificationModal);
+  const openUserProfile = () => setUserProfile(!userProfile);
+  const closeIt = () => setNotificationModal(false);
 
   return (
     <div className="adminPage-sidebar">
@@ -41,14 +42,12 @@ function Sidebar() {
           <button className="notification-profile" onClick={openIt}>
             <FontAwesomeIcon icon={faBell} />
           </button>
-          <button
-            onClick={() => setModalIsOpen(true)}
-            className="notification-profile"
-          >
+          <button className="notification-profile" onClick={openUserProfile}>
             <FontAwesomeIcon icon={faUserCircle} />
           </button>
         </div>
         {notificationModal && <AdminNotificationModalOne />}
+        {userProfile && <UserProfileModal />}
       </div>
       <nav className={`admin-sideBar ${isOpen ? "open" : ""}`}>
         <div className="adminPage-sidebar-logo">
@@ -75,9 +74,9 @@ function Sidebar() {
           </li>
         </ul>
       </nav>
-      <UploadModal isOpen={modalIsOpen} onRequestClose={closeModal}>
+      {/* <UploadModal isOpen={modalIsOpen} onRequestClose={closeModal}>
         hey
-      </UploadModal>
+      </UploadModal> */}
     </div>
   );
 }
