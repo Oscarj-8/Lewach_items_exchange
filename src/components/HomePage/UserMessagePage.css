@@ -21,6 +21,13 @@
   display: flex;
   gap: 0.5em;
   padding: 1em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.img-main-wrapper {
+  display: flex;
+  gap: 1.5em;
 }
 
 .userMessage-top {
@@ -39,7 +46,7 @@
   letter-spacing: 0.05em;
 }
 
-.userMessage-counter {
+.userMessage-counter-top {
   width: 1.5em;
   height: 1.5em;
   display: flex;
@@ -57,7 +64,12 @@
 .userMessage-main {
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 0.7em;
+}
+
+.userMessage-main span {
+  font-family: var(--ffroboto);
+  color: rgb(64, 64, 64);
 }
 
 .userMessage-card img {
@@ -70,4 +82,15 @@
   font-size: var(--fsmall);
   font-family: var(--ffroboto);
   color: rgb(61, 61, 61);
+}
+
+.userMessage-counter-bottom {
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #03467a;
+  color: white;
+  border-radius: 50%;
 }

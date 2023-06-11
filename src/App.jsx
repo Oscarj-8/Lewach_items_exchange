@@ -18,14 +18,14 @@ function App() {
   return (
     <div className="root">
       {
-        <Routes>
-          <Route path="/" Component={index} />
-          <Route path="/login" Component={Logreg} />
-          <Route path="/fullhomepage" Component={FullHomepage} />
-          <Route path="/profilepage" Component={UserProfilePage} />
-        </Routes>
+        // <Routes>
+        //   <Route path="/" Component={index} />
+        //   <Route path="/login" Component={Logreg} />
+        //   <Route path="/fullhomepage" Component={FullHomepage} />
+        //   <Route path="/profilepage" Component={UserProfilePage} />
+        // </Routes>
       }
-      {/* <UserMessagePage /> */}
+      <UserMessagePage />
     </div>
   );
 }
