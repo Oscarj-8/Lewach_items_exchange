@@ -15,6 +15,7 @@ import logoBlue from "../../assets/images/logoBlue.png";
 import logoWhite from "../../assets/images/logoWhite.png";
 import SearchBar from "./SearchBar";
 import UploadModal from "../HomePage/UploadModal";
+import AdminNotificationModalOne from "./AdminNotificationModalOne";
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +26,11 @@ function Sidebar() {
     setIsOpen(!isOpen);
   }
 
+  const [notificationModal, setNotificationModal] = useState(false);
+  const closeIt = () => setNotificationModal(false);
+
+  const openIt = () => setNotificationModal(!notificationModal);
+
   return (
     <div className="adminPage-sidebar">
       <div className="adminPage-header">
@@ -32,7 +38,7 @@ function Sidebar() {
           <FontAwesomeIcon icon={faBars} size="2x" />
         </button>
         <div className="admin-notification-profile">
-          <button className="notification-profile">
+          <button className="notification-profile" onClick={openIt}>
             <FontAwesomeIcon icon={faBell} />
           </button>
           <button
@@ -42,6 +48,7 @@ function Sidebar() {
             <FontAwesomeIcon icon={faUserCircle} />
           </button>
         </div>
+        {notificationModal && <AdminNotificationModalOne />}
       </div>
       <nav className={`admin-sideBar ${isOpen ? "open" : ""}`}>
         <div className="adminPage-sidebar-logo">
@@ -68,10 +75,9 @@ function Sidebar() {
           </li>
         </ul>
       </nav>
-      <UploadModal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-      ></UploadModal>
+      <UploadModal isOpen={modalIsOpen} onRequestClose={closeModal}>
+        hey
+      </UploadModal>
     </div>
   );
 }

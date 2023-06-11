@@ -44,7 +44,7 @@
   transform: translateX(0);
 }
 
-.adminPage-sidebar ul {
+.admin-sideBar ul {
   width: 80%;
   margin-left: 20%;
   list-style: none;
@@ -88,14 +88,39 @@
 
 .admin-notification-profile {
   display: flex;
+  gap: 1.5em;
 }
 
 .admin-notification-profile button {
   color: #03467a;
+  background: transparent;
+  border: none;
 }
 
 .notification-profile {
-  scale: 1.5;
+  scale: 1.8;
+}
+
+.adminNotificationModalOne-root {
+  position: absolute;
+  right: 1em;
+  top: 3em;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35);
+  margin: 0 1em;
+  background-color: white;
+  padding: 0.5em;
+  border-radius: 0.2em;
+  z-index: 1;
+}
+
+.adminNotificationModalOne-list li {
+  list-style: none;
+  padding: 0.6em;
+  border-bottom: 1px solid #03467a;
+}
+
+.adminNotificationModalOne-root li:last-child {
+  border: none;
 }
 
 /* search bar starts here */
