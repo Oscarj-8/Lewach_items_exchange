@@ -60,7 +60,7 @@ function AdminDeliveryRequest() {
     <div className="adminDeliveryRequests-root">
       <Sidebar />
       <SearchBar />
-      <div className="dashbaord-card">
+      <div className="dashboard-card">
         <h3>Delivery Requests</h3>
         <div className="time">
           <span>September 12,2022 12:35 PM</span>

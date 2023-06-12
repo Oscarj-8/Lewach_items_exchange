@@ -6,7 +6,7 @@ function AdminDashboard() {
     <div className="adminDashboard-root">
       <Sidebar />
       <SearchBar />
-      <div className="most-exchange dashbaord-card">
+      <div className="most-exchange dashboard-card">
         <h3>Most exchanged items</h3>
         <div className="time">
           <span>September 12,2022 12:35 PM</span>
@@ -14,7 +14,7 @@ function AdminDashboard() {
       </div>
       <div className="dashboard-chart1"></div>
       <div className="dashboard-chart1"></div>
-      <div className="most-exchange dashbaord-card">
+      <div className="most-exchange dashboard-card">
         <h3>Most exchanged items</h3>
         <div className="time">
           <span>September 12,2022 12:35 PM</span>

@@ -167,7 +167,7 @@
   flex-direction: column;
 }
 
-.dashbaord-card {
+.dashboard-card {
   background-color: #ffffff;
   box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.15);
   margin: 0 1em;
@@ -332,6 +332,15 @@ tr:hover {
 }
 
 @media screen and (min-width: 992px) {
+  .admin-notification-profile {
+    gap: 2.5em;
+  }
+
+  .dashboard-card {
+    width: 68%;
+    align-self: center;
+  }
+
   .adminSeachbar input {
     width: 70%;
   }
@@ -352,6 +361,15 @@ tr:hover {
 }
 
 @media screen and (min-width: 1200px) {
+  .dashboard-card {
+    width: 60%;
+  }
+
+  .time {
+    width: 50%;
+    align-self: center;
+  }
+
   .adminSeachbar input {
     width: 60%;
   }
@@ -364,5 +382,15 @@ tr:hover {
   }
   .deliveryItem-card {
     margin: 1% 1%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .dashboard-card {
+    width: 20%;
+  }
+
+  .time {
+    width: 70%;
   }
 }
