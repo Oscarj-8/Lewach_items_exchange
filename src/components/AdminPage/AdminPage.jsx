@@ -9,9 +9,6 @@ function AdminPage() {
     <div className="adminPage-root">
       <Sidebar />
       <SearchBar />
-      <AdminDashboard />
-      <AdminDeliveryRequest />
-      <ManageAccount />
     </div>
   );
 }

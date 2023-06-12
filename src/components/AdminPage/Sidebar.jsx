@@ -55,19 +55,19 @@ function Sidebar() {
         </div>
         <ul>
           <li>
-            <Link to="/" onClick={ToggleSidebar}>
+            <Link to="/adminDashboard" onClick={ToggleSidebar}>
               <FontAwesomeIcon icon={faChartLine} />
               Dashbaord
             </Link>
           </li>
           <li>
-            <Link to="/" onClick={ToggleSidebar}>
+            <Link to="/adminDeliveryRequest" onClick={ToggleSidebar}>
               <FontAwesomeIcon icon={faTruck} />
               Delivery request
             </Link>
           </li>
           <li>
-            <Link to="/" onClick={ToggleSidebar}>
+            <Link to="/manageAccount" onClick={ToggleSidebar}>
               <FontAwesomeIcon icon={faUserCog} />
               Manage account
             </Link>

@@ -1,6 +1,8 @@
 import phone from "../../assets/images/phone.png";
 import variety from "../../assets/images/variety.png";
 import waste from "../../assets/images/waste.png";
+import SearchBar from "./SearchBar";
+import Sidebar from "./Sidebar";
 
 function AdminDeliveryRequest() {
   const deliveryItems = [
@@ -40,6 +42,8 @@ function AdminDeliveryRequest() {
 
   return (
     <div>
+      <Sidebar />
+      <SearchBar />
       <div className="dashbaord-card">
         <h3>Delivery Requests</h3>
         <div className="time">

@@ -1,8 +1,11 @@
-import React from "react";
+import Sidebar from "./Sidebar";
+import SearchBar from "./SearchBar";
 
 function AdminDashboard() {
   return (
     <div className="adminDashboard-root">
+      <Sidebar />
+      <SearchBar />
       <div className="most-exchange dashbaord-card">
         <h3>Most exchanged items</h3>
         <div className="time">

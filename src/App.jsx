@@ -11,22 +11,31 @@ import UserProfilePage from "./components/HomePage/UserProfilePage";
 import TestPage from "./components/HomePage/TestPage";
 import UserNotificationPage from "./components/HomePage/UserNotificationPage";
 import UserMessagePage from "./components/HomePage/UserMessagePage";
+import AdminDashboard from "./components/AdminPage/AdminDashboard";
+import AdminDeliveryRequest from "./components/AdminPage/AdminDeliveryRequest";
+import ManageAccount from "./components/AdminPage/ManageAccount";
 
 Modal.setAppElement("#root");
 
 function App() {
   return (
     <div className="root">
-      {/* {
+      {
         <Routes>
           <Route path="/" Component={index} />
           <Route path="/login" Component={Logreg} />
           <Route path="/fullhomepage" Component={FullHomepage} />
           <Route path="/profilepage" Component={UserProfilePage} />
+          <Route path="/adminDashboard" Component={AdminDashboard} />
+          <Route
+            path="/adminDeliveryRequest"
+            Component={AdminDeliveryRequest}
+          />
+          <Route path="/manageAccount" Component={ManageAccount} />
         </Routes>
-      } */}
+      }
       {/* <UserMessagePage /> */}
-      <AdminPage />
+      {/* <AdminPage /> */}
     </div>
   );
 }

@@ -1,5 +1,7 @@
 import { faEdit } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Sidebar from "./Sidebar";
+import SearchBar from "./SearchBar";
 
 function ManageAccount() {
   const data = [
@@ -13,6 +15,8 @@ function ManageAccount() {
 
   return (
     <div className="manageAccount-root">
+      <Sidebar />
+      <SearchBar />
       <table className="manage-account-table">
         <thead>
           <tr>
