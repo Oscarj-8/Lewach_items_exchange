@@ -38,10 +38,26 @@ function AdminDeliveryRequest() {
       from: "Addis Ababa",
       to: "Jimma",
     },
+    {
+      id: 5,
+      image: `${waste}`,
+      itemsToBeSwapped_1: "Tv",
+      itemsToBeSwapped_2: "Phone",
+      from: "Harar",
+      to: "Dire Dawa",
+    },
+    {
+      id: 6,
+      image: `${variety}`,
+      itemsToBeSwapped_1: "Tablet",
+      itemsToBeSwapped_2: "Tablet",
+      from: "Addis Ababa",
+      to: "Jimma",
+    },
   ];
 
   return (
-    <div>
+    <div className="adminDeliveryRequests-root">
       <Sidebar />
       <SearchBar />
       <div className="dashbaord-card">
@@ -50,24 +66,26 @@ function AdminDeliveryRequest() {
           <span>September 12,2022 12:35 PM</span>
         </div>
       </div>
-      {deliveryItems.map(
-        ({ id, image, itemsToBeSwapped_1, itemsToBeSwapped_2, from, to }) => (
-          <div className="deliveryItem-card" key={`DeliveryCard-${id}`}>
-            <img src={image} alt="item img" />
-            <div className="item-img-side">
-              <h3>
-                {itemsToBeSwapped_1} - {itemsToBeSwapped_2} Swap
-              </h3>
-              <span>From - {from}</span>
-              <span> To - {to}</span>
-              <div className="itemcard-btns">
-                <button className="itemCard-btn view-btn">View</button>
-                <button className="itemCard-btn forward-btn">Forward</button>
+      <div className="deliveryItem-cards">
+        {deliveryItems.map(
+          ({ id, image, itemsToBeSwapped_1, itemsToBeSwapped_2, from, to }) => (
+            <div className="deliveryItem-card" key={`DeliveryCard-${id}`}>
+              <img src={image} alt="item img" />
+              <div className="item-img-side">
+                <h3>
+                  {itemsToBeSwapped_1} - {itemsToBeSwapped_2} Swap
+                </h3>
+                <span>From - {from}</span>
+                <span> To - {to}</span>
+                <div className="itemcard-btns">
+                  <button className="itemCard-btn view-btn">View</button>
+                  <button className="itemCard-btn forward-btn">Forward</button>
+                </div>
               </div>
             </div>
-          </div>
-        )
-      )}
+          )
+        )}
+      </div>
     </div>
   );
 }
