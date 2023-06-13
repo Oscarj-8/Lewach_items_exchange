@@ -64,7 +64,6 @@ function UserMessagePage() {
               <span>{text}</span>
             </div>
           </div>
-
           <div className="userMessage-counter-bottom">
             <span>1</span>
           </div>

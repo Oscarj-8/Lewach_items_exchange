@@ -1,8 +1,9 @@
 import UploadModal from "./UploadModal";
 import Modal from "react-modal";
 import { useState } from "react";
-import { FaTimes } from "react-icons/fa";
 import CustomFileInput from "./CustomFileInput";
+import { faClose } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Upload() {
   const itemTypes = ["type one", "type two", "type three"];
@@ -96,7 +97,7 @@ function Upload() {
         <div className="modal-username-section">
           <span>User - Alex Moreno</span>
           <button className="uploadModal-close-btn" onClick={handleClose}>
-            <FaTimes />
+            <FontAwesomeIcon icon={faClose} />
           </button>
         </div>
         <hr />

@@ -345,6 +345,78 @@
   cursor: pointer;
 }
 
+/* view modal starts here */
+
+.viewModal {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.viewModal-top {
+  background-color: #03467a;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em;
+  border-radius: 0.25em;
+}
+
+.viewModal-top span {
+  font-size: var(--fmid);
+  font-family: var(--ffbebas);
+}
+
+.viewModal-top button {
+  background: none;
+  border: none;
+  color: white;
+}
+
+.viewModal-img {
+  width: 9em;
+  height: 9em;
+  background-color: #d4cbcb;
+}
+
+.viewModal-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.viewModal-details h2 {
+  font-family: var(--ffbebas);
+  letter-spacing: 0.05em;
+  color: #262626;
+}
+
+.viewModal-details span {
+  font-family: var(--ffbebas);
+}
+
+.viewModal-btns {
+  width: 100%;
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+}
+
+.viewModal-btns button {
+  background: #03467a;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  color: white;
+  width: 8em;
+  height: 3em;
+  margin-bottom: 5%;
+}
+
 @media screen and (min-width: 500px) {
   .nav2 {
     background-color: #03467a;

@@ -3,6 +3,7 @@ import chat from "../../assets/images/chat.png";
 import "./NotificationPage.css";
 import Home_page_header from "./Home_page_header";
 import Footer from "../LandingPage/Footer";
+import UserNavTopSection from "./UserNavTopSection";
 
 function UserNotificationPage() {
   const notification = [
@@ -59,9 +60,7 @@ function UserNotificationPage() {
   return (
     <div className="userNotification-root">
       <Home_page_header />
-      {/* <div className="Notification-header">
-        <h3>Notifications</h3>
-      </div> */}
+      <UserNavTopSection header="Notification" countNumber="7" />
       {notification.map(({ id, image, title, text }) => (
         <div key={`notification-${id}`} className="notification-card">
           <img src={image} alt="Image chat" />
