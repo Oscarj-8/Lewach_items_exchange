@@ -1,6 +1,6 @@
 import "./AdminPage.css";
 import Modal from "react-modal";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -32,6 +32,14 @@ function Sidebar() {
   const openUserProfile = () => setUserProfile(!userProfile);
   const closeIt = () => setNotificationModal(false);
 
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowSize(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="adminPage-sidebar">
       <div className="adminPage-header">
@@ -50,29 +58,56 @@ function Sidebar() {
         {userProfile && <UserProfileModal />}
       </div>
       <nav className={`admin-sideBar ${isOpen ? "open" : ""}`}>
-        <div className="adminPage-sidebar-logo">
-          <img src={logoWhite} />
-        </div>
-        <ul>
-          <li>
-            <Link to="/adminDashboard" onClick={ToggleSidebar}>
-              <FontAwesomeIcon icon={faChartLine} />
-              Dashbaord
-            </Link>
-          </li>
-          <li>
-            <Link to="/adminDeliveryRequest" onClick={ToggleSidebar}>
-              <FontAwesomeIcon icon={faTruck} />
-              Delivery request
-            </Link>
-          </li>
-          <li>
-            <Link to="/manageAccount" onClick={ToggleSidebar}>
-              <FontAwesomeIcon icon={faUserCog} />
-              Manage account
-            </Link>
-          </li>
-        </ul>
+        {windowSize < 1200 ? (
+          <div className="sidebar-l1200 sidebar-Links">
+            <div className="adminPage-sidebar-logo">
+              <img src={logoWhite} />
+            </div>
+            <ul>
+              <li>
+                <Link to="/adminDashboard" onClick={ToggleSidebar}>
+                  <FontAwesomeIcon icon={faChartLine} />
+                  Dashbaord
+                </Link>
+              </li>
+              <li>
+                <Link to="/adminDeliveryRequest" onClick={ToggleSidebar}>
+                  <FontAwesomeIcon icon={faTruck} />
+                  Delivery request
+                </Link>
+              </li>
+              <li>
+                <Link to="/manageAccount" onClick={ToggleSidebar}>
+                  <FontAwesomeIcon icon={faUserCog} />
+                  Manage account
+                </Link>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <div className="sidebar-g1200 sidebar-Links ">
+            <div className="adminPage-sidebar-logo">
+              <img src={logoWhite} />
+            </div>
+            <ul>
+              <li>
+                <Link to="/adminDashboard" onClick={ToggleSidebar}>
+                  <FontAwesomeIcon icon={faChartLine} />
+                </Link>
+              </li>
+              <li>
+                <Link to="/adminDeliveryRequest" onClick={ToggleSidebar}>
+                  <FontAwesomeIcon icon={faTruck} s />
+                </Link>
+              </li>
+              <li>
+                <Link to="/manageAccount" onClick={ToggleSidebar}>
+                  <FontAwesomeIcon icon={faUserCog} />
+                </Link>
+              </li>
+            </ul>
+          </div>
+        )}
       </nav>
       {/* <UploadModal isOpen={modalIsOpen} onRequestClose={closeModal}>
         hey
