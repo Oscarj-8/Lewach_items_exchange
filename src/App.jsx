@@ -26,6 +26,8 @@ function App() {
           <Route path="/login" Component={Logreg} />
           <Route path="/fullhomepage" Component={FullHomepage} />
           <Route path="/profilepage" Component={UserProfilePage} />
+          <Route path="/userMessage" Component={UserMessagePage} />
+          <Route path="/userNotification" Component={UserNotificationPage} />
           <Route path="/adminDashboard" Component={AdminDashboard} />
           <Route
             path="/adminDeliveryRequest"

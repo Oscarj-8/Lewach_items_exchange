@@ -4,6 +4,7 @@ import variety from "../../assets/images/variety.png";
 import testimonial from "../../assets/images/testimonial.jpg";
 import Footer from "../LandingPage/Footer";
 import "./UserMessagePage.css";
+import UserNavTopSection from "./UserNavTopSection";
 
 function UserMessagePage() {
   const message = [
@@ -53,12 +54,7 @@ function UserMessagePage() {
   return (
     <div className="userMessage-root">
       <Home_page_header />
-      <div className="userMessage-top">
-        <h3>Messages</h3>
-        <div className="userMessage-counter-top">
-          <span>7</span>
-        </div>
-      </div>
+      <UserNavTopSection header="Message" countNumber="7" />
       {message.map(({ id, image, userName, text }) => (
         <div className="userMessage-card" key={`message-${id}`}>
           <div className="img-main-wrapper">

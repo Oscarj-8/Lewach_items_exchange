@@ -50,17 +50,17 @@ function Home_page_header() {
         {windowSize >= 500 && windowSize <= 992 ? (
           <ul className="icon-links nav-links">
             <li>
-              <Link onClick={handler}>
+              <Link to="/fullhomepage" onClick={handler}>
                 <FontAwesomeIcon icon={faHome} />
               </Link>
             </li>
             <li>
-              <Link onClick={handler}>
+              <Link to="/userMessage" onClick={handler}>
                 <FontAwesomeIcon icon={faEnvelope} />
               </Link>
             </li>
             <li>
-              <Link onClick={handler}>
+              <Link to="/userNotification" onClick={handler}>
                 <FontAwesomeIcon icon={faBell} />
               </Link>
             </li>
@@ -73,28 +73,18 @@ function Home_page_header() {
         ) : (
           <ul className="nav-links">
             <li>
-              <Link onClick={handler}>Home</Link>
+              <Link to="/fullhomepage" onClick={handler}>
+                Home
+              </Link>
             </li>
             <li>
-              <Link onClick={handler}>Message</Link>
+              <Link to="/userMessage" onClick={handler}>
+                Message
+              </Link>
             </li>
             <li>
-              <Link onClick={handler}>Notification</Link>
-            </li>
-            {/* <li>
-              <a
-                className="nav-links"
-                href="/profilepage"
-                onClick={handler}
-                style={{ textDecoration: "none" }}
-              >
-                Profile
-              </a>
-            </li> */}
-
-            <li>
-              <Link to="/profilepage" onClick={handler}>
-                Profile
+              <Link to="/userNotification" onClick={handler}>
+                Notification
               </Link>
             </li>
           </ul>

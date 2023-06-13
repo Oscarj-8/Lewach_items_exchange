@@ -25,6 +25,7 @@
   border-radius: 0.5em;
   padding: 1em;
   margin: 0.5em;
+  align-self: center;
 }
 
 .notification-main {
@@ -42,4 +43,10 @@
   font-size: var(--fsmall);
   font-family: var(--ffroboto);
   color: rgb(61, 61, 61);
+}
+
+@media screen and (min-width: 768px) {
+  .notification-card {
+    width: 80%;
+  }
 }
