@@ -1,4 +1,4 @@
-import community from "../../assets/images/community.png";
+import teamyoung from "../../assets/images/teamyoung.avif";
 import connect from "../../assets/images/connect.png";
 import delivery from "../../assets/images/delivery2.png";
 import waste from "../../assets/images/waste.png";
@@ -48,7 +48,7 @@ function Section2() {
             reducing waste
           </p>
         </div>
-        <img src={community} />
+        <img src={teamyoung} />
       </div>
       <div
         className="page3-card card-2 fade-in"
