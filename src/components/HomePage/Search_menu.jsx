@@ -1,11 +1,12 @@
 import phoneMenu from "../../assets/images/phone-sidebar.png";
 import { FaSearch } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import HomePage_sidebar from "./HomePage_sidebar";
 import Upload from "./Upload";
 
 function Search_menu() {
   const [isOpen, setIsOpen] = useState(false);
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
 
   function handler() {
     setIsOpen(!isOpen);
@@ -16,6 +17,12 @@ function Search_menu() {
     setIsOpen(!isOpen);
     document.body.classList.remove("no-scroll");
   }
+
+  useEffect(() => {
+    const handleResize = () => setWindowSize(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="search-menu">
@@ -38,9 +45,15 @@ function Search_menu() {
           placeholder="Search"
           name="search"
         />
-        <button className="search-btn">
-          <FaSearch /> Search
-        </button>
+        {windowSize < 650 ? (
+          <button className="search-btn">
+            <FaSearch />
+          </button>
+        ) : (
+          <button className="search-btn">
+            <FaSearch /> Search
+          </button>
+        )}
       </div>
       <Upload />
     </div>
