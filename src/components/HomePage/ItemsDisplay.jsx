@@ -2,10 +2,32 @@ import { useState } from "react";
 import UploadModal from "./UploadModal";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import phone from "../../assets/images/phone.png";
+import { Link } from "react-router-dom";
 
 function ItemsDisplay({ items }) {
+  const itemDetail = [
+    {
+      id: 1,
+      image: `${phone}`,
+      brand: "LG",
+      model: "23GT-23LG",
+      quantity: "1",
+      estimatedValue: "12,300",
+      usage: "1.2yr",
+      defects: "Broken glass",
+      region: "Adama",
+      city: "Adama",
+      subCity: "dunno",
+      areaName: "18",
+      itemsWillingToAccept:
+        "any kind of touch mobile phone and may be smart watch",
+    },
+  ];
+
   const [viewIsOpen, setViewIsOpen] = useState(false);
   const [contactIsOpen, setContactIsOpen] = useState(false);
+  const [tradeIsOpen, setTradeIsOpen] = useState(false);
 
   const openViewModal = () => {
     setViewIsOpen(!viewIsOpen);
@@ -13,6 +35,10 @@ function ItemsDisplay({ items }) {
 
   const openContactModal = () => {
     setContactIsOpen(!contactIsOpen);
+  };
+
+  const toggleTradeModal = () => {
+    setTradeIsOpen(!tradeIsOpen);
   };
 
   const closeModal = () => setViewIsOpen(false);
@@ -48,44 +74,78 @@ function ItemsDisplay({ items }) {
                 View
               </button>
               <UploadModal onRequestClose={closeModal} isOpen={viewIsOpen}>
-                <div className="viewModal">
-                  <div className="viewModal-top">
-                    <span>Jermey Oceans</span>
-                    <button onClick={closeModal}>
-                      <FontAwesomeIcon
-                        icon={faClose}
-                        className="viewModalClose"
-                        size="2x"
-                      />
-                    </button>
-                  </div>
-                  <div className="viewModal-img">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Corrupti ducimus saepe natus accusamus cumque nobis
-                    assumenda, .
-                  </div>
-                  <div className="viewModal-itemDetails viewModal-details">
-                    <h2>Item detail</h2>
-                    <span>Item brand: </span>
-                    <span>Model Type: </span>
-                    <span>Item quantity: </span>
-                    <span>Estimated value:</span>
-                    <span>Duration of usage:</span>
-                    <span>Defects of item:</span>
-                  </div>
-                  <div className="viewModal-LocationDetails  viewModal-details">
-                    <h2>Location details</h2>
-                    <span>Region: </span>
-                    <span>City/Zone: </span>
-                    <span>Subcity/Woreda: </span>
-                    <span>Specific area name:</span>
-                    <span>Items willing to accept:</span>
-                  </div>
-                  <div className="viewModal-btns">
-                    <button>Trade</button>
-                    <button>Contact</button>
-                  </div>
-                </div>
+                {itemDetail.map(
+                  ({
+                    id,
+                    image,
+                    brand,
+                    model,
+                    quantity,
+                    estimatedValue,
+                    usage,
+                    defects,
+                    region,
+                    city,
+                    subCity,
+                    areaName,
+                    itemsWillingToAccept,
+                  }) => (
+                    <div key={`veiewItem - ${id}`} className="viewModal">
+                      <div className="viewModal-top">
+                        <span>Jermey Oceans</span>
+                        <button onClick={closeModal}>
+                          <FontAwesomeIcon
+                            icon={faClose}
+                            className="viewModalClose"
+                            size="2x"
+                          />
+                        </button>
+                      </div>
+                      <div className="viewModal-img">
+                        <img src={image} alt="item picture" />
+                      </div>
+                      <div className="viewModal-itemDetails viewModal-details">
+                        <h2>Item detail</h2>
+                        <span>Item brand: {brand} </span>
+                        <span>Model Type: {model} </span>
+                        <span>Item quantity: {quantity} </span>
+                        <span>Estimated value: {estimatedValue} </span>
+                        <span>Duration of usage: {usage}</span>
+                        <span>Defects of item: {defects}</span>
+                      </div>
+                      <div className="viewModal-LocationDetails  viewModal-details">
+                        <h2>Location details</h2>
+                        <span>Region: {region} </span>
+                        <span>City/Zone: {city} </span>
+                        <span>Subcity/Woreda: {subCity} </span>
+                        <span>Specific area name: {areaName} </span>
+                        <span>
+                          Items willing to accept: {itemsWillingToAccept}
+                        </span>
+                      </div>
+                      <div className="viewModal-btns">
+                        <button onClick={toggleTradeModal}>Trade</button>
+                        {tradeIsOpen && (
+                          <div className="tradeModal">
+                            <span>
+                              Do you want to upload now or use already uploaded
+                              items?
+                            </span>
+                            <div className="">
+                              <button>
+                                <Link>Upload now</Link>
+                              </button>
+                              <button>
+                                <Link to="/profilepage">Go to profile</Link>
+                              </button>
+                            </div>
+                          </div>
+                        )}
+                        <button>Contact</button>
+                      </div>
+                    </div>
+                  )
+                )}
               </UploadModal>
               <button className="card-bottom-btn" onClick={openContactModal}>
                 Contact

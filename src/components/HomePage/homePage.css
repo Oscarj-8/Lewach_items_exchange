@@ -367,7 +367,6 @@
 
 .viewModal-top span {
   font-size: var(--fmid);
-  font-family: var(--ffbebas);
 }
 
 .viewModal-top button {
@@ -376,10 +375,9 @@
   color: white;
 }
 
-.viewModal-img {
+.viewModal-img img {
   width: 9em;
   height: 9em;
-  background-color: #d4cbcb;
 }
 
 .viewModal-details {
@@ -396,7 +394,7 @@
 }
 
 .viewModal-details span {
-  font-family: var(--ffbebas);
+  font-family: var(--ffroboto);
 }
 
 .viewModal-btns {
@@ -415,6 +413,33 @@
   width: 8em;
   height: 3em;
   margin-bottom: 5%;
+}
+
+.tradeModal {
+  background-color: #03467a;
+  position: absolute;
+  top: 50%;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  border-radius: 1em;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.tradeModal span {
+  font-size: var(--fsmall);
+  font-family: var(--ffroboto);
+}
+
+.tradeModal button {
+  margin: 0;
+}
+
+.tradeModal a {
+  text-decoration: none;
+  color: white;
 }
 
 @media screen and (min-width: 500px) {
