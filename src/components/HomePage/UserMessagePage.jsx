@@ -1,4 +1,3 @@
-import React from "react";
 import Home_page_header from "./Home_page_header";
 import variety from "../../assets/images/variety.png";
 import testimonial from "../../assets/images/testimonial.jpg";
@@ -74,7 +73,7 @@ function UserMessagePage() {
           <a>Load more ...</a>
         </span>
       </div>
-      <Footer />
+      <Footer className="footer" />
     </div>
   );
 }
