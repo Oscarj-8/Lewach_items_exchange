@@ -34,6 +34,15 @@ function SignIn() {
       },
       body: JSON.stringify({ email, password }),
     });
+  //   if (response.ok) {
+  //     const data = await response.json();
+  //     console.log(data);
+  //     localStorage.setItem("token", data.token); // Store the JWT token in local storage
+  //     window.location.href = "/FullHomepage";
+  //   } else {
+  //     console.error("Error:", response.statusText);
+  //   }
+  // };
 
     if (response.ok) {
       const user = await response.json();

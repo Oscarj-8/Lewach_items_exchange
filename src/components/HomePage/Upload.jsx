@@ -75,9 +75,41 @@ function Upload() {
     setItemsWillingToAccept(e.target.value);
   };
 
-  function formSubmitHandler(e) {
+  const formSubmitHandler = async (e) => {
     e.preventDefault();
+    const formData = new FormData();
+    formData.append('itemType', itemType);
+    formData.append('brandName', brandName);
+    formData.append('modelType', modelType);
+    formData.append('itemQuantity', itemQuantity);
+    formData.append('itemEstimatedValue', itemEstimatedValue);
+    formData.append('itemDurationOfUsage', itemDurationOfUsage);
+    formData.append('itemDefects', itemDefects);
+    formData.append('itemRegion', itemRegion);
+    formData.append('itemCityZone', itemCityZone);
+    formData.append('itemSubcityWoreda', itemSubcityWoreda);
+    formData.append('itemSpecificArea', itemSpecificArea);
+    formData.append('itemsWillingToAccept', itemsWillingToAccept);
+    formData.append('itemImage', file);
+  
+    try {
+      const response = await fetch("http://localhost:3001/submit-item", {
+        method: 'POST',
+        body: formData,
+      });
+  
+      if (response.ok) {
+        console.log('Item saved to MongoDB');
+        closeModal();
+      } else {
+        console.log('Error saving item:', response.statusText);
+      }
+    } catch (error) {
+      console.log(error);
+    }
   }
+  
+  //New Code End
 
   const [file, setFile] = useState(null);
 
@@ -106,6 +138,7 @@ function Upload() {
             <CustomFileInput
               id="my-file-input"
               label="Choose a file"
+              accept=".jpg,.jpeg,.png,.gif"
               onChange={handleFileChange}
             />
             {file && <p>Selected file: {file.name}</p>}
@@ -282,3 +315,5 @@ function Upload() {
 }
 
 export default Upload;
+
+
