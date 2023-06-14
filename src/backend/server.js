@@ -2,15 +2,13 @@ import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import jwt from 'jsonwebtoken';
-import bcrypt from 'bcryptjs';
+import multer from 'multer';
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
 const connectionString = 'mongodb+srv://lewach:lewachabmss@lewachdb.vdgyobf.mongodb.net/';
-
 
 mongoose.connect(connectionString, {
   useNewUrlParser: true,
@@ -61,27 +59,64 @@ app.post('/login', async (req, res) => {
   }
 });
 
-// app.post('/login', async (req, res) => {
+const itemSchema = new mongoose.Schema({
+  itemType: String,
+  brandName: String,
+  modelType: String,
+  itemQuantity: Number,
+  itemEstimatedValue: String,
+  itemDurationOfUsage: String,
+  itemDefects: String,
+  itemRegion: String,
+  itemCityZone: String,
+  itemSubcityWoreda: String,
+  itemSpecificArea: String,
+  itemsWillingToAccept: String,
+  file: {
+    data: Buffer,
+    contentType: String,
+  },
+});
+
+const Item = mongoose.model('Item', itemSchema);
+
+const upload = multer({ storage: multer.memoryStorage() });
+
+// app.post('/submit-item', upload.single('file'), async (req, res) => {
 //   try {
-//     const user = await User.findOne({ email: req.body.email });
-//     if (!user) {
-//       return res.status(404).send('User not found');
-//     }
-
-//     const validPassword = await bcrypt.compare(req.body.password, user.password);
-//     if (!validPassword) {
-//       return res.status(401).send('Incorrect password');
-//     }
-
-//     const token = jwt.sign({ _id: user._id }, '$2a$10$JZJZJZJZJZJZJZJZJZJZJZJZ', { expiresIn: '1h' });
-
-//     res.status(200).json({ token });
+//     const newItem = new Item({
+//       ...req.body,
+//       file: {
+//         data: req.file.buffer,
+//         contentType: req.file.mimetype,
+//       },
+//     });
+//     await newItem.save();
+//     res.status(201).send(newItem);
 //   } catch (error) {
-//     res.status(500).send(error);
+//     res.status(400).send(error);
 //   }
 // });
 
-
+app.post('/submit-item', upload.single('itemImage'), async (req, res) => {
+  try {
+    const newItem = new Item({
+      ...req.body,
+      file: {
+        data: req.file.buffer,
+        contentType: req.file.mimetype,
+      },
+    });
+    await newItem.save();
+    res.status(201).send({ message: 'Item saved' });
+  } catch (error) {
+    console.error('Error processing request:', error);
+    res.status(500).send({
+      error: error.message,
+      data
+    });
+  }
+});
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
