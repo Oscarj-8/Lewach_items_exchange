@@ -4,6 +4,7 @@ import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import phone from "../../assets/images/phone.png";
 import { Link } from "react-router-dom";
+import Upload from "./Upload";
 
 function ItemsDisplay({ items }) {
   const itemDetail = [
@@ -45,6 +46,10 @@ function ItemsDisplay({ items }) {
   const closeModal2 = () => {
     setContactIsOpen(false);
   };
+  const closeTradeModal = () => {
+    setTradeIsOpen(false);
+  };
+
   return (
     <>
       {items.map(({ id, type, name, status, returns, image }) => (
@@ -127,13 +132,19 @@ function ItemsDisplay({ items }) {
                         <button onClick={toggleTradeModal}>Trade</button>
                         {tradeIsOpen && (
                           <div className="tradeModal">
+                            <div className="tradeModal-closeBtn">
+                              <FontAwesomeIcon
+                                icon={faClose}
+                                onClick={closeTradeModal}
+                              />
+                            </div>
                             <span>
                               Do you want to upload now or use already uploaded
                               items?
                             </span>
-                            <div className="">
+                            <div className="tradeModal-inside">
                               <button>
-                                <Link>Upload now</Link>
+                                <Upload />
                               </button>
                               <button>
                                 <Link to="/profilepage">Go to profile</Link>
