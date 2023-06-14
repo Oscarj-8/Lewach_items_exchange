@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react';
 import logo from "../../assets/images/logoBlue.png";
+import useAuth from "./useAuth"; // Import the useAuth hook
 import Cookies from "js-cookie";
 
 function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { login } = useAuth(); // Use the login function from the useAuth hook
 
   const isEmailValid = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -14,6 +16,7 @@ function SignIn() {
   const isPasswordValid = (password) => {
     return password.length >= 8;
   };
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -28,27 +31,18 @@ function SignIn() {
       return;
     }
 
-    const response = await fetch("http://localhost:3001/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, password }),
-    });
-
-    if (response.ok) {
-      const user = await response.json();
-      Cookies.set("session_id", user.session_id, { expires: 7 }); // Set the session ID in a cookie with a 7-day expiration
+    try {
+      await login(email, password); // Use the login function from the useAuth hook
       window.location.href = "/FullHomepage";
-    } else {
-      console.error("Error:", response.statusText);
+    } catch (error) {
+      console.error("Error:", error);
     }
   };
 
   useEffect(() => {
     const session_id = Cookies.get("session_id");
-    if (!session_id) {
-      window.location.href = "/signin"; // Redirect to the login page if the session ID is not found
+    if (session_id) {
+      window.location.href = "/FullHomepage"; // Redirect to the homepage if the session ID is found
     }
   }, []);
 
