@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../assets/images/logoBlue.png";
+import Cookies from "js-cookie";
 
 function SignIn() {
   const [email, setEmail] = useState("");
@@ -37,11 +38,20 @@ function SignIn() {
 
     if (response.ok) {
       const user = await response.json();
+      Cookies.set("session_id", user.session_id, { expires: 7 }); // Set the session ID in a cookie with a 7-day expiration
       window.location.href = "/FullHomepage";
     } else {
       console.error("Error:", response.statusText);
     }
   };
+
+  useEffect(() => {
+    const session_id = Cookies.get("session_id");
+    if (!session_id) {
+      window.location.href = "/signin"; // Redirect to the login page if the session ID is not found
+    }
+  }, []);
+
 
   return (
     <section className="container-form container-form-sign-in">

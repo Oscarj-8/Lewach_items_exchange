@@ -3,6 +3,8 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import multer from 'multer';
+import session from 'express-session';
+import MongoDBStore from 'connect-mongodb-session';
 
 const app = express();
 app.use(cors());
@@ -15,6 +17,27 @@ mongoose.connect(connectionString, {
   useUnifiedTopology: true,
 });
 
+//SESSION
+const MongoDBSessionStore = MongoDBStore(session);
+
+const store = new MongoDBSessionStore({
+  uri: connectionString,
+  collection: 'sessions',
+});
+
+app.use(
+  session({
+    secret: '2023@ABMSSKEYYEKSSMBA', 
+    resave: false,
+    saveUninitialized: false,
+    store: store,
+    cookie: { maxAge: 7 * 24 * 60 * 60 * 1000 }, 
+  })
+);
+//SESSION END
+
+
+//USER
 const userSchema = new mongoose.Schema({
   firstname: String,
   lastname: String,
@@ -58,7 +81,9 @@ app.post('/login', async (req, res) => {
     res.status(500).send(error);
   }
 });
+//USER END
 
+//UPLOAD
 const itemSchema = new mongoose.Schema({
   itemType: String,
   brandName: String,
@@ -82,22 +107,6 @@ const Item = mongoose.model('Item', itemSchema);
 
 const upload = multer({ storage: multer.memoryStorage() });
 
-// app.post('/submit-item', upload.single('file'), async (req, res) => {
-//   try {
-//     const newItem = new Item({
-//       ...req.body,
-//       file: {
-//         data: req.file.buffer,
-//         contentType: req.file.mimetype,
-//       },
-//     });
-//     await newItem.save();
-//     res.status(201).send(newItem);
-//   } catch (error) {
-//     res.status(400).send(error);
-//   }
-// });
-
 app.post('/submit-item', upload.single('itemImage'), async (req, res) => {
   try {
     const newItem = new Item({
@@ -117,6 +126,9 @@ app.post('/submit-item', upload.single('itemImage'), async (req, res) => {
     });
   }
 });
+//UPLOAD END
+
+
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
