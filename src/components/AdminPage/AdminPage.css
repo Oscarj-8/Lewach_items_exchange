@@ -257,10 +257,11 @@
 /* Manage account starts here */
 
 .manage-accounts-main {
-  padding: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0.5em;
+  gap: 2em;
 }
 
 .manage-acc-table-btn {
@@ -273,6 +274,7 @@
   background: none;
   padding: 0.5em;
   color: #03467a;
+  font-family: var(--ffroboto);
 }
 
 .manage-acc-inside-btns {
@@ -283,12 +285,45 @@
 
 .edit-delete-btn {
   border: none;
-
   padding: 0.5em;
   border-radius: 0.8em;
   color: #03467a;
   width: 5em;
 }
+
+.manage-acc-mid {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.create-agent button {
+  color: #03467a;
+  border: none;
+  background: transparent;
+  scale: 1.5;
+}
+.user-acc-section {
+  width: 100%;
+}
+
+.agent-acc-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.manage-acc-mid {
+  display: flex;
+}
+
+.manage-acc-mid select {
+  padding: 0.2em;
+  border-radius: 0.5em;
+}
+
 .manage-account-table {
   text-align: left;
   border-collapse: collapse;

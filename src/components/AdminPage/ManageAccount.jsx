@@ -1,4 +1,4 @@
-import { faEdit } from "@fortawesome/free-solid-svg-icons";
+import { faEdit, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import Sidebar from "./Sidebar";
@@ -72,76 +72,114 @@ function ManageAccount() {
         </tbody>
       </table> */}
       <div className="manage-accounts-main">
-        <h2>Manage Accounts</h2>
+        <div className="most-exchange dashboard-card">
+          <h3>Manage accounts</h3>
+          <div className="time">
+            <span>September 12,2022 12:35 PM</span>
+          </div>
+        </div>
         <div className="manage-acc-table-btn">
           <button onClick={() => handleTabClick("users")}>Users</button>
           <button onClick={() => handleTabClick("agents")}>Agents</button>
         </div>
         {activeTab === "users" && (
-          <table className="manage-account-table">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {users.map((user) => (
-                <tr key={user.id}>
-                  <td>{user.id}</td>
-                  <td>{user.name}</td>
-                  <td>{user.email}</td>
-                  <td>
-                    <div className="manage-acc-inside-btns">
-                      <button
-                        onClick={() => handleEditUser(user.id)}
-                        className="edit-delete-btn"
-                      >
-                        Edit
-                      </button>
-                      <button
-                        onClick={() => handleDeleteUser(user.id)}
-                        className="edit-delete-btn"
-                      >
-                        Delete
-                      </button>
-                    </div>
-                  </td>
+          <div className="user-acc-section">
+            <div className="manage-acc-mid">
+              <select>
+                <option value="">Filter</option>
+                <option value="data-of-reg">Date of registration</option>
+                <option value="alphabetically">Alphabetically</option>
+                <option value="latest-arrival">Latest arrival</option>
+              </select>
+            </div>
+            <table className="manage-account-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Actions</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {users.map((user) => (
+                  <tr key={user.id}>
+                    <td>{user.id}</td>
+                    <td>{user.name}</td>
+                    <td>{user.email}</td>
+                    <td>
+                      <div className="manage-acc-inside-btns">
+                        <button
+                          onClick={() => handleEditUser(user.id)}
+                          className="edit-delete-btn"
+                        >
+                          Edit
+                        </button>
+                        <button
+                          onClick={() => handleDeleteUser(user.id)}
+                          className="edit-delete-btn"
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         )}
         {activeTab === "agents" && (
-          <table className="manage-account-table">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {agents.map((agent) => (
-                <tr key={agent.id}>
-                  <td>{agent.id}</td>
-                  <td>{agent.name}</td>
-                  <td>{agent.email}</td>
-                  <td>
-                    <button onClick={() => handleEditAgent(agent.id)}>
-                      Edit
-                    </button>
-                    <button onClick={() => handleDeleteAgent(agent.id)}>
-                      Delete
-                    </button>
-                  </td>
+          <div className="agent-acc-section">
+            <div className="manage-acc-mid">
+              <select>
+                <option value="">Filter</option>
+                <option value="data-of-reg">Date of registration</option>
+                <option value="alphabetically">Alphabetically</option>
+                <option value="latest-arrival">Latest arrival</option>
+              </select>
+              <div className="create-agent">
+                <button>
+                  <FontAwesomeIcon icon={faPlusCircle} />
+                </button>
+              </div>
+            </div>
+            <table className="manage-account-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Actions</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {agents.map((agent) => (
+                  <tr key={agent.id}>
+                    <td>{agent.id}</td>
+                    <td>{agent.name}</td>
+                    <td>{agent.email}</td>
+                    <td>
+                      <div className="manage-acc-inside-btns">
+                        <button
+                          onClick={() => handleEditAgent(agent.id)}
+                          className="edit-delete-btn"
+                        >
+                          Edit
+                        </button>
+                        <button
+                          onClick={() => handleDeleteAgent(agent.id)}
+                          className="edit-delete-btn"
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         )}
       </div>
     </div>
