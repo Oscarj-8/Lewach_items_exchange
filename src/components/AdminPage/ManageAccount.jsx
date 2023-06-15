@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import Sidebar from "./Sidebar";
 import SearchBar from "./SearchBar";
+import UploadModal from "../HomePage/UploadModal";
 
 function ManageAccount() {
   // const data = [
@@ -24,13 +25,17 @@ function ManageAccount() {
   ]);
 
   const [activeTab, setActiveTab] = useState("users");
+  const [isOpen, setIsOpen] = useState(false);
 
+  function openCreateAgent() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
   const handleTabClick = (tab) => {
     setActiveTab(tab);
-  };
-
-  const handleEditUser = (userId) => {
-    // Display modal with form to edit user details
   };
 
   const handleDeleteUser = (userId) => {
@@ -51,26 +56,6 @@ function ManageAccount() {
     <div className="manageAccount-root">
       <Sidebar />
       <SearchBar />
-      {/* <table className="manage-account-table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Username</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map(({ id, name, username }) => (
-            <tr key={`user_${id}`}>
-              <td>{name}</td>
-              <td>{username}</td>
-              <td className="action">
-                <FontAwesomeIcon icon={faEdit} />
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table> */}
       <div className="manage-accounts-main">
         <div className="most-exchange dashboard-card">
           <h3>Manage accounts</h3>
@@ -110,12 +95,6 @@ function ManageAccount() {
                     <td>
                       <div className="manage-acc-inside-btns">
                         <button
-                          onClick={() => handleEditUser(user.id)}
-                          className="edit-delete-btn"
-                        >
-                          Edit
-                        </button>
-                        <button
                           onClick={() => handleDeleteUser(user.id)}
                           className="edit-delete-btn"
                         >
@@ -140,8 +119,14 @@ function ManageAccount() {
               </select>
               <div className="create-agent">
                 <button>
-                  <FontAwesomeIcon icon={faPlusCircle} />
+                  <FontAwesomeIcon
+                    icon={faPlusCircle}
+                    onClick={openCreateAgent}
+                  />
                 </button>
+                <UploadModal onRequestClose={closeModal} isOpen={isOpen}>
+                  hey
+                </UploadModal>
               </div>
             </div>
             <table className="manage-account-table">

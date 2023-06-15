@@ -118,9 +118,11 @@ function AdminDeliveryRequest() {
   const openViewModal = () => {
     setIsModalOpen(!isModalOpen);
   };
+
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
   return (
     <div className="adminDeliveryRequests-root">
       <Sidebar />
