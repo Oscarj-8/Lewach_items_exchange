@@ -256,6 +256,39 @@
 
 /* Manage account starts here */
 
+.manage-accounts-main {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.manage-acc-table-btn {
+  display: flex;
+  gap: 0.5em;
+}
+
+.manage-acc-table-btn button {
+  border: none;
+  background: none;
+  padding: 0.5em;
+  color: #03467a;
+}
+
+.manage-acc-inside-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.edit-delete-btn {
+  border: none;
+
+  padding: 0.5em;
+  border-radius: 0.8em;
+  color: #03467a;
+  width: 5em;
+}
 .manage-account-table {
   text-align: left;
   border-collapse: collapse;
@@ -271,7 +304,7 @@
 .manage-account-table th,
 .manage-account-table td {
   text-align: left;
-  padding: 1em;
+  padding: 0.5em;
   border-bottom: 1px solid #ddd;
 }
 
@@ -345,6 +378,10 @@ tr:hover {
 @media screen and (min-width: 768px) {
   .admin-sideBar {
     width: 30%;
+  }
+
+  .manage-acc-inside-btns {
+    flex-direction: row;
   }
 
   .manage-account-table {
