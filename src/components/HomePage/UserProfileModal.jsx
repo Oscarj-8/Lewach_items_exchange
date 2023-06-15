@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
+import useAuth from "../LoginPage/useAuth";
 
 
 function UserProfileModal({ handler }) {
   const { logout } = useAuth();
 
-  const handleLogout = async () => {
+  function handleLogout() {
     try {
-      await logout();
-      handler();
+      logout(); // Call the logout function from the useAuth hook
     } catch (error) {
-      console.error(error);
+      console.error("Error:", error);
     }
-  };
+  }
 
   return (
     <div className="HomeUserProfile-upload">

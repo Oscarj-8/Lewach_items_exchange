@@ -32,19 +32,15 @@ function SignIn() {
     }
 
     try {
-      await login(email, password); // Use the login function from the useAuth hook
+      await login(email, password);
       window.location.href = "/FullHomepage";
     } catch (error) {
       console.error("Error:", error);
+      alert("Error: Login failed");
     }
   };
 
-  useEffect(() => {
-    const session_id = Cookies.get("session_id");
-    if (session_id) {
-      window.location.href = "/FullHomepage"; // Redirect to the homepage if the session ID is found
-    }
-  }, []);
+ 
 
 
   return (
