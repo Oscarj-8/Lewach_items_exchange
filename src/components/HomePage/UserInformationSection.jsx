@@ -2,12 +2,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLongArrowAltLeft, faClose } from "@fortawesome/free-solid-svg-icons";
 import UploadModal from "./UploadModal";
 import { useState } from "react";
+import  useAuth from '../LoginPage/useAuth';
 
 function UserInformationSection() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const closeModal = () => {
     setModalIsOpen(false);
   };
+  const { getUser } = useAuth();
+const user = getUser();
 
   return (
     <div className="userInfo-sec">
@@ -20,9 +23,9 @@ function UserInformationSection() {
         <div className="userProfile-infoSection">
           <div className="userInfo-1">
             <h2>Personal information</h2>
-            <span>First name : Gelila</span>
+            <span>First name : {user.firstname}</span>
             <hr />
-            <span>Last name : Sisay</span>
+            <span>Last name : {user.lastname}</span>
             <hr />
             <span>Email : LilaSis23@gmail.com</span>
             <hr />
@@ -33,13 +36,13 @@ function UserInformationSection() {
           </div>
           <div className="userInfo-2">
             <h2>Address information</h2>
-            <span>City : Addis Ababa</span>
+            <span>Region : {user.region}</span>
             <hr />
-            <span>Subcity : Lideta</span>
+            <span>City : { user.cityzone}</span>
             <hr />
-            <span>Woreda : Dunno</span>
+            <span>Subcity : {user.subcityworeda}</span>
             <hr />
-            <span>SSN : 329569-3455</span>
+            <span>SSN : { user.snn}</span>
           </div>
           <div className="userProfile-editBtn">
             <button onClick={() => setModalIsOpen(true)}>Edit</button>

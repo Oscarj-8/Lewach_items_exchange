@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react';
 import logo from "../../assets/images/logoBlue.png";
+import useAuth from "./useAuth"; // Import the useAuth hook
+import Cookies from "js-cookie";
 
 function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { login } = useAuth(); // Use the login function from the useAuth hook
 
   const isEmailValid = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -13,6 +16,7 @@ function SignIn() {
   const isPasswordValid = (password) => {
     return password.length >= 8;
   };
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -27,30 +31,17 @@ function SignIn() {
       return;
     }
 
-    const response = await fetch("http://localhost:3001/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, password }),
-    });
-  //   if (response.ok) {
-  //     const data = await response.json();
-  //     console.log(data);
-  //     localStorage.setItem("token", data.token); // Store the JWT token in local storage
-  //     window.location.href = "/FullHomepage";
-  //   } else {
-  //     console.error("Error:", response.statusText);
-  //   }
-  // };
-
-    if (response.ok) {
-      const user = await response.json();
+    try {
+      await login(email, password);
       window.location.href = "/FullHomepage";
-    } else {
-      console.error("Error:", response.statusText);
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Error: Login failed");
     }
   };
+
+ 
+
 
   return (
     <section className="container-form container-form-sign-in">
