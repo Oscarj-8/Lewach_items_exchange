@@ -214,6 +214,7 @@
   scale: 1.5;
   color: #03467a;
 }
+
 .sidebar {
   position: fixed;
   top: 3.9em;
@@ -518,7 +519,7 @@
   }
 
   .side-bar-btns {
-    width: 30%;
+    width: 40%;
     top: 4.6em;
   }
 
@@ -560,7 +561,7 @@
   }
 
   .side-bar-btns {
-    width: 30%;
+    width: 25%;
   }
 }
 
@@ -591,6 +592,6 @@
   }
 
   .side-bar-btns {
-    width: 10%;
+    width: 12%;
   }
 }

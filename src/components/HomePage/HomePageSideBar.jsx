@@ -60,7 +60,7 @@ function HomePageSideBar() {
             className={`sidebar side-bar-btns  ${open ? "open" : ""}`}
             ref={sidebarRef}
           >
-            <button onClick={handleClose}>Close Sidebar</button>
+            {/* <button onClick={handleClose}>Close Sidebar</button> */}
             <span onClick={handler}>Location</span>
 
             {open && (
