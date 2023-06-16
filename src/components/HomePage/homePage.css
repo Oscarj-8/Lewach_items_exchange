@@ -208,15 +208,25 @@
   overflow: hidden;
 } */
 
+.homePageSidebar-btn button {
+  background: transparent;
+  border: none;
+  scale: 1.5;
+  color: #03467a;
+}
 .sidebar {
   position: fixed;
   top: 3.9em;
   left: 0;
-  background-color: rgb(198, 97, 97);
   height: 100%;
   width: 70%;
-  padding: 1em;
   z-index: 9999;
+}
+
+.sidebar button {
+  align-self: self-end;
+  background: transparent;
+  border: none;
 }
 
 /* .sidebar.open {

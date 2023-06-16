@@ -15,29 +15,36 @@ function HomePage_sidebar({ handleClose }) {
     setOpen2(!open2);
   };
   return (
-    <div className="side-bar-btns">
-      <span onClick={handler}>Location</span>
+    <>
+      <div
+        className={`sidebar side-bar-btns  ${open ? "open" : ""}`}
+        ref={sidebarRef}
+      >
+        <span onClick={handler}>Location</span>
 
-      {open && (
-        <div className="HomepageSide-btns">
-          <button onClick={handleClose}>Addis Ababa</button>
-          <button>Adama</button>
-          <button>Dire Dawa</button>
-          <button>Hawassa</button>
-          <button>SNNPR</button>
-        </div>
-      )}
-      <span onClick={handler2}> Types of item</span>
-      {open2 && (
-        <div className="HomepageSide-btns">
-          <button onClick={handleClose}>Addis Ababa</button>
-          <button>Adama</button>
-          <button>Dire Dawa</button>
-          <button>Hawassa</button>
-          <button>SNNPR</button>
-        </div>
-      )}
-    </div>
+        {open && (
+          <div className="HomepageSide-btns">
+            <button onClick={handleClose}>Addis Ababa</button>
+            <button>Adama</button>
+            <button>Dire Dawa</button>
+            <button>Hawassa</button>
+            <button>SNNPR</button>
+          </div>
+        )}
+        <span onClick={handler2}> Types of item</span>
+        {open2 && (
+          <div className="HomepageSide-btns">
+            <button onClick={handleClose}>Addis Ababa</button>
+            <button>Adama</button>
+            <button>Dire Dawa</button>
+            <button>Hawassa</button>
+            <button>SNNPR</button>
+          </div>
+        )}
+        <button onClick={handleClose}>Close Sidebar</button>
+      </div>
+      <div className="sidebar-overlay" onClick={handleClose}></div>
+    </>
   );
 }
 
