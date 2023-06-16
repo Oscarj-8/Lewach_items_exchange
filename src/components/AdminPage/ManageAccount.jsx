@@ -4,6 +4,7 @@ import { useState } from "react";
 import Sidebar from "./Sidebar";
 import SearchBar from "./SearchBar";
 import UploadModal from "../HomePage/UploadModal";
+import EditAgentModal from "./EditAgentModal";
 
 function ManageAccount() {
   // const data = [
@@ -14,6 +15,7 @@ function ManageAccount() {
   //   { id: 5, name: "Joao felix", username: "felixSchool_" },
   //   { id: 6, name: "Matin garixx", username: "garixx34" },
   // ];
+
   const [users, setUsers] = useState([
     { id: 1, name: "John Doe", email: "john.doe@example.com" },
     { id: 2, name: "Jane Doe", email: "jane.doe@example.com" },
@@ -40,10 +42,6 @@ function ManageAccount() {
 
   const handleDeleteUser = (userId) => {
     setUsers((prevUsers) => prevUsers.filter((user) => user.id !== userId));
-  };
-
-  const handleEditAgent = (agentId) => {
-    // Display modal with form to edit agent details
   };
 
   const handleDeleteAgent = (agentId) => {
@@ -146,12 +144,7 @@ function ManageAccount() {
                     <td>{agent.email}</td>
                     <td>
                       <div className="manage-acc-inside-btns">
-                        <button
-                          onClick={() => handleEditAgent(agent.id)}
-                          className="edit-delete-btn"
-                        >
-                          Edit
-                        </button>
+                        <EditAgentModal agentId={123} />
                         <button
                           onClick={() => handleDeleteAgent(agent.id)}
                           className="edit-delete-btn"
