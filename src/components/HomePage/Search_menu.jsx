@@ -3,6 +3,7 @@ import { FaSearch } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import HomePage_sidebar from "./HomePage_sidebar";
 import Upload from "./Upload";
+import HomePageSideBar from "./HomePageSideBar";
 
 function Search_menu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,9 +28,10 @@ function Search_menu() {
   return (
     <div className="search-menu">
       <div>
-        <div className="search-menu-img">
+        {/* <div className="search-menu-img">
           <img src={phoneMenu} onClick={handler} />
-        </div>
+        </div> */}
+        <HomePageSideBar />
         {isOpen && (
           <div className="home-overlay">
             <div>

@@ -1,8 +1,10 @@
+import { useState } from "react";
 import phone from "../../assets/images/phone.png";
 import variety from "../../assets/images/variety.png";
 import waste from "../../assets/images/waste.png";
 import SearchBar from "./SearchBar";
 import Sidebar from "./Sidebar";
+import UploadModal from "../HomePage/UploadModal";
 
 function AdminDeliveryRequest() {
   const deliveryItems = [
@@ -104,6 +106,30 @@ function AdminDeliveryRequest() {
     },
   ];
 
+  const modalStyle = {
+    content: {
+      height: "32em",
+      width: "40em",
+      backgroundColor: "#fff",
+    },
+  };
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isForwardOpen, setIsFowardOpen] = useState(false);
+
+  const openViewModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
+  const openForwardModal = () => {
+    setIsFowardOpen(!isForwardOpen);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setIsFowardOpen(false);
+  };
+
   return (
     <div className="adminDeliveryRequests-root">
       <Sidebar />
@@ -126,8 +152,29 @@ function AdminDeliveryRequest() {
                 <span>From - {from}</span>
                 <span> To - {to}</span>
                 <div className="itemcard-btns">
-                  <button className="itemCard-btn view-btn">View</button>
-                  <button className="itemCard-btn forward-btn">Forward</button>
+                  <button
+                    className="itemCard-btn view-btn"
+                    onClick={openViewModal}
+                  >
+                    View
+                  </button>
+                  {
+                    <UploadModal
+                      isOpen={isModalOpen}
+                      onRequestClose={closeModal}
+                      modalStyle={modalStyle}
+                    ></UploadModal>
+                  }
+                  <button
+                    className="itemCard-btn forward-btn"
+                    onClick={openForwardModal}
+                  >
+                    Forward
+                  </button>
+                  <UploadModal
+                    isOpen={isForwardOpen}
+                    onRequestClose={closeModal}
+                  ></UploadModal>
                 </div>
               </div>
             </div>
