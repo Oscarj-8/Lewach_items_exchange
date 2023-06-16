@@ -113,14 +113,21 @@ function AdminDeliveryRequest() {
       backgroundColor: "#fff",
     },
   };
+
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isForwardOpen, setIsFowardOpen] = useState(false);
 
   const openViewModal = () => {
     setIsModalOpen(!isModalOpen);
   };
 
+  const openForwardModal = () => {
+    setIsFowardOpen(!isForwardOpen);
+  };
+
   const closeModal = () => {
     setIsModalOpen(false);
+    setIsFowardOpen(false);
   };
 
   return (
@@ -158,7 +165,16 @@ function AdminDeliveryRequest() {
                       modalStyle={modalStyle}
                     ></UploadModal>
                   }
-                  <button className="itemCard-btn forward-btn">Forward</button>
+                  <button
+                    className="itemCard-btn forward-btn"
+                    onClick={openForwardModal}
+                  >
+                    Forward
+                  </button>
+                  <UploadModal
+                    isOpen={isForwardOpen}
+                    onRequestClose={closeModal}
+                  ></UploadModal>
                 </div>
               </div>
             </div>
