@@ -66,7 +66,7 @@ function useAuth() {
     } catch (error) {
       console.error("Error:", error);
       throw error;
-    }
+    }0
   };
 
   useEffect(() => {
