@@ -66,18 +66,14 @@ function useAuth() {
     } catch (error) {
       console.error("Error:", error);
       throw error;
-    }
+    }0
   };
-  const getUser = () => {
-    return user;
-  };
-
 
   useEffect(() => {
     // checkAuth();
   }, []);
 
-  return {  getUser, login, logout };
+  return { user, login, logout };
 }
 
 export default useAuth;
