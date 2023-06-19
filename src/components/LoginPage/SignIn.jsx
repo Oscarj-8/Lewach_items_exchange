@@ -22,12 +22,12 @@ function SignIn() {
     event.preventDefault();
 
     if (!isEmailValid(email)) {
-      alert("Error: Invalid email");
+      alert("Invalid email");
       return;
     }
 
     if (!isPasswordValid(password)) {
-      alert("Error: Password must be at least 8 characters");
+      alert("Password must be at least 8 characters");
       return;
     }
 
@@ -36,7 +36,7 @@ function SignIn() {
       window.location.href = "/FullHomepage";
     } catch (error) {
       console.error("Error:", error);
-      alert("Error: Login failed");
+      alert("Incorrect Uername Or Password");
     }
   };
 

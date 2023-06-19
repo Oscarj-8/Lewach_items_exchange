@@ -15,8 +15,8 @@ function useAuth() {
   
       const data = await response.json();
   
-      if (data.user) {
-        setUser(data.user);
+      if (data.username) {
+        setUser(data.username);
       } else {
         throw new Error("User not authenticated");
       }
@@ -51,22 +51,35 @@ function useAuth() {
     }
   };
   const logout = async () => {
+   
+
     try {
-      const response = await fetch("/logout", {
+      const response = await fetch("http://localhost:3001/logout", {
         method: "POST",
+        headers: {
+          Authorization: Cookies.get("session_id"),
+        },
       });
-      const data = await response.json();
-      if (data.success) {
+  
+      if (!response.ok) {
+        throw new Error("Logout request failed");
+      }
+    
+  
+      const data = await response.text();
+  
+      if (data === "Logged out successfully") {
         setUser(null);
         Cookies.remove("session_id");
-        window.location.href = "/signin";
+        window.location.href = "/login";
+        
       } else {
         throw new Error("Logout failed");
       }
     } catch (error) {
       console.error("Error:", error);
       throw error;
-    }0
+    }
   };
 
   useEffect(() => {

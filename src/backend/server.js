@@ -94,26 +94,27 @@ app.post('/login', async (req, res) => {
 //USER END
 
 //UPLOAD
-const itemSchema = new mongoose.Schema({
-  itemType: String,
-  brandName: String,
-  modelType: String,
-  itemQuantity: Number,
-  itemEstimatedValue: String,
-  itemDurationOfUsage: String,
-  itemDefects: String,
-  itemRegion: String,
-  itemCityZone: String,
-  itemSubcityWoreda: String,
-  itemSpecificArea: String,
-  itemsWillingToAccept: String,
-  file: {
-    data: Buffer,
-    contentType: String,
-  },
-});
 
-const Item = mongoose.model('Item', itemSchema);
+  const itemSchema = new mongoose.Schema({
+    itemType: String,
+    brandName: String,
+    modelType: String,
+    itemQuantity: Number,
+    itemEstimatedValue: String,
+    itemDurationOfUsage: String,
+    itemDefects: String,
+    itemRegion: String,
+    itemCityZone: String,
+    itemSubcityWoreda: String,
+    itemSpecificArea: String,
+    itemsWillingToAccept: String,
+    file: {
+      data: Buffer,
+      contentType: String,
+    },
+  });
+
+ const Item = mongoose.model('Item', itemSchema);
 
 const upload = multer({ storage: multer.memoryStorage() });
 
@@ -149,19 +150,18 @@ async function getUserFromSession(sessionID) {
   return user;
 }
 
-app.post('/logout',  async (req, res) => {
-  const sessionID = req.headers.authorization;
-  if (!sessionID) {
-    return res.status(401).send('Unauthorized');
-  }
-  try {
-    await MongoDBSessionStore.destroy(sessionID);
-    res.status(200).send('Logout successful');
-  } catch (error) {
-    console.error(error);
-    res.status(500).send('Logout failed');
-  }
+app.post("/logout", (req, res) => {
+  // Destroy the session
+  req.session.destroy((err) => {
+    if (err) {
+      console.error(err);
+      res.status(500).send("Error logging out");
+    } else {
+      res.status(200).send("Logged out successfully");
+    }
+  });
 });
+
 
 app.get('/check-auth',  async (req, res) => {
   const sessionID = req.sessionID;
