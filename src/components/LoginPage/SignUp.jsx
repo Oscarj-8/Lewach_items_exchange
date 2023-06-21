@@ -114,6 +114,7 @@ function SignUp() {
     const region = event.target.value;
     setSelectedRegion(region);
     setCityZones(regions[region] || []);
+    setFormData({ ...formData, region });
   }
   return (
     <section className="container-form container-form-sign-up">
