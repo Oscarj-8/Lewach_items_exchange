@@ -34,6 +34,9 @@ function SignIn() {
     try {
       await login(email, password);
       window.location.href = "/FullHomepage";
+      if (email === "adminlewach@gmail.com" && password === "lewachabmss") {
+        window.location.href = "/adminDashboard";
+      }
     } catch (error) {
       console.error("Error:", error);
       alert("Incorrect Uername Or Password");
