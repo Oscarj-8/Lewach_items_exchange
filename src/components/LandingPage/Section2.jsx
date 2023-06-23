@@ -1,4 +1,4 @@
-import teamyoung from "../../assets/images/teamyoung.avif";
+import teamyoung from "../../assets/images/teamyoung.avif"
 import connect from "../../assets/images/connect.png";
 import delivery from "../../assets/images/delivery2.png";
 import waste from "../../assets/images/waste.png";

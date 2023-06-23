@@ -92,6 +92,7 @@ function SignUp() {
     if (response.ok) {
       const newUser = await response.json();
       console.log("Registered:", newUser);
+      alert("Registerd Successfully");
     } else {
       console.error("Error:", response.statusText);
     }
