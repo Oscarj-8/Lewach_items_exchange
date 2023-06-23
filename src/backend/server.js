@@ -177,7 +177,15 @@ app.get('/check-auth',  async (req, res) => {
   }
 });
 
-
+app.get('/items', async (req, res) => {
+  try {
+    const items = await Item.find();
+    res.status(200).send(items);
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).send(error);
+  }
+});
 
 
 
