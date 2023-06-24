@@ -95,7 +95,8 @@ app.post('/login', async (req, res) => {
 
 //UPLOAD
 
-  const itemSchema = new mongoose.Schema({
+const itemSchema = new mongoose.Schema({
+  name: String,
     itemType: String,
     brandName: String,
     modelType: String,
