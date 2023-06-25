@@ -17,12 +17,13 @@ function Testimonial() {
         <div className="comment comment-box1">
           <img className="immgg" src={quote} alt="quote icon" />
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Exercitationem tempore mollitia eos recusandae illo quasi ad cumque,
-            at doloribus nulla eveniet
+            I have been a memeber of Lewach commnity for quite some time now,
+            it's been reaaly great place for me to find items that i could use
+            and let my items that i stopped using go to others. Lewach is one of
+            those nice places that anyone could find intersting items.
           </p>
           <div className="testimonial-bottom">
-            <span>Joan Fergusson</span>
+            <span>Alemu solomon</span>
           </div>
         </div>
         <div className="arrow right">

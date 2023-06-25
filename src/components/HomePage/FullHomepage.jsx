@@ -6,7 +6,7 @@ import Footer from "../LandingPage/Footer";
 
 function FullHomepage() {
   return (
-    <div>
+    <div className="fullHomePage-root">
       <Home_page_header />
       <Search_menu />
       <HomePage_section1 />

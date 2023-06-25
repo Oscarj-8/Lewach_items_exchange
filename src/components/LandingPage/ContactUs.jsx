@@ -25,8 +25,8 @@ function ContactUs() {
               </div>
               <div className="email-info inside-sec">
                 <h2>EMAIL</h2>
-                <span>h1@yahoo.com</span>
-                <span>h2@yahoo.com</span>
+                <span>mmmabdulahi954@yahoo.com</span>
+                <span>mabdulahi954@gamil.com</span>
               </div>
             </div>
             <div className="addess-sec info-sec">
@@ -46,8 +46,8 @@ function ContactUs() {
               </div>
               <div className="phone-info inside-sec">
                 <h2>PHONE</h2>
-                <span>Mobile: (555) 555-5555</span>
-                <span>fax: (555) 555-5555</span>
+                <span>Mobile: (+251) 913-70-15-96 </span>
+                <span>Mobile: (+251) 779-35-45-65 </span>
               </div>
             </div>
             <div className="opening-sec info-sec">
@@ -56,7 +56,7 @@ function ContactUs() {
               </div>
               <div className="opening-info inside-sec">
                 <h2>OPENING HOURS</h2>
-                <span>Monday to Friday 8:00AM - 8:00PM </span>
+                <span>Monday to Friday 8:00AM - 6:00PM </span>
               </div>
             </div>
           </div>
