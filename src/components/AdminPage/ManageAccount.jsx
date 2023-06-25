@@ -5,17 +5,9 @@ import Sidebar from "./Sidebar";
 import SearchBar from "./SearchBar";
 import UploadModal from "../HomePage/UploadModal";
 import EditAgentModal from "./EditAgentModal";
+import DeleteAgentModal from "./DeleteAgentModal";
 
 function ManageAccount() {
-  // const data = [
-  //   { id: 1, name: "Ander herrera", username: "Andyher" },
-  //   { id: 2, name: "HectorsShmels", username: "hec23__" },
-  //   { id: 3, name: "Dawit ayhey", username: "dawdaw09" },
-  //   { id: 4, name: "Mykhailo mudryk", username: "mudmykhail" },
-  //   { id: 5, name: "Joao felix", username: "felixSchool_" },
-  //   { id: 6, name: "Matin garixx", username: "garixx34" },
-  // ];
-
   const [users, setUsers] = useState([
     { id: 1, name: "John Doe", email: "john.doe@example.com" },
     { id: 2, name: "Jane Doe", email: "jane.doe@example.com" },
@@ -145,12 +137,9 @@ function ManageAccount() {
                     <td>
                       <div className="manage-acc-inside-btns">
                         <EditAgentModal agentId={123} />
-                        <button
-                          onClick={() => handleDeleteAgent(agent.id)}
-                          className="edit-delete-btn"
-                        >
-                          Delete
-                        </button>
+                        <DeleteAgentModal
+                          handleDeleteAgent={handleDeleteAgent}
+                        />
                       </div>
                     </td>
                   </tr>
