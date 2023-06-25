@@ -15,8 +15,8 @@ function ManageAccount() {
   //   { id: 6, name: "Matin garixx", username: "garixx34" },
   // ];
   const [users, setUsers] = useState([
-    { id: 1, name: "John Doe", email: "john.doe@example.com" },
-    { id: 2, name: "Jane Doe", email: "jane.doe@example.com" },
+    { id: 1, name: "John Doe", email: "johndoe14@gmail.com.com" },
+    { id: 2, name: "Biniyam Zeleke", email: "binizele18@gmail.com" },
   ]);
 
   const [agents, setAgents] = useState([

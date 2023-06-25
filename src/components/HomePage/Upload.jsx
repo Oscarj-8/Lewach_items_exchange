@@ -20,7 +20,7 @@ function Upload() {
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const closeModal = () => setModalIsOpen(false);
-
+  const [name, setName] = useState("");
   const [itemType, setItemType] = useState("");
   const [brandName, setBrandName] = useState("");
   const [modelType, setModelType] = useState("");
@@ -33,6 +33,10 @@ function Upload() {
   const [itemSubcityWoreda, setItemSubcityWoreda] = useState("");
   const [itemSpecificArea, setItemSpecificArea] = useState("");
   const [itemsWillingToAccept, setItemsWillingToAccept] = useState("");
+
+  const nameChangeHandler = (e) => {
+    setName(e.target.value);
+  };
 
   const itemTypeChangeHandler = (e) => {
     setItemType(e.target.value);
@@ -78,6 +82,7 @@ function Upload() {
   const formSubmitHandler = async (e) => {
     e.preventDefault();
     const formData = new FormData();
+    formData.append('name', name);
     formData.append('itemType', itemType);
     formData.append('brandName', brandName);
     formData.append('modelType', modelType);
@@ -144,6 +149,15 @@ function Upload() {
             {file && <p>Selected file: {file.name}</p>}
           </div>
           <h3>Item Details</h3>
+          <div className="form-items form-text-inpts">
+            <label htmlFor="estimated-value">Name:</label>
+            <input
+              type="text"
+              id="name"
+              value={name}
+              onChange={nameChangeHandler}
+            />
+          </div>
           <div className="form-items">
             <label htmlFor="item-type">Item Type:</label>
             <select

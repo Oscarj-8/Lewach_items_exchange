@@ -92,6 +92,7 @@ function SignUp() {
     if (response.ok) {
       const newUser = await response.json();
       console.log("Registered:", newUser);
+      alert("Registerd Successfully");
     } else {
       console.error("Error:", response.statusText);
     }
@@ -114,6 +115,7 @@ function SignUp() {
     const region = event.target.value;
     setSelectedRegion(region);
     setCityZones(regions[region] || []);
+    setFormData({ ...formData, region });
   }
   return (
     <section className="container-form container-form-sign-up">
