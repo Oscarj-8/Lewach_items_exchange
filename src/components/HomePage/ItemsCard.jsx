@@ -51,7 +51,7 @@ function ItemsCard() {
         <div className="card-top-text">
           <h2>Asus laptop</h2>
           <span>
-            Body Medium Lorem ipsum dolor sit amet consectetur cambuur.
+            
           </span>
         </div>
         <div className="section1-card-bottom">
@@ -61,7 +61,7 @@ function ItemsCard() {
       </div>
       <div className="card-top-img">
         <img
-          src="https://plus.unsplash.com/premium_photo-1677013011737-ba61149ba70c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8b2xkJTIwY2xvdGhlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+          src="https://images.unsplash.com/photo-1508965493703-4823ac484045?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
           alt="Google Logo"
         />
       </div>

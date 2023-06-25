@@ -219,18 +219,16 @@ export default HomePage_section2;
 //       name: "Nike air force",
 //       status: "Used for 4 months",
 //       returns: "Shoe, Jacket, Sweater and a Hat",
-//       image:
-//         "https://images.unsplash.com/photo-1661956600684-97d3a4320e45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwzNnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
-//     },
+//       image: "https://images.unsplash.com/photo-1614860957837-d8cf8798cb25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+//         },
 //     {
 //       id: 2,
 //       type: "Music instrument",
 //       name: "Guitar",
-//       status: "Used for 4 months",
-//       returns: "Shoe, Jacket, Sweater and a Hat",
-//       image:
-//         "https://images.unsplash.com/photo-1684144820756-d6cafa65247b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
-//     },
+//       status: "Used for 1 year",
+//       returns: "Any Music Insturements",
+//       image:"https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+//        },
 //     {
 //       id: 3,
 //       type: "Household",
