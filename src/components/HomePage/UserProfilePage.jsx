@@ -9,7 +9,7 @@ function UserProfilePage() {
     {
       id: 1,
       sold: "Phone",
-      sold_to: "Phillip lahm",
+      sold_to: "Alem zayd",
       bought: "Tablet",
       date: "12 - 22 - 2012",
       used_delivery: "No",
@@ -17,15 +17,15 @@ function UserProfilePage() {
     {
       id: 2,
       sold: "Tv",
-      sold_to: "kai lahm",
-      bought: "Spokio",
+      sold_to: "Yoseph detebo",
+      bought: "Tv stand",
       date: "12 - 22 - 2012",
       used_delivery: "Yes",
     },
     {
       id: 3,
       sold: "Motor cycle",
-      sold_to: "Some one",
+      sold_to: "Amanuel sitot",
       bought: "TV",
       date: "12 - 22 - 2012",
       used_delivery: "Yes",
@@ -33,7 +33,7 @@ function UserProfilePage() {
     {
       id: 4,
       sold: "Phone",
-      sold_to: "Phillip lahm",
+      sold_to: "Alem zayd",
       bought: "Tablet",
       date: "12 - 22 - 2012",
       used_delivery: "No",
@@ -41,8 +41,8 @@ function UserProfilePage() {
     {
       id: 5,
       sold: "Tv",
-      sold_to: "kai lahm",
-      bought: "Spokio",
+      sold_to: "Alemu solomon",
+      bought: "Blender",
       date: "12 - 22 - 2012",
       used_delivery: "Yes",
     },

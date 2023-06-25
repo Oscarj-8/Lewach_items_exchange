@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
+import userProfile from "../../assets/images/userProfile.jpg";
 import UploadModal from "./UploadModal";
 
 function UserProfileSide() {
@@ -8,7 +9,9 @@ function UserProfileSide() {
   const closeModal = () => setModalIsOpen(false);
   return (
     <section className="useProfile-section">
-      <div className="userProfile-pic"></div>
+      <div className="userProfile-pic">
+        <img src={userProfile} alt="user profile picture" />
+      </div>
       <div className="userProfile-nameEmail">
         <h2>Gelila Sisay</h2>
         <span>LilaSis23@gmail.com</span>

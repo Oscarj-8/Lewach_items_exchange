@@ -27,7 +27,7 @@
   color: white;
 }
 
-.userProfile-pic {
+.userProfile-pic img {
   width: 9.5em;
   height: 9.5em;
   background-color: aliceblue;
@@ -140,7 +140,7 @@
   flex-wrap: wrap;
 }
 
-.user-items {
+.user-items img {
   width: 200px;
   height: 250px;
   background-color: rgb(215, 213, 213);
