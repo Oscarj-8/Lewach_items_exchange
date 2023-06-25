@@ -355,6 +355,54 @@ tr:hover {
   background-color: #ddd;
 }
 
+.agentEditModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.agentEdit-modal-content {
+  background-color: white;
+  padding: 1em;
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.agentEdit-modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: center;
+}
+
+.closeEditAgent {
+  align-self: flex-end;
+  scale: 2;
+  cursor: pointer;
+}
+
+.agentEdit-modal-btns {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+}
+
+.agentEdit-modal-btns button {
+  width: 6em;
+  background-color: #03467a;
+  color: white;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  border: none;
+}
 .manage-acc-table-btn button:focus {
   border-bottom: 2px solid #31c719;
   border-radius: 0.5em;
