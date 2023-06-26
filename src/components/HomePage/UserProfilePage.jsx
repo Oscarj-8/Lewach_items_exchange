@@ -1,4 +1,6 @@
 import "./UserProfilePage.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLongArrowAltLeft, faClose } from "@fortawesome/free-solid-svg-icons";
 import UserInformationSection from "./UserInformationSection";
 import UserItems from "./UserItems";
 import UserProfileSide from "./UserProfileSide";
@@ -51,9 +53,13 @@ function UserProfilePage() {
     <div className="userProfile-root">
       <UserProfileSide />
       <main className="userProfile-main">
+        <div className="userProfile-header">
+          <a href="/FullHomepage">
+            <FontAwesomeIcon icon={faLongArrowAltLeft} /> Go back to Home
+          </a>
+        </div>
         <UserInformationSection />
         <div className="main-itemsList">
-          <h2 className="mainItems-header">Uploaded items</h2>
           <UserItems />
           <div className="userTransaction-sec">
             <h2>Transaction History</h2>

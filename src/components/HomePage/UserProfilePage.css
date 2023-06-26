@@ -11,38 +11,94 @@
   --fxxlarge: 2.625em;
 }
 
-.userProfile-root {
-  height: 100%;
-  display: flex;
+.userProfile-root h2 {
+  font-size: var(--fsmall);
+}
+
+.userProfile-header {
+  background-color: #03467a;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  font-size: 10px;
+}
+
+.userProfile-header a {
+  color: white;
+  text-decoration: none;
 }
 
 .useProfile-section {
-  width: 15%;
   background-color: #03467a;
   display: flex;
+  color: white;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   padding-top: 3%;
-  gap: 2em;
-  color: white;
+  gap: 1em;
+  padding-bottom: 3%;
 }
 
 .userProfile-pic img {
-  width: 9.5em;
-  height: 9.5em;
-  background-color: aliceblue;
+  width: 7em;
   border-radius: 50%;
 }
 
 .userProfile-nameEmail {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.6em;
   font-family: var(--ffroboto);
 }
 
-.useProfile-section button {
+.personalInfo-modal {
+  position: absolute;
+  top: 20%;
+  left: 1%;
+  border: 1px solid black;
+  background-color: white;
+  width: 15%;
+  border: none;
+  border-radius: 0.5em;
+  box-shadow: 1px 2px 50px rgba(0, 0, 0, 0.25);
+}
+
+.accountInfoModal-header {
+  display: flex;
+  background-color: #03467a;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em;
+  border-radius: 0.5em 0.5em 0 0em;
+}
+
+.accountEdit-form {
+  margin-top: 5%;
+}
+
+.accountEdit-form input {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  width: 90%;
+  padding: 0.5em;
+  font-size: var(--fxxsmall);
+}
+
+.accountEdit-form input:focus {
+  outline: none;
+}
+
+.accountInfo-editBtns button {
+  border: none;
+  background-color: #03467a;
+  color: white;
+  padding: 0.35em;
+  border-radius: 0.5em;
+  width: 5em;
+  margin: 1em;
+}
+
+.accountInfo-editBtn {
   background-color: white;
   border: none;
   padding: 0.6em 2em;
@@ -51,8 +107,27 @@
   box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.25);
 }
 
+.accountInfoModal-closeBtn {
+  border: none;
+  background-color: transparent;
+  color: white;
+}
+
 .useProfile-section button:hover {
   box-shadow: none;
+}
+
+.password-sec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.password-sec button {
+  background-color: #03467a;
+  color: white;
+  border: none;
+  padding: 0.15em 0.5em;
 }
 
 /* main section starts here*/
@@ -62,46 +137,39 @@
   display: flex;
   flex-wrap: wrap;
   gap: 3em;
+  padding: 0 0.5em;
 }
 
 .userInfo-sec {
-  width: 40%;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  padding: 3em;
-  gap: 3em;
+  justify-content: center;
 }
 
-.userProfile-header {
-  width: 12em;
-  color: #03467a;
-  cursor: pointer;
+.userProfile-mainSection {
+  width: 90%;
 }
 
 .userProfile-infoSection {
+  padding-top: 5%;
   display: flex;
   flex-direction: column;
-  gap: 3em;
-  padding: 2em 2em;
-  border-radius: 1em;
-  box-shadow: 1px 3px 20px rgba(0, 0, 0, 0.15);
+  gap: 1em;
+}
+
+.userInfo-1 h2,
+.userInfo-2 h2 {
+  text-align: center;
+  margin-bottom: 3%;
 }
 
 .userInfo-1,
 .userInfo-2 {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 0.5em;
   font-size: var(--fxsmall);
   font-family: var(--ffroboto);
-}
-
-.userInfo-1 h2,
-.userInfo-2 h2 {
-  font-family: var(--ffroboto);
-  margin-bottom: 5%;
-  color: #03467a;
-  font-size: 2em;
 }
 
 .userProfile-editBtn {
@@ -109,20 +177,21 @@
 }
 
 .userProfile-editBtn button {
-  background-color: #03467a;
+  padding: 0.6em 2em;
+  border-radius: 1em;
   border: none;
-  padding: 0.8em 3em;
-  border-radius: 1.2em;
-  color: #fff;
-  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.15);
+  background-color: #03467a;
+  color: white;
 }
 
-.userProfile-editBtn button:hover {
-  box-shadow: none;
+.userPorfile-itemsDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .main-itemsList {
-  flex: 1;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -130,49 +199,52 @@
 
 .mainItems-header {
   font-family: var(--ffroboto);
-  margin-top: 5em;
   color: #03467a;
+  align-self: center;
 }
 
 .userProfile-itemList {
   display: flex;
   gap: 1em;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .user-items img {
-  width: 200px;
-  height: 250px;
-  background-color: rgb(215, 213, 213);
+  width: 4em;
+}
+
+.userTransaction-sec {
+  display: flex;
+  flex-direction: column;
 }
 
 .userTransaction-sec h2 {
   font-family: var(--ffroboto);
   color: #03467a;
   margin-bottom: 3%;
+  align-self: center;
 }
 
 .userTransaction-table {
   font-family: var(--ffroboto);
-  width: 90%;
   border-collapse: collapse;
   text-align: left;
 }
 
 .userTransaction-table td,
 .userTransaction-table th {
-  padding: 1em;
+  font-size: 0.5em;
+  padding: 0.25em;
   border-bottom: 1px solid #ddd;
 }
 
 .userTransaction-table th {
   background-color: #03467a;
   color: white;
-}
-
-.ReactModal__Content {
-  /* width: 50%; */
-  height: 75vh;
+  font-size: 0.3em;
+  font-weight: 100;
 }
 
 .personalInfo-closeBtn {
@@ -188,22 +260,6 @@
   background: transparent;
   border: none;
   color: white;
-}
-
-.ReactModal__Overlay {
-  background-color: rgba(0, 0, 0, 0.15) !important;
-}
-
-.password-sec {
-  display: flex;
-  justify-content: space-between;
-}
-
-.password-sec button {
-  background-color: #03467a;
-  color: white;
-  padding: 0.2em 1em;
-  border: none;
 }
 
 .personal-info-edit {
@@ -247,12 +303,125 @@
   gap: 2em;
 }
 
-.infoEdit-btns button,
-.accountInfo-editBtns button {
+.infoEdit-btns button {
   background-color: #03467a;
   color: white;
   width: 7em;
   padding: 1em 1.5em;
   border: none;
   border-radius: 1em;
+}
+
+@media screen and (min-width: 500px) {
+  .user-items img {
+    width: 8em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .userProfile-root {
+    height: 100%;
+    display: flex;
+  }
+
+  .userProfile-pic img {
+    width: 8em;
+  }
+
+  .userProfile-header {
+    left: 5%;
+  }
+
+  .userProfile-nameEmail {
+    gap: 0.7em;
+  }
+
+  .useProfile-section {
+    width: 35%;
+    padding-top: 5%;
+  }
+
+  /* main section starts here*/
+
+  .userInfo-sec {
+    padding: 1em;
+  }
+
+  .userProfile-infoSection {
+    padding: 2em 2em;
+    border-radius: 1em;
+    box-shadow: 1px 3px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .userInfo-1,
+  .userInfo-2 {
+    gap: 1em;
+  }
+
+  .userInfo-1 h2,
+  .userInfo-2 h2 {
+    color: #03467a;
+    font-size: var(--flarge);
+  }
+
+  .userProfile-editBtn button {
+    padding: 0.8em 3em;
+    border-radius: 1.2em;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .userProfile-editBtn button:hover {
+    box-shadow: none;
+  }
+
+  .main-itemsList h2 {
+    font-size: var(--flarge);
+  }
+
+  .user-items img {
+    width: 9em;
+  }
+
+  .userTransaction-table {
+    margin: 0 2em;
+  }
+
+  .userTransaction-table td,
+  .userTransaction-table th {
+    padding: 1.5em;
+  }
+
+  .ReactModal__Overlay {
+    background-color: rgba(0, 0, 0, 0.15) !important;
+  }
+
+  .password-sec button {
+    padding: 0.2em 1em;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .userProfile-header {
+    left: 3%;
+  }
+
+  .useProfile-section {
+    width: 15%;
+    height: 100vh;
+  }
+
+  .userProfile-main {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .userInfo-sec {
+    margin: auto;
+  }
+
+  .main-itemsList {
+    margin: auto;
+    gap: 10em;
+  }
 }

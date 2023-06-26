@@ -17,16 +17,21 @@ function UserProfileSide() {
         <span>LilaSis23@gmail.com</span>
         <span>__LilaSis</span>
       </div>
-      <button onClick={() => setModalIsOpen(true)}>Edit</button>
-      <UploadModal isOpen={modalIsOpen} onRequestClose={closeModal}>
-        <div>
-          <div className="personalInfo-closeBtn">
+      <button
+        className="accountInfo-editBtn"
+        onClick={() => setModalIsOpen(true)}
+      >
+        Edit
+      </button>
+      {modalIsOpen && (
+        <div className="personalInfo-modal">
+          <div className="accountInfoModal-header">
             <h2>Account Information</h2>
-            <button onClick={closeModal}>
+            <button className="accountInfoModal-closeBtn" onClick={closeModal}>
               <FontAwesomeIcon icon={faClose} size="2x" />
             </button>
           </div>
-          <form>
+          <form className="accountEdit-form">
             <input type="text" placeholder="Full name" />
             <input type="text" placeholder="Email" />
             <input type="text" placeholder="Username" />
@@ -36,7 +41,7 @@ function UserProfileSide() {
             </div>
           </form>
         </div>
-      </UploadModal>
+      )}
     </section>
   );
 }

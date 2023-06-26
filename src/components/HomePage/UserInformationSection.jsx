@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLongArrowAltLeft, faClose } from "@fortawesome/free-solid-svg-icons";
+import { faClose } from "@fortawesome/free-solid-svg-icons";
 import UploadModal from "./UploadModal";
 import { useState } from "react";
 
@@ -11,11 +11,6 @@ function UserInformationSection() {
 
   return (
     <div className="userInfo-sec">
-      <div className="userProfile-header">
-        <span>
-          <a href="/FullHomepage"><FontAwesomeIcon icon={faLongArrowAltLeft} /> Go back to Home</a>
-        </span>
-      </div>
       <div className="userProfile-mainSection">
         <div className="userProfile-infoSection">
           <div className="userInfo-1">
@@ -40,6 +35,7 @@ function UserInformationSection() {
             <span>Woreda : Dunno</span>
             <hr />
             <span>SSN : 329569-3455</span>
+            <hr />
           </div>
           <div className="userProfile-editBtn">
             <button onClick={() => setModalIsOpen(true)}>Edit</button>
