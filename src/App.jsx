@@ -14,7 +14,6 @@ import UserMessagePage from "./components/HomePage/UserMessagePage";
 import AdminDashboard from "./components/AdminPage/AdminDashboard";
 import AdminDeliveryRequest from "./components/AdminPage/AdminDeliveryRequest";
 import ManageAccount from "./components/AdminPage/ManageAccount";
-import termsandconditions from "./termsconditions"
 
 Modal.setAppElement("#root");
 
