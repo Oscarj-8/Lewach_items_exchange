@@ -73,10 +73,8 @@ function HomePage_section2() {
           <div key={item._id} className="section2-card">
             <div className="section1-card-top section2-card-top ">
               <div className="card-top-text">
-                <img
-                  src={`data:${
-                    item.file.contentType
-                  };base64,${item.file.data.toString("base64")}`}
+              <img
+                  src={`data:${item.file.contentType};base64,${item.file.data}`}
                   alt="item"
                 />
                 <div className="">

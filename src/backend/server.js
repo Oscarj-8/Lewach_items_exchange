@@ -96,7 +96,7 @@ app.post('/login', async (req, res) => {
 //UPLOAD
 
 const itemSchema = new mongoose.Schema({
-  name: String,
+    name: String,
     itemType: String,
     brandName: String,
     modelType: String,
@@ -180,14 +180,23 @@ app.get('/check-auth',  async (req, res) => {
 
 app.get('/items', async (req, res) => {
   try {
-    const items = await Item.find();
+    let items = await Item.find();
+
+    // Convert the image data to a Base64 string
+    items = items.map(item => {
+      if (item.file && item.file.data) {
+        let base64Image = Buffer.from(item.file.data).toString('base64');
+        item.file.data = base64Image;
+      }
+      return item;
+    });
+
     res.status(200).send(items);
   } catch (error) {
     console.error('Error:', error);
     res.status(500).send(error);
   }
 });
-
 
 
 const PORT = process.env.PORT || 3001;
