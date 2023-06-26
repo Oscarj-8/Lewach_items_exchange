@@ -1,0 +1,12 @@
+.agentHomePage-root {
+  display: flex;
+}
+
+.agentSidebar-root {
+  background-color: #03476a;
+  width: 12%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}

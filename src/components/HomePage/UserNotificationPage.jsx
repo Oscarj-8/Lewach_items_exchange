@@ -11,7 +11,7 @@ function UserNotificationPage() {
       id: 1,
       image: `${chat}`,
       title: "Gelila wants exchange",
-      text: "You bitch give my Tv back, you fucking bastard. you tricked me in to this",
+      text: "Gelila is requesting for exchange",
     },
 
     {

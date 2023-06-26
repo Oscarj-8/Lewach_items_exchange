@@ -1,5 +1,4 @@
 import "./AdminPage.css";
-import Modal from "react-modal";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,8 +12,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import logoBlue from "../../assets/images/logoBlue.png";
 import logoWhite from "../../assets/images/logoWhite.png";
-import SearchBar from "./SearchBar";
-import UploadModal from "../HomePage/UploadModal";
 import AdminNotificationModalOne from "./AdminNotificationModalOne";
 import UserProfileModal from "../HomePage/UserProfileModal";
 
@@ -109,47 +106,8 @@ function Sidebar() {
           </div>
         )}
       </nav>
-      {/* <UploadModal isOpen={modalIsOpen} onRequestClose={closeModal}>
-        hey
-      </UploadModal> */}
     </div>
   );
 }
 
 export default Sidebar;
-
-// import React, { useState } from "react";
-// import { Link } from "react-router-dom";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faBars } from "@fortawesome/free-solid-svg-icons";
-
-// function Sidebar() {
-//   const [isOpen, setIsOpen] = useState(false);
-
-//   function toggleSidebar() {
-//     setIsOpen(!isOpen);
-//   }
-
-//   return (
-//     <>
-//       <button className="fab" onClick={toggleSidebar}>
-//         <FontAwesomeIcon icon={faBars} />
-//       </button>
-//       <div className={`sidebar ${isOpen ? "open" : ""}`}>
-//         <ul>
-//           <li>
-//             <Link to="/dashboard">Dashboard</Link>
-//           </li>
-//           <li>
-//             <Link to="/delivery-requests">Delivery Requests</Link>
-//           </li>
-//           <li>
-//             <Link to="/manage-account">Manage Account</Link>
-//           </li>
-//         </ul>
-//       </div>
-//     </>
-//   );
-// }
-
-// export default Sidebar;
