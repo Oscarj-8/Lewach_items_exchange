@@ -49,6 +49,11 @@ function SignUp() {
     } else if (formData.password !== formData.confirmpassword) {
       errors.confirmpassword = "Passwords do not match";
     }
+    if (!formData.ssn.trim()) {
+      errors.ssn = "*";
+    } else if (formData.ssn.length < 10) {
+      errors.ssn = "Invalid Phone Number";
+    }
     console.log("Step 0 errors:", errors);
     setFormErrors(errors);
     return Object.keys(errors).length === 0;
@@ -273,7 +278,7 @@ function SignUp() {
               />
               <input
                 type="text"
-                placeholder="SSN"
+                placeholder="Phone Number"
                 name="ssn"
                 value={formData.ssn}
                 onChange={handleChange}
