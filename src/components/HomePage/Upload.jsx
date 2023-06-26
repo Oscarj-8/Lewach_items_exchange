@@ -105,9 +105,11 @@ function Upload() {
   
       if (response.ok) {
         console.log('Item saved to MongoDB');
+        alert("Upload Successfull");
         closeModal();
       } else {
         console.log('Error saving item:', response.statusText);
+        alert("Upload Failed");
       }
     } catch (error) {
       console.log(error);
