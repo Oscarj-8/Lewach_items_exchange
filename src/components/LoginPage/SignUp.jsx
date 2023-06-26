@@ -19,10 +19,15 @@ function SignUp() {
     ssn: "",
   });
   const [formErrors, setFormErrors] = useState({});
+  const [termsChecked, setTermsChecked] = useState(false);
   const [selectedRegion, setSelectedRegion] = useState("");
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
+  const handleTermsChecked = (event) => {
+    setTermsChecked(event.target.checked);
+  };
+  
   const validateStep0 = () => {
     const errors = {};
     if (!formData.firstname.trim()) {
@@ -70,6 +75,9 @@ function SignUp() {
       errors.ssn = "*";
     } else if (formData.ssn.length < 10) {
       errors.ssn = "Invalid Phone Number";
+    }
+    if (!termsChecked) {
+      errors.terms = "You must agree to the terms and conditions";
     }
     console.log("Step 1 errors:", errors);
     setFormErrors(errors);
@@ -287,7 +295,20 @@ function SignUp() {
               />
                {formErrors.ssn && (
               <div className="error">{formErrors.ssn}</div>
-            )}
+              )}
+              <div className="tc">
+              <input
+              type="checkbox"
+              name="terms"
+              checked={termsChecked}
+              onChange={handleTermsChecked}
+             />
+              <span >I agree to the
+                <a rel="stylesheet" href="/termsandconditions" style={{ textDecoration: 'underline' }}> terms and conditions</a>
+              </span>
+       
+                {formErrors.terms && <span className="error">{formErrors.terms}</span>}
+                </div>
               <button
                 type="button"
                 className="signIn-register-btn next-back-reg-btn back-btn"

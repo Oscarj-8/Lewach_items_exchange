@@ -108,10 +108,19 @@ function HomePageSideBar() {
             {open2 && (
               <div className="HomepageSide-btns">
                 <button onClick={handleClose}>Addis Ababa</button>
-                <button>Adama</button>
-                <button>Dire Dawa</button>
-                <button>Hawassa</button>
-                <button>SNNPR</button>
+                <button>Antiques</button>
+                <button>Art</button>
+                <button>Car</button>
+                <button>Clothing</button>
+                <button>Collectibles</button>
+                <button>Electronics</button>
+                <button>Furniture</button>
+                <button>Home Appliance</button>
+                <button>Jewelry</button>
+                <button>Musical Instruments</button>
+                <button>Sports Equipment</button>
+                <button>Toys and Games</button>
+                
               </div>
             )}
           </div>
