@@ -22,22 +22,21 @@ function App() {
   return (
     <div className="root">
       {
-        // <Routes>
-        //   <Route path="/" Component={index} />
-        //   <Route path="/login" Component={Logreg} />
-        //   <Route path="/fullhomepage" Component={FullHomepage} />
-        //   <Route path="/profilepage" Component={UserProfilePage} />
-        //   <Route path="/userMessage" Component={UserMessagePage} />
-        //   <Route path="/userNotification" Component={UserNotificationPage} />
-        //   <Route path="/adminDashboard" Component={AdminDashboard} />
-        //   <Route
-        //     path="/adminDeliveryRequest"
-        //     Component={AdminDeliveryRequest}
-        //   />
-        //   <Route path="/manageAccount" Component={ManageAccount} />
-        // </Routes>
+        <Routes>
+          <Route path="/" Component={index} />
+          <Route path="/login" Component={Logreg} />
+          <Route path="/fullhomepage" Component={FullHomepage} />
+          <Route path="/profilepage" Component={UserProfilePage} />
+          <Route path="/userMessage" Component={UserMessagePage} />
+          <Route path="/userNotification" Component={UserNotificationPage} />
+          <Route path="/adminDashboard" Component={AdminDashboard} />
+          <Route
+            path="/adminDeliveryRequest"
+            Component={AdminDeliveryRequest}
+          />
+          <Route path="/manageAccount" Component={ManageAccount} />
+        </Routes>
       }
-      <AgentHomePage />
     </div>
   );
 }
