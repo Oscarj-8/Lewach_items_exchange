@@ -14,8 +14,7 @@ import UserMessagePage from "./components/HomePage/UserMessagePage";
 import AdminDashboard from "./components/AdminPage/AdminDashboard";
 import AdminDeliveryRequest from "./components/AdminPage/AdminDeliveryRequest";
 import ManageAccount from "./components/AdminPage/ManageAccount";
-import AgentHomePage from "./components/AgentPage/AgentHomePage";
-
+import termsandconditions from "./termsconditions"
 Modal.setAppElement("#root");
 
 function App() {
@@ -30,6 +29,7 @@ function App() {
           <Route path="/userMessage" Component={UserMessagePage} />
           <Route path="/userNotification" Component={UserNotificationPage} />
           <Route path="/adminDashboard" Component={AdminDashboard} />
+          <Route path="/termsandconditions" Component={termsandconditions} />
           <Route
             path="/adminDeliveryRequest"
             Component={AdminDeliveryRequest}
