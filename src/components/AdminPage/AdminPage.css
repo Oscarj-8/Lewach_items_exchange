@@ -403,11 +403,34 @@ tr:hover {
   border-radius: 0.5em;
   border: none;
 }
+
 .manage-acc-table-btn button:focus {
   border-bottom: 2px solid #31c719;
   border-radius: 0.5em;
 }
 
+.items-delivery-request {
+  display: flex;
+}
+
+.item-1 {
+  width: 50%;
+}
+
+.item-1-imgs,
+.item-2-imgs {
+  display: flex;
+  gap: 2em;
+}
+
+.item-1Img-1,
+.item-1Img-2,
+.item-2Img-1,
+.item-2Img-2 {
+  width: 8em;
+  height: 8em;
+  background-color: #ddd;
+}
 @media screen and (min-width: 500px) {
   .admin-sideBar {
     width: 55%;

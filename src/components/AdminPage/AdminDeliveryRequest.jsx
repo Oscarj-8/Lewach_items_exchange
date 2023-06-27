@@ -109,7 +109,7 @@ function AdminDeliveryRequest() {
 
   const modalStyle = {
     content: {
-      height: "32em",
+      height: "40em",
       width: "40em",
       backgroundColor: "#fff",
     },
@@ -164,7 +164,90 @@ function AdminDeliveryRequest() {
                       isOpen={isModalOpen}
                       onRequestClose={closeModal}
                       modalStyle={modalStyle}
-                    ></UploadModal>
+                    >
+                      <div className="items-delivery-request">
+                        <div className="item-1">
+                          <div className="item-1-item-info">
+                            <h2>Item 1</h2>
+                            <div className="item-1-imgs">
+                              <div className="item-1Img-1"></div>
+                              <div className="item-1Img-2"></div>
+                            </div>
+                            <div>
+                              <h2>Item Info</h2>
+                            </div>
+                            <div className="item-1-info">
+                              <span>
+                                Item Type: <b>Phone</b>
+                              </span>
+                            </div>
+                            <div className="item-1-info">
+                              <span>
+                                Item Brand: <b>Iphone</b>
+                              </span>
+                            </div>
+                            <div className="item-1-info">
+                              <span>
+                                Model Type: <b>Iphone X</b>
+                              </span>
+                            </div>
+                            <div className="item-1-info">
+                              <span>
+                                Items Quantity: <b>1</b>
+                              </span>
+                            </div>
+                            <div className="item-1-info">
+                              <span>
+                                Estimated value: <b>29,899 birr</b>
+                              </span>
+                            </div>
+                            <div className="item-1-info">
+                              <span>
+                                Duration of usage: <b>2 years</b>
+                              </span>
+                            </div>
+                            <div className="item-1-info">
+                              <span>
+                                Defects of item: <b>Broken glass</b>
+                              </span>
+                            </div>
+                          </div>
+
+                          <div className="item-1-location-info">
+                            <div>
+                              <h2>Location Info</h2>
+                            </div>
+                            <div className="item-1-info">
+                              <span>
+                                Region: <b>Arba minch</b>
+                              </span>
+                            </div>
+                            <div className="item-1-info">
+                              <span>
+                                City/ zone: <b>Arba minch</b>
+                              </span>
+                            </div>
+                            <div className="item-1-info">
+                              <span>
+                                SUbcity/Woreda: <b>4</b>
+                              </span>
+                            </div>
+                            <div className="item-1-info">
+                              <span>
+                                Specific area name: <b>Lemat</b>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="item-2">
+                          <h2>Item 2</h2>
+                          <div className="item-2-imgs">
+                            <div className="item-2Img-1"></div>
+                            <div className="item-2Img-2"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </UploadModal>
                   }
                   <button
                     className="itemCard-btn forward-btn"
