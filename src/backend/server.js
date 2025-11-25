@@ -1,46 +1,64 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import multer from 'multer';
 import session from 'express-session';
-import MongoDBStore from 'connect-mongodb-session';
-import path from 'path';
+import connectMongoDBSession from 'connect-mongodb-session';
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-const connectionString = 'mongodb+srv://lewach:lewachabmss@lewachdb.vdgyobf.mongodb.net/';
+/* ---------------------------------------
+   DATABASE CONNECTION
+---------------------------------------- */
+
+const connectionString = process.env.MONGO_URI;
 
 mongoose.connect(connectionString, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-});
+})
+.then(() => console.log("✅ MongoDB Connected"))
+.catch(err => console.error("❌ MongoDB Error:", err));
 
-//SESSION
-const MongoDBSessionStore = MongoDBStore(session);
 
-const store = new MongoDBSessionStore({
+/* ---------------------------------------
+   SESSION STORE FIX
+---------------------------------------- */
+
+const MongoDBStore = connectMongoDBSession(session);
+
+const store = new MongoDBStore({
   uri: connectionString,
   collection: 'sessions',
 });
-store.on('error', (error) => {
-  console.error('Session store error:', error);
+
+store.on("error", (error) => {
+  console.error("❌ Session store error:", error);
 });
 
 app.use(
   session({
-    secret: '2023@ABMSSKEYYEKSSMBA', 
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
-    store: store,
-    cookie: { maxAge: 7 * 24 * 60 * 60 * 1000 }, 
+    store,
+    cookie: { 
+      maxAge: 7 * 24 * 60 * 60 * 1000 
+    },
   })
 );
-//SESSION END
 
-//USER
+
+/* ---------------------------------------
+   USER SCHEMA + ROUTES
+---------------------------------------- */
+
 const userSchema = new mongoose.Schema({
   firstname: String,
   lastname: String,
@@ -71,126 +89,112 @@ app.post('/register', async (req, res) => {
 app.post('/login', async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.email });
-    if (!user) {
-      return res.status(404).send('User not found');
-    }
 
-    if (user.password !== req.body.password) {
-      return res.status(401).send('Incorrect password');
-    }
-    
+    if (!user) return res.status(404).send("User not found");
+    if (user.password !== req.body.password)
+      return res.status(401).send("Incorrect password");
+
     req.session.userID = user._id;
-
-    console.log('Session ID:', req.sessionID);
 
     res.status(200).send(user);
   } catch (error) {
-    console.error('Error:', error);
     res.status(500).send(error);
   }
 });
 
 
-//USER END
-
-//UPLOAD
+/* ---------------------------------------
+   ITEM UPLOAD FIXED
+---------------------------------------- */
 
 const itemSchema = new mongoose.Schema({
   name: String,
-    itemType: String,
-    brandName: String,
-    modelType: String,
-    itemQuantity: Number,
-    itemEstimatedValue: String,
-    itemDurationOfUsage: String,
-    itemDefects: String,
-    itemRegion: String,
-    itemCityZone: String,
-    itemSubcityWoreda: String,
-    itemSpecificArea: String,
-    itemsWillingToAccept: String,
-    file: {
-      data: Buffer,
-      contentType: String,
-    },
-  });
+  itemType: String,
+  brandName: String,
+  modelType: String,
+  itemQuantity: Number,
+  itemEstimatedValue: String,
+  itemDurationOfUsage: String,
+  itemDefects: String,
+  itemRegion: String,
+  itemCityZone: String,
+  itemSubcityWoreda: String,
+  itemSpecificArea: String,
+  itemsWillingToAccept: String,
+  file: {
+    data: Buffer,
+    contentType: String,
+  },
+});
 
- const Item = mongoose.model('Item', itemSchema);
+const Item = mongoose.model('Item', itemSchema);
 
 const upload = multer({ storage: multer.memoryStorage() });
 
-app.post('/submit-item',  upload.single('itemImage'), async (req, res) => {
+app.post('/submit-item', upload.single('itemImage'), async (req, res) => {
   try {
     const newItem = new Item({
       ...req.body,
-      file: {
-        data: req.file.buffer,
-        contentType: req.file.mimetype,
-      },
+      file: req.file
+        ? {
+            data: req.file.buffer,
+            contentType: req.file.mimetype,
+          }
+        : null,
     });
+
     await newItem.save();
-    res.status(201).send({ message: 'Item saved' });
+    res.status(201).send({ message: "Item saved successfully" });
+
   } catch (error) {
-    console.error('Error processing request:', error);
-    res.status(500).send({
-      error: error.message,
-      data
-    });
+    res.status(500).send({ error: error.message });
   }
 });
-//UPLOAD END
+
+
+/* ---------------------------------------
+   AUTH CHECK
+---------------------------------------- */
+
 async function getUserFromSession(sessionID) {
-  const session = await MongoDBSessionStore.get(sessionID);
-  if (!session) {
-    throw new Error('Session not found');
-  }
-  const user = await User.findById(session.userID);
-  if (!user) {
-    throw new Error('User not found');
-  }
+  const sessionData = await store.get(sessionID);
+  if (!sessionData) throw new Error("Session not found");
+
+  const user = await User.findById(sessionData.userID);
+  if (!user) throw new Error("User not found");
+
   return user;
 }
 
-app.post("/logout", (req, res) => {
-  // Destroy the session
-  req.session.destroy((err) => {
-    if (err) {
-      console.error(err);
-      res.status(500).send("Error logging out");
-    } else {
-      res.status(200).send("Logged out successfully");
-    }
-  });
-});
-
-
-app.get('/check-auth',  async (req, res) => {
-  const sessionID = req.sessionID;
-  console.log('Session ID:', req.sessionID);
-  if (!sessionID) {
-    return res.status(401).send('Unauthorized');
-  }
+app.get('/check-auth', async (req, res) => {
   try {
-    const user = await getUserFromSession(sessionID);
+    const user = await getUserFromSession(req.sessionID);
     res.status(200).send(user);
   } catch (error) {
-    res.status(401).send('Unauthorized');
+    res.status(401).send("Unauthorized");
   }
 });
+
+
+/* ---------------------------------------
+   GET ITEMS
+---------------------------------------- */
 
 app.get('/items', async (req, res) => {
   try {
     const items = await Item.find();
     res.status(200).send(items);
   } catch (error) {
-    console.error('Error:', error);
     res.status(500).send(error);
   }
 });
 
 
+/* ---------------------------------------
+   SERVER
+---------------------------------------- */
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`🚀 Server running on port ${PORT}`);
 });
