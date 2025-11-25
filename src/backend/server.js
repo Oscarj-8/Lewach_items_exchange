@@ -23,8 +23,8 @@ mongoose.connect(connectionString, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-.then(() => console.log("✅ MongoDB Connected"))
-.catch(err => console.error("❌ MongoDB Error:", err));
+.then(() => console.log("MongoDB Connected"))
+.catch(err => console.error("MongoDB Error:", err));
 
 
 /* ---------------------------------------
@@ -39,7 +39,7 @@ const store = new MongoDBStore({
 });
 
 store.on("error", (error) => {
-  console.error("❌ Session store error:", error);
+  console.error("Session store error:", error);
 });
 
 app.use(
